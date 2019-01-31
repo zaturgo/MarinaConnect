@@ -1,5 +1,9 @@
 <?php
-session_start();
+
+include '../vue/header.php';
+include '../accesseur/FactureDAO.php';
+
+//session_start();
 //https://stackoverflow.com/questions/33775897/how-do-i-install-the-ext-curl-extension-with-php-7
 //sudo apt-get install php-curl
 //sudo service apache2 restart
@@ -18,8 +22,7 @@ $_SESSION['datedebut'] = $_GET['datedebut'];
 $_SESSION['datefin'] = $_GET['datefin'];
 $_SESSION['idreservation'] = $_GET['idreservation'];
 
-include '../vue/header.php';
-include '../accesseur/FactureDAO.php';
+
 
 $factureDAO = new FactureDAO();
 

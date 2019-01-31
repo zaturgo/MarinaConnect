@@ -1,6 +1,7 @@
 <?php
+include '../vue/header.php';
 
-session_start();
+//session_start();
 
 include '../fonctions/envoyerMail.php';
 
@@ -25,7 +26,6 @@ $charge = \Stripe\Charge::create(array(
 
 ));
 
-include '../vue/header.php';
 
 $lien_vers_reservation = "<a href='http://158.69.113.110/site/vue/vueReservationDetailClient.php?idreservation=" . $_SESSION['idreservation'] . "'>Détails de votre réservation</a>";
 
