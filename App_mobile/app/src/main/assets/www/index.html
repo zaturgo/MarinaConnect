@@ -4,21 +4,81 @@
     <title>Marina Connect Mobile</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
 
+    <link rel="stylesheet" type="text/css" href="style/marinaStyle.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
           crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
 </head>
 <body>
+<div id="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="img/marina-0.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Marina Connect
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<div class="alert alert-danger" role="alert">
-    Erreur dans le programme.
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link ico-menu" href="#"><i class="fas fa-home"></i>   Accueil<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ico-menu" href="#marinas"><i class="fas fa-map-marked-alt"></i>   Marinas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ico-menu" href="#contact"><i class="far fa-envelope"></i>   Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ico-menu" href="#settings"><i class="fas fa-cog"></i>   Paramètres</a>
+                </li>
+
+                <!--<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>-->
+            </ul>
+        </div>
+    </nav>
 </div>
 
-<script type="text/javascript" charset="utf-8" src="lib/cordova.js"></script>
-<script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script>
+<div id="container">
+    <div class="alert alert-danger" role="alert">
+        Erreur dans le programme.
+    </div>
+</div>
+
+<div id="footer">
+
+</div>
+
+<script type="text/html" id="page-home">
+    <p>Coucou</p>
+</script>
+
+<script src="action/VueHome.js"></script>
 <script src="action/application.js"></script>
+
+<!--<script type="text/javascript" charset="utf-8" src="lib/cordova.js"></script>-->
+<script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
