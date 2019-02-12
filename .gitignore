@@ -93,3 +93,5 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 App_mobile/gradle/
+Appli\ desktop/node_modules/
+
