@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Phaf stats!</title>
+    <meta charset="utf8">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+<div id="corps">
+    Chargement...
+    <script type="plain/text" id="page-stat">
+<div id="page-stat" class="m-5">
+<div id="menuDeroulant" class="text-center"></div>
+    <div id="header" class="text-center"><h1>Statistiques</h1><h2>X Catégories, X produits</h2></div>
+    <div id="blocResume" class="float-right border rounded bg-info"><h3>Somme des profits et vente</h3></div>
+    <div id="tableauMois"></div>
+    <div id="tableauProduits"></div>
+    <div id="tableauCategories"></div>
+</div>
+
+    </script>
+</div>
+</body>
+</html>
+
+<script src="src/vue/VuePrincipale.js"></script>
+<script src="src/vue/VueErreur.js"></script>
+
+<script src="src/modele/Categorie.js"></script>
+<script src="src/modele/Mois.js"></script>
+<script src="src/modele/Produit.js"></script>
+<script src="src/modele/Pays.js"></script>
+<script src="src/modele/Stats.js"></script>
+
+<script src="src/donnees/MoisDAO.js"></script>
+<script src="src/donnees/CategorieDAO.js"></script>
+<script src="src/donnees/ProduitDAO.js"></script>
+<script src="src/donnees/PaysDAO.js"></script>
+<script src="src/donnees/StatsDAO.js"></script>
+
+<script src="src/application.js"></script>
+

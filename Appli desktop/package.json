@@ -1,0 +1,15 @@
+{
+  "name": "statistiques-phaf",
+  "version": "1.0.0",
+  "description": "Statistiques des mugs",
+  "main": "index.js",
+  "scripts": {
+    "start" : "electron .",
+    "test": "test"
+  },
+  "author": "zaturgo",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^3.0.10"
+  }
+}
