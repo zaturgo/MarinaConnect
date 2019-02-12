@@ -30,14 +30,13 @@
 
 <!-- Sidebar -->
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-blue w3-hide-large" title="Close Menu">
         <i class="fa fa-remove"></i>
     </a>
-    <h4 class="w3-bar-item"><b>Menu</b></h4>
-    <a class="w3-bar-item w3-button w3-hover-black" href="pagePeche.php">Pêche</a>
-    <a class="w3-bar-item w3-button w3-hover-black" href="pageTraversee.php">Traversée</a>
-    <a class="w3-bar-item w3-button w3-hover-black" href="pageSecurite.php">Sécurité</a>
-    <a class="w3-bar-item w3-button w3-hover-black" href="connexion.php">Reserver ! </a>
+    <a class="w3-bar-item w3-button w3-hover-blue" href="pagePeche.php">Pêche locale</a>
+    <a class="w3-bar-item w3-button w3-hover-blue" href="pageTraversee.php">Traversée du St-Laurent</a>
+    <a class="w3-bar-item w3-button w3-hover-blue" href="pageSecurite.php">Sécurité maritime</a>
+    <a class="w3-bar-item w3-button w3-hover-blue" href="connexion.php">Réserver à la marina</a>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -49,6 +48,7 @@
     <div class="w3-row w3-padding-64">
         <div class="w3-twothird w3-container">
             <h1 class="w3-text-teal">La rivière Matane, paradis pour pêcheurs</h1>
+
             <p>La rivière Matane est l’une des meilleures rivières à saumon au Québec. En plus d’être parmi les rivières où il remonte le plus de saumons annuellement, sa grande accessibilité et la facilité pour la pêcher permettent d’être l’endroit par excellence pour s’initier à ce sport.
             </p>
             <p>
@@ -65,8 +65,8 @@
 
                <p> Pêcher sur la rivière Matane, c'est un plaisir facilement accessible!</p>
         </div>
-        <div class="w3-third w3-container">
-            <img class="w3-border w3-padding-32 w3-center" src="../img/peche.png">
+        <div class="w3-padding-64 w3-third w3-container">
+            <img class="w3-padding-64 w3-center" src="../img/peche.png">
         </div>
     </div>
     <div class="w3-row w3-padding-64">
