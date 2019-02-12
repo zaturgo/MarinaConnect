@@ -5,6 +5,8 @@ var VueMap = (function () {
         this.afficher = function(){
 
             document.getElementById("container").innerHTML = pageMap;
+
+            initMap();
         }
     }
 })();

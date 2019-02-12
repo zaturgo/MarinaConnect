@@ -1,4 +1,5 @@
 (function () {
+    Loader();
     var instance = this;
 
     this.initialiser = function () {
@@ -17,17 +18,15 @@
             vueHome.afficher();
 
         }else if (hash.match(/^#marinas/)) {
+
             var vueMap = new VueMap();
             vueMap.afficher();
 
         }else if (hash.match(/^#settings/)) {
 
-
         }else if (hash.match(/^#contact/)) {
 
-
         }else if (hash.match(/^#marina\/([0-9]+)/)) {
-
 
         }
     };
@@ -48,6 +47,6 @@
         window.location.hash = "";
     };
 
+    //initialiser();
 
-    initialiser();
 })();
