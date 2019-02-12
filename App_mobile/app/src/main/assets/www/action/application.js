@@ -16,7 +16,17 @@
             var vueHome = new VueHome();
             vueHome.afficher();
 
-        }else if (hash.match(/^#livre\/([0-9]+)/)) {
+        }else if (hash.match(/^#marinas/)) {
+            var vueMap = new VueMap();
+            vueMap.afficher();
+
+        }else if (hash.match(/^#settings/)) {
+
+
+        }else if (hash.match(/^#contact/)) {
+
+
+        }else if (hash.match(/^#marina\/([0-9]+)/)) {
 
 
         }
