@@ -10,11 +10,9 @@
     <script type="plain/text" id="page-stat">
 <div id="page-stat" class="m-5">
 <div id="menuDeroulant" class="text-center"></div>
-    <div id="header" class="text-center"><h1>Statistiques</h1><h2>X Catégories, X produits</h2></div>
-    <div id="blocResume" class="float-right border rounded bg-info"><h3>Somme des profits et vente</h3></div>
-    <div id="tableauMois"></div>
-    <div id="tableauProduits"></div>
-    <div id="tableauCategories"></div>
+    <div id="header" class="text-center"><h1>Statistiques</h1><h2>Graphique du X</h2></div>
+    <div id="controles"></div>
+    <div id="graphique"></div>
 </div>
 
     </script>
@@ -22,20 +20,19 @@
 </body>
 </html>
 
+<!--import fichiers vue-->
 <script src="src/vue/VuePrincipale.js"></script>
-<script src="src/vue/VueErreur.js"></script>
 
-<script src="src/modele/Categorie.js"></script>
-<script src="src/modele/Mois.js"></script>
-<script src="src/modele/Produit.js"></script>
-<script src="src/modele/Pays.js"></script>
-<script src="src/modele/Stats.js"></script>
+<!--import dao-->
+<script src="src/donnees/TemperatureDAO.js"></script>
+<script src="src/donnees/HumiditeDAO.js"></script>
+<script src="src/donnees/PressionDAO.js"></script>
 
-<script src="src/donnees/MoisDAO.js"></script>
-<script src="src/donnees/CategorieDAO.js"></script>
-<script src="src/donnees/ProduitDAO.js"></script>
-<script src="src/donnees/PaysDAO.js"></script>
-<script src="src/donnees/StatsDAO.js"></script>
+<!--import modele-->
+<script src="src/modele/Temperature.js"></script>
+<script src="src/modele/Humidite.js"></script>
+<script src="src/modele/Pression.js"></script>
 
+<!--import projet-->
 <script src="src/application.js"></script>
 

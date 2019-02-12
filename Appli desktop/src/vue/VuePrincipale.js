@@ -4,16 +4,12 @@ var VuePrincipale = (function()
     var pageGlobal = document.getElementById("page-stat").innerHTML; //recuperation du javascript
     return function()
     {
-        this.afficher = function(listeCategorie, listeMois, listeProduits, pays, listePays, listeStats)
+        this.afficher = function(listeHumidite, listeTemp, listePression, date)
         {
-            console.log(listeCategorie);
-            console.log(listeMois);
-            console.log(listeProduits);
-            console.log(listePays);
-            console.log(listeStats);
+
             document.getElementById("corps").innerHTML = pageGlobal; //changement de la valeur de body
 
-            var tableauMois = document.getElementById("tableauMois");
+           /* var tableauMois = document.getElementById("tableauMois");
             var tableauTemp = '<h3>Tableau mois</h3>' +
                 '<table class="table">' +
                 '<tr>' +
@@ -40,10 +36,10 @@ var VuePrincipale = (function()
                     '</tr>';
             }
             tableauTemp+= '</tbody></table>';
-            tableauMois.innerHTML = tableauTemp;
+            tableauMois.innerHTML = tableauTemp;*/
 
 
-            var tableauProduits = document.getElementById("tableauProduits");
+            /*var tableauProduits = document.getElementById("tableauProduits");
             var tableauTemp = '<h3>Tableau Produits</h3>' +
                 '<table class="table">' +
                 '<tr>' +
@@ -64,12 +60,12 @@ var VuePrincipale = (function()
                     '</tr>';
             }
             tableauTemp+= '</tbody></table>';
-            tableauProduits.innerHTML = tableauTemp;
+            tableauProduits.innerHTML = tableauTemp;*/
 
 
 
 
-            var tableauCategories = document.getElementById("tableauCategories");
+          /*  var tableauCategories = document.getElementById("tableauCategories");
             var tableauTemp = '<h3>Tableau Catégories</h3>' +
                 '<table class="table">' +
                 '<thead class="thead-dark">'+
@@ -102,24 +98,19 @@ var VuePrincipale = (function()
                     '</tr>';
             }
             tableauTemp+= '</tbody></table>';
-            tableauCategories.innerHTML = tableauTemp;
+            tableauCategories.innerHTML = tableauTemp;*/
 
             var header = document.getElementById("header");
-             header.innerHTML = '<h1>Statistiques '+pays+'</h1><h2>'+listeStats[1].nb_categorie+' catégories, '+listeStats[2].nb_produit+' produits</h2>';
+             header.innerHTML = '<h1>Statistiques</h1><h2>Graphique par '+date+'</h2>';
 
-            var resume = document.getElementById("blocResume");
-            resume.innerHTML = '<h3>'+listeStats[0].benef+' $ de benefices</h3>';
 
             var menuDeroulant = document.getElementById("menuDeroulant");
            var variable = "<select name='menu_region' onchange='location = this.value;'>" +
-                "<option value='#'>Partout</option>" ;
-            for (i = 0; i< listePays.length; i++){
-                variable +=  "<option value='#"+listePays[i].region+"'" ;
-                    if (listePays[i].region === pays){
-                        variable+= " selected ";
-                    }
-                    variable += ">"+listePays[i].region+"</option>"
-            }
+                "<option value='annee'>Année</option>" +
+                "<option value='mois'>Mois</option>" +
+                "<option value='semaine'>Semaine</option>" +
+                "<option value='jour'>Jour</option>" ;
+
             variable+= "</select>";
             menuDeroulant.innerHTML = variable;
 
