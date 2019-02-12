@@ -71,16 +71,21 @@ if (($PSEUDO != null) && ($MDP != null)) {
 ?>
 <div class="row justify-content-center">
     <div class="col-12 col-md-8 col-lg-6 pb-5">
+
+        <div class="w3-third w3-container">
+            <img class="w3-center" src="../img/logo.png">
+        </div>
+
         <legend><?php echo _("Connexion à MarinaConnect"); ?></legend>
 
-        <form class="form-horizontal" action="connexion.php" method="post">
+        <form class="form-horizontal w3-padding-32" action="connexion.php" method="post">
             <div class="form-group">
-                <label class="control-label col-sm-2"><?php echo _("Mail:"); ?></label><br>
+                <label class="control-label col-sm-4"><?php echo _("Mail"); ?></label><br>
                 <input class="form-control" type="email" name="pseudo"/>
             </div>
 
             <div class="form-group">
-                <label class="control-label col-sm-2"><?php echo _("Mot de passe :"); ?> </label><br>
+                <label class="control-label col-sm-4"><?php echo _("Mot de passe"); ?> </label><br>
                 <input class="form-control" type="password" name="mot_de_passe"/>
             </div>
             <?php
@@ -88,12 +93,13 @@ if (($PSEUDO != null) && ($MDP != null)) {
                 echo $erreurs['mot_de_passe'];
             } ?>
 
-            <div class="form-group">
-                <input class="btn btn-default" type="submit" name="send" value="<?php echo _("Connexion"); ?>">
+            <div class="form-group w3-center">
+                <input class="btn btn-primary" type="submit" name="send" value="<?php echo _("Connexion"); ?>">
             </div>
+
         </form>
 
-        <a href="creerCompte.php"><?php echo _("Creer un compte..."); ?></a>
+        <a href="creerCompte.php"><?php echo _("Créer un compte"); ?></a>
     </div>
 </div>
 
