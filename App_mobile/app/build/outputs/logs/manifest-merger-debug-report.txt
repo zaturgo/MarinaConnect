@@ -4,33 +4,33 @@ ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\
 INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
 INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
 INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\61ab62981defda66a995b141ec9e6dcd\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6ed1a8c8c08aaf56baafdb6ed25b5c45\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\8e3db3099fbe29c4daaa13c8ffcfc9ef\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\15b9312ec9dd21c275249fa8d12809a0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\a4f1574a39c144084b39c7959c144833\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\2c4a899a972ed434a3b7609911f81760\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\231b50e3a99d22e45293be8e26f4a813\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\adb0f80e16cf8776f9859393d8649a2a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\7291fbc89d3ce29333ff7272530918a0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\e6dabd8045dc32641c680bda40ae3672\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\b6692609b8e1e8e9b666bb1a3846ea92\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\f47f2891d531c5d148216e8038bbe5b8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\bffb5d1a99bda34ecc9169434d2ede80\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\64d6d2058a62b824b5e72d749c3e9022\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\a91b78635d108413df6db35711705913\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\7b7920a97df254c8e6dd2f73fcb077a3\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\5622c6fa848b31031f3618bd9ad6206d\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\945157d08da0116a98daf03f90a26a80\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\222376a3e0ad26bbaacf47aea89e1adc\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\35b0c84a57aa804e6f79a879282b02aa\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\a176ce9b2c4bc0bcd2b29ea1fd05819a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\e8c727e029b8b7af2534b9bc066babd2\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\18987101c2f0e03ccd52983efe1c586a\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\87ae000bf2466f74dd9268d255f14d02\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\92412e29b07e17f79c5488d629f271c8\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\317cd3a3090930a723269f69807160c6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\1baf8a8dee9de8c6b51f64768c1ba2c8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\cfbfe8f86fedab1effed4872e958e76b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\36faabf2f24f8a863852e922e5d2da27\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\888f22419d97dacd576218a9a58ac86b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\79eb1bdaa99f6f5f487f88b29eb2b031\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\3f65bf50ae23173848b1dd5cd77f621d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\9ccdd7163c276eb0554ff58ff2f9a16b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\0719c6cac529dd0a568079c6fd03239b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\d1e78ec861bff8063ee026a7c05421b0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\9b2aeeed4be36ac6215c9d3f2e43e393\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\157fa8211bf88e335083df6d0cb1e07a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\9809b396de3d9e9d6382f8ecaab438d4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\6a45f450a2eaf76ff5d03c3282875376\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\d6132b1c80b3f2f9745492e9602b1251\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\dc2a067f81919c20de3d1088dfe463c3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\2408fc939f9948aabd75fdb371d55785\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\164596c0ed7af267040414304296e7f6\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\20a553e5f914543e18b234a570456115\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\008a000b159b9b85cbea58cc9017c502\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5e5056e5d15ed658e09cfe8b96c4d54f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bc42751f405e257e01a098ddbb8e54d7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\b11c9b4a5b4cb5ea40e92257c3ee2aab\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\5b9eb29ffeec2ce76fb6ce8e41c9a278\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\c8d3ed8a98f181bc25834226723fe9dc\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\9134aee82b8666cd260db76d6943beef\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\657935127c43e0191fed56379fc1205d\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\fbcfb4ba78b4cff8e171d5f37ab6a641\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\4c39ff987adf5ac50d777acf8e3747b0\AndroidManifest.xml:17:1-22:12
 INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
 INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
 INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
@@ -114,14 +114,14 @@ ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\
 		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:20:22-72
 application
 ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:22:5-36:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6ed1a8c8c08aaf56baafdb6ed25b5c45\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6ed1a8c8c08aaf56baafdb6ed25b5c45\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\7b7920a97df254c8e6dd2f73fcb077a3\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\7b7920a97df254c8e6dd2f73fcb077a3\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\5622c6fa848b31031f3618bd9ad6206d\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\5622c6fa848b31031f3618bd9ad6206d\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\36faabf2f24f8a863852e922e5d2da27\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\36faabf2f24f8a863852e922e5d2da27\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\164596c0ed7af267040414304296e7f6\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\164596c0ed7af267040414304296e7f6\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\20a553e5f914543e18b234a570456115\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\20a553e5f914543e18b234a570456115\AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\7b7920a97df254c8e6dd2f73fcb077a3\AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\164596c0ed7af267040414304296e7f6\AndroidManifest.xml:22:18-91
 	android:supportsRtl
 		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:27:9-35
 	android:label
@@ -152,60 +152,60 @@ uses-sdk
 INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\61ab62981defda66a995b141ec9e6dcd\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\61ab62981defda66a995b141ec9e6dcd\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6ed1a8c8c08aaf56baafdb6ed25b5c45\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6ed1a8c8c08aaf56baafdb6ed25b5c45\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\8e3db3099fbe29c4daaa13c8ffcfc9ef\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\8e3db3099fbe29c4daaa13c8ffcfc9ef\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\15b9312ec9dd21c275249fa8d12809a0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\15b9312ec9dd21c275249fa8d12809a0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\a4f1574a39c144084b39c7959c144833\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\a4f1574a39c144084b39c7959c144833\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\2c4a899a972ed434a3b7609911f81760\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\2c4a899a972ed434a3b7609911f81760\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\231b50e3a99d22e45293be8e26f4a813\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\231b50e3a99d22e45293be8e26f4a813\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\adb0f80e16cf8776f9859393d8649a2a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\adb0f80e16cf8776f9859393d8649a2a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\7291fbc89d3ce29333ff7272530918a0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\7291fbc89d3ce29333ff7272530918a0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\e6dabd8045dc32641c680bda40ae3672\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\e6dabd8045dc32641c680bda40ae3672\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\b6692609b8e1e8e9b666bb1a3846ea92\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\b6692609b8e1e8e9b666bb1a3846ea92\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\f47f2891d531c5d148216e8038bbe5b8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\f47f2891d531c5d148216e8038bbe5b8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\bffb5d1a99bda34ecc9169434d2ede80\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\bffb5d1a99bda34ecc9169434d2ede80\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\64d6d2058a62b824b5e72d749c3e9022\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\64d6d2058a62b824b5e72d749c3e9022\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\a91b78635d108413df6db35711705913\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\a91b78635d108413df6db35711705913\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\7b7920a97df254c8e6dd2f73fcb077a3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\7b7920a97df254c8e6dd2f73fcb077a3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\5622c6fa848b31031f3618bd9ad6206d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\5622c6fa848b31031f3618bd9ad6206d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\945157d08da0116a98daf03f90a26a80\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\945157d08da0116a98daf03f90a26a80\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\222376a3e0ad26bbaacf47aea89e1adc\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\222376a3e0ad26bbaacf47aea89e1adc\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\35b0c84a57aa804e6f79a879282b02aa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\35b0c84a57aa804e6f79a879282b02aa\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\a176ce9b2c4bc0bcd2b29ea1fd05819a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\a176ce9b2c4bc0bcd2b29ea1fd05819a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\e8c727e029b8b7af2534b9bc066babd2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\e8c727e029b8b7af2534b9bc066babd2\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\18987101c2f0e03ccd52983efe1c586a\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\18987101c2f0e03ccd52983efe1c586a\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\87ae000bf2466f74dd9268d255f14d02\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\87ae000bf2466f74dd9268d255f14d02\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\92412e29b07e17f79c5488d629f271c8\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\92412e29b07e17f79c5488d629f271c8\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\317cd3a3090930a723269f69807160c6\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\317cd3a3090930a723269f69807160c6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\1baf8a8dee9de8c6b51f64768c1ba2c8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\1baf8a8dee9de8c6b51f64768c1ba2c8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\cfbfe8f86fedab1effed4872e958e76b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\cfbfe8f86fedab1effed4872e958e76b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\36faabf2f24f8a863852e922e5d2da27\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\36faabf2f24f8a863852e922e5d2da27\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\888f22419d97dacd576218a9a58ac86b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\888f22419d97dacd576218a9a58ac86b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\79eb1bdaa99f6f5f487f88b29eb2b031\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\79eb1bdaa99f6f5f487f88b29eb2b031\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\3f65bf50ae23173848b1dd5cd77f621d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\3f65bf50ae23173848b1dd5cd77f621d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\9ccdd7163c276eb0554ff58ff2f9a16b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\9ccdd7163c276eb0554ff58ff2f9a16b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\0719c6cac529dd0a568079c6fd03239b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\0719c6cac529dd0a568079c6fd03239b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\d1e78ec861bff8063ee026a7c05421b0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\d1e78ec861bff8063ee026a7c05421b0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\9b2aeeed4be36ac6215c9d3f2e43e393\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\9b2aeeed4be36ac6215c9d3f2e43e393\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\157fa8211bf88e335083df6d0cb1e07a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\157fa8211bf88e335083df6d0cb1e07a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\9809b396de3d9e9d6382f8ecaab438d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\9809b396de3d9e9d6382f8ecaab438d4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\6a45f450a2eaf76ff5d03c3282875376\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\6a45f450a2eaf76ff5d03c3282875376\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\d6132b1c80b3f2f9745492e9602b1251\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\d6132b1c80b3f2f9745492e9602b1251\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\dc2a067f81919c20de3d1088dfe463c3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\dc2a067f81919c20de3d1088dfe463c3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\2408fc939f9948aabd75fdb371d55785\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\2408fc939f9948aabd75fdb371d55785\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\164596c0ed7af267040414304296e7f6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\164596c0ed7af267040414304296e7f6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\20a553e5f914543e18b234a570456115\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\20a553e5f914543e18b234a570456115\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\008a000b159b9b85cbea58cc9017c502\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\008a000b159b9b85cbea58cc9017c502\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5e5056e5d15ed658e09cfe8b96c4d54f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5e5056e5d15ed658e09cfe8b96c4d54f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bc42751f405e257e01a098ddbb8e54d7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bc42751f405e257e01a098ddbb8e54d7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\b11c9b4a5b4cb5ea40e92257c3ee2aab\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\b11c9b4a5b4cb5ea40e92257c3ee2aab\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\5b9eb29ffeec2ce76fb6ce8e41c9a278\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\5b9eb29ffeec2ce76fb6ce8e41c9a278\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\c8d3ed8a98f181bc25834226723fe9dc\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\c8d3ed8a98f181bc25834226723fe9dc\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\9134aee82b8666cd260db76d6943beef\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\9134aee82b8666cd260db76d6943beef\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\657935127c43e0191fed56379fc1205d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\657935127c43e0191fed56379fc1205d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\fbcfb4ba78b4cff8e171d5f37ab6a641\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\fbcfb4ba78b4cff8e171d5f37ab6a641\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\4c39ff987adf5ac50d777acf8e3747b0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\4c39ff987adf5ac50d777acf8e3747b0\AndroidManifest.xml:20:5-44
 INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
