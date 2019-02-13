@@ -11,22 +11,28 @@
     };
 
     this.naviguer = function () {
+        Loader();
         var hash = window.location.hash;
 
         if (!hash) {
             var vueHome = new VueHome();
             vueHome.afficher();
 
-        }else if (hash.match(/^#marinas/)) {
-
+        } else if (hash.match(/^#marinas/)) {
+            Loader();
             var vueMap = new VueMap();
             vueMap.afficher();
 
-        }else if (hash.match(/^#settings/)) {
+        } else if (hash.match(/^#settings/)) {
 
-        }else if (hash.match(/^#contact/)) {
+        } else if (hash.match(/^#contact/)) {
 
-        }else if (hash.match(/^#marina\/([0-9]+)/)) {
+        } else if (hash.match(/^#marina\/([0-9]+)/)) {
+            var idMarina = 1;
+            //appelle bdd pour info de la marina
+
+            var vueDetail = new VueDetail();
+            vueDetail.afficher();
 
         }
     };
