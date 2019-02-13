@@ -69,10 +69,9 @@
             <img class="w3-padding-64 w3-center" src="../img/peche.png">
         </div>
     </div>
-    <div class="w3-row w3-padding-64">
-        <div class="w3-twothird w3-container">
-            <h1 class="w3-text-teal">Informations complémentaires:</h1>
-            <br>
+    <div class="w3-row">
+        <div class="w3-container">
+            <h1 class="w3-text-teal">Informations complémentaires</h1>
             <p>
                 <a href="http://rivierematane.com">Site de la rivière Matane</a>, expliquant toutes les modalités nécessaires</br>
                 <a href="https://www.pac.dfo-mpo.gc.ca/fm-gp/rec/licence-permis/index-fra.html">Informations sur le permis de pêche</a>, site du gouvernement Canadien</br>

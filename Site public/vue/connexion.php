@@ -72,11 +72,12 @@ if (($PSEUDO != null) && ($MDP != null)) {
 <div class="row justify-content-center">
     <div class="col-12 col-md-8 col-lg-6 pb-5">
 
-        <div class="w3-third w3-container">
-            <img class="w3-center" src="../img/logo.png">
+        <div class="w3-center w3-container">
+            <img class="w3-center" src="../img/marina.png">
         </div>
 
-        <legend><?php echo _("Connexion à MarinaConnect"); ?></legend>
+
+        <legend align="center"><?php echo _("Se connecter avec son compte"); ?></legend>
 
         <form class="form-horizontal w3-padding-32" action="connexion.php" method="post">
             <div class="form-group">
@@ -99,7 +100,7 @@ if (($PSEUDO != null) && ($MDP != null)) {
 
         </form>
 
-        <a href="creerCompte.php"><?php echo _("Créer un compte"); ?></a>
+        <a href="creerCompte.php"><?php echo _("Ou créer un compte"); ?></a>
     </div>
 </div>
 
