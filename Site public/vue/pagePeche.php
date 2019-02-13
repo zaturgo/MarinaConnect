@@ -45,7 +45,7 @@
 <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
 <div class="w3-main" style="margin-left:250px; height:100%;">
     <div style="min-height:94.5%;">
-    <div class="w3-row w3-padding-32">
+    <div class="w3-row w3-padding-64">
         <div class="w3-twothird w3-container">
             <h1 class="w3-text-teal">La rivière Matane, paradis pour pêcheurs</h1>
 

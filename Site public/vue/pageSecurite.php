@@ -59,9 +59,9 @@
             <img class="w3-padding-16 w3-center" src="../img/secu.jpg">
         </div>
     </div>
-    <div class="w3-row w3-padding-64 w3-margin-bottom">
+    <div class="w3-row w3-padding-32 w3-margin-bottom">
         <div class="w3-twothird w3-container">
-            <h1 class="w3-text-teal">En savoir plus:</h1>
+            <h1 class="w3-text-teal">En savoir plus</h1>
             <br><a href = "https://www.tc.gc.ca/media/documents/securitemaritime/TP-511f.pdf">Guide de sécurité nautique</a>, contenant tout ce qu'il faut avoir sur la voile</br>
             <a href = "https://www.sportsexperts.ca/fr-CA/plein-air/equipements/nautique/vfi-veste-flottaison-individuel">Fournitures</a>, disponibles sur Sports Experts</br>
             <a href = "https://www.tc.gc.ca/fra/quebec/securitemaritime-plaisance-2061.htm">Conseils</a>, du gouvernement Canadien</br>

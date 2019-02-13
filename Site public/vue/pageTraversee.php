@@ -62,7 +62,7 @@
             <img class="w3-padding-32 w3-center" src="../img/bato.png">
         </div>
     </div>
-    <div class="w3-row w3-padding-64 w3-margin-bottom">
+    <div class="w3-row w3-padding-16 w3-margin-bottom">
         <div class="w3-twothird w3-container">
             <h1 class="w3-text-teal">Informations complémentaires</h1>
             <p><b>Réservations :</b> Une réservation est recommandée pour les conducteurs de véhicule et les groupes de 15 personnes ou plus.</br>
