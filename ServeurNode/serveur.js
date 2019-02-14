@@ -22,12 +22,14 @@ app.get('/', (req, res) => {
 });
 
 let routesHumidites =require('./api/route/routesHumidite');
+let routesPression =require('./api/route/routesPression');
 
 app.get('/', (req, res) => {
     return res.status(200).send('Vous êtes bien connecté au serveur');
 });
 
 routesHumidites(app);
+routesPression(app);
 
 app.listen(8085);
 console.log('Le serveur tourne sur le port ', 8085);

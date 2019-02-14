@@ -15,14 +15,14 @@ module.exports = function(app) {
 });
 
 	app.get('/humidites/mois' , (req, res) => {
-        console.log('Routage humidite : get toutes les humidites jour');
+        console.log('Routage humidite : get toutes les humidites mois');
        return controleurHumidite.listerHumiteMois(req, res);
 });
 
 
 
 	app.get('/humidites/annee' , (req, res) => {
-        console.log('Routage humidite : get toutes les humidites jour');
+        console.log('Routage humidite : get toutes les humidites Annee');
        return controleurHumidite.listerHumiteAnnee(req, res);
 });
 
