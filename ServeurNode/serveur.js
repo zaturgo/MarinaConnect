@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
 
 let routesHumidites =require('./api/route/routesHumidite');
 let routesPression =require('./api/route/routesPression');
+let routesTemperature =require('./api/route/routesTemperature');
 
 app.get('/', (req, res) => {
     return res.status(200).send('Vous êtes bien connecté au serveur');
@@ -30,6 +31,7 @@ app.get('/', (req, res) => {
 
 routesHumidites(app);
 routesPression(app);
+routesTemperature(app);
 
 app.listen(8085);
 console.log('Le serveur tourne sur le port ', 8085);
