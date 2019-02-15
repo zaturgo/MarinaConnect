@@ -19,7 +19,7 @@
 
 <script type="text/javascript">
     function initMap() {
-        
+
         var latlng = new google.maps.LatLng(46.718021, 1.808943);
         var myOptions = {
             zoom: 5,
@@ -114,7 +114,7 @@
             <option>Jours</option>
         </select>
     </div>
-    <canvas id="canva" width="400" height="400"></canvas>
+    <div id="graph"></div>
 </script>
 
 <script type="text/html" id="page-settings">
@@ -145,6 +145,8 @@
 <script src="action/vue/VueMap.js"></script>
 
 <script src="action/application.js"></script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <script>initialiser()</script>
 
