@@ -1,8 +1,8 @@
 (function () {
     Loader();
     var instance = this;
-
     this.initialiser = function () {
+        this.donneeDAO = new DonneeDAO();
         // DAO init
 
         window.addEventListener("hashchange", naviguer);
@@ -31,6 +31,7 @@
             var idMarina = 1;
             //appelle bdd pour info de la marina
 
+            donneeDAO.listerHumidites();
             var vueDetail = new VueDetail();
             vueDetail.afficher();
 
