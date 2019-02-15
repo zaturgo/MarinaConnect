@@ -3,7 +3,14 @@ var VueDetail = (function () {
 
     return function () {
         var chart;
-        this.afficher = function(){
+        this.afficher = function(donnees, id){
+
+            for (let i = 0; i < donnees.length; i++) {
+                if (donnes[i].id == id){
+                    
+                }
+            }
+
 
             document.getElementById("container").innerHTML = pageDetail;
             //var ctx = document.getElementById('myChart').getContext('2d');

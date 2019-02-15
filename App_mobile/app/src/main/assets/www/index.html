@@ -18,13 +18,8 @@
 <body>
 
 <script type="text/javascript">
-    var labels = 'zz';
-    var labelIndex = 0;
-
-    var marseille;
-
     function initMap() {
-        marseille = new google.maps.LatLng(43.350160, 5.332140);
+        
         var latlng = new google.maps.LatLng(46.718021, 1.808943);
         var myOptions = {
             zoom: 5,
@@ -35,42 +30,8 @@
         var map = new google.maps.Map(document.getElementById("map"),
             myOptions);
 
-        google.maps.event.addListener(map, 'click', function (event) {
-            addMarker(event.latLng, map);
-        });
-
-        // Add a marker at the center of the map.
-        addMarker(map);
+        return map;
     }
-
-    // Adds a marker to the map.
-    function addMarker(map) {
-        var contentString = '<div id="content">' +
-            '<div id="siteNotice">' +
-            '</div>' +
-            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>' +
-            '<div id="bodyContent">' +
-            '<p><b>Tabernouche la pinouche</b> wouah</p>' +
-            '<p>Teste lien mon gars : <a href="#marina/1">' +
-            'Click ici</a></p>' +
-            '</div>' +
-            '</div>';
-
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString
-        });
-
-        var marker = new google.maps.Marker({
-            position: marseille,
-            map: map,
-            title: 'Uluru (Ayers Rock)'
-        });
-        marker.addListener('click', function () {
-            infowindow.open(map, marker);
-        });
-
-    }
-
 </script>
 
 <div id="header">

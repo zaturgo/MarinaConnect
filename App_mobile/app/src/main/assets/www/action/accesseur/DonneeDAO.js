@@ -1,6 +1,6 @@
 var DonneeDAO = function () {
 
-    this.listerHumidites = function lister() {
+    this.listerHumidites = function lister(callback) {
         console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + "humidites";
@@ -11,6 +11,7 @@ var DonneeDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 console.log(this.responseText);
+                callback(this.responseText);
             }
         });
 
@@ -19,7 +20,7 @@ var DonneeDAO = function () {
 
         xhr.send(data);
     };
-    this.listerPression = function lister() {
+    this.listerPression = function lister(callback) {
         console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + "pression";
@@ -39,7 +40,7 @@ var DonneeDAO = function () {
 
         xhr.send(data);
     };
-    this.listerTemperature = function lister() {
+    this.listerTemperature = function lister(callback) {
         console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + "temperatures";
@@ -51,6 +52,7 @@ var DonneeDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 console.log(this.responseText);
+                callback(this.responseText);
             }
         });
 
@@ -59,7 +61,7 @@ var DonneeDAO = function () {
 
         xhr.send(data);
     };
-    this.listerMarina = function lister() {
+    this.listerMarina = function lister(callback) {
         console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + "marina";
@@ -70,7 +72,8 @@ var DonneeDAO = function () {
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                console.log(this.responseText);
+                //console.log(this.responseText);
+                callback(this.responseText)
             }
         });
 
