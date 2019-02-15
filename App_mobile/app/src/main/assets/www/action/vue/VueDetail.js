@@ -3,14 +3,18 @@ var VueDetail = (function () {
 
     return function () {
         var chart;
+        var humidites = [];
+        var humiditesVal = [];
         this.afficher = function(donnees, id){
+            console.log("ID : "+id)
 
             for (let i = 0; i < donnees.length; i++) {
-                if (donnes[i].id == id){
-                    
+                console.log(donnees[i].idmarina);
+                if (donnees[i].idmarina == id){
+                    humidites.push(donnees[i])
+                    humiditesVal.push(donnees[i].valeur)
                 }
             }
-
 
             document.getElementById("container").innerHTML = pageDetail;
             //var ctx = document.getElementById('myChart').getContext('2d');
@@ -22,8 +26,7 @@ var VueDetail = (function () {
                     borderColor: 'rgb(255, 50, 0)',
                     backgroundColor:  'rgb(255, 50, 50)',
                     fill: false,
-                    data: [-5,0,5,10,15,20,25
-                    ],
+                    data: humiditesVal,
                     yAxisID: 'y-axis-1',
                 }, {
                     label: 'Pression',

@@ -1,10 +1,11 @@
 (function () {
     Loader();
     var instance = this;
-    var map;
+    var idMarina;
     this.initialiser = function () {
         this.donneeDAO = new DonneeDAO();
 
+        idMarina = 0;
         window.addEventListener("hashchange", naviguer);
 
         this.naviguer();
@@ -28,7 +29,9 @@
         } else if (hash.match(/^#contact/)) {
 
         } else if (hash.match(/^#marina\/([0-9]+)/)) {
-            var id = hash;
+            var navigation = hash.match(/^#marina\/([0-9]+)/);
+            idMarina= navigation[1];
+
             donneeDAO.listerHumidites(callbackHumidite);
         }
     };
@@ -36,7 +39,7 @@
     var callbackHumidite = function callbackHumidite(result) {
         var donnees = JSON.parse(result).humidites;
         var vueDetail = new VueDetail();
-        vueDetail.afficher(donnees);
+        vueDetail.afficher(donnees,idMarina);
     };
 
     var callbackMarina = function (result) {

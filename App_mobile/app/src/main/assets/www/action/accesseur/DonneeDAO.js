@@ -10,7 +10,7 @@ var DonneeDAO = function () {
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                console.log(this.responseText);
+                //console.log(this.responseText);
                 callback(this.responseText);
             }
         });
@@ -31,7 +31,7 @@ var DonneeDAO = function () {
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                console.log(this.responseText);
+                //console.log(this.responseText);
             }
         });
 
@@ -51,7 +51,7 @@ var DonneeDAO = function () {
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                console.log(this.responseText);
+                //console.log(this.responseText);
                 callback(this.responseText);
             }
         });
