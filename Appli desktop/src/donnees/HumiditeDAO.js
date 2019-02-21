@@ -1,6 +1,6 @@
 var HumiditeDAO = function () {
 
-    this.lister =async function (callBackHumidite, pays) {
+    this.lister =async function (callBackHumidite, date) {
         let url;
             console.log(date);
             url = API_URL+'/humidites/'+date;
