@@ -18,8 +18,8 @@ var PressionDAO = function () {
                     let str = JSON.stringify(response);
                     let json = JSON.parse(str);
                     listePression= [];
-                    for (var i = 0; i < json.stats.length; i++) {
-                        var ligne = json.stats[i];
+                    for (var i = 0; i < json.pression.length; i++) {
+                        var ligne = json.pression[i];
                         listePression.push(new Pression(ligne.id,ligne.valeur ,ligne.date ,ligne.idmarina));
                     }
 

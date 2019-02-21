@@ -18,8 +18,8 @@ var HumiditeDAO = function () {
                     let str = JSON.stringify(response);
                     let json = JSON.parse(str);
                     listeHumidite= [];
-                    for (var i = 0; i < json.stats.length; i++) {
-                        var ligne = json.stats[i];
+                    for (var i = 0; i < json.humidites.length; i++) {
+                        var ligne = json.humidites[i];
                         listeHumidite.push(new Humidite(ligne.id,ligne.valeur ,ligne.date ,ligne.idmarina));
                     }
 

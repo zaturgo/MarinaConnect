@@ -3,7 +3,7 @@ var TemperatureDAO = function () {
     this.lister =async function (callBackTemperature, date) {
         let url;
         console.log(date);
-        url = API_URL+'/temperature/'+date;
+        url = API_URL+'/temperatures/'+date;
 
         fetch(url, {
             method: 'GET',
@@ -18,8 +18,8 @@ var TemperatureDAO = function () {
                     let str = JSON.stringify(response);
                     let json = JSON.parse(str);
                     listeTemperature= [];
-                    for (var i = 0; i < json.stats.length; i++) {
-                        var ligne = json.stats[i];
+                    for (var i = 0; i < json.temperature.length; i++) {
+                        var ligne = json.temperature[i];
                         listeTemperature.push(new Temperature(ligne.id,ligne.valeur ,ligne.date ,ligne.idmarina));
                     }
 
