@@ -62,14 +62,14 @@ var VuePrincipale = (function()
             var lineChartData = {
                 labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre','Octobre','Novembre','Decembre'],
                 datasets: [{
-                    label: 'Températures',
+                    label: 'Température (°C)',
                     borderColor: "rgb(205,92,92)",
                     backgroundColor: "rgb(219,112,147)",
                     fill: false,
                     yAxisID: 'y-axis-1',
                     data: valTemp
                 }, {
-                    label: 'Humidités',
+                    label: 'Humidité (%)',
                     borderColor: "rgb(176,196,222)",
                     backgroundColor: "rgb(135,206,250)",
                     fill: false,
@@ -88,21 +88,26 @@ var VuePrincipale = (function()
                     responsive: true,
                     hoverMode: 'index',
                     stacked: false,
-                    title: {
-                        display: true,
-                        text: 'Graphique de température et d\'humidité'
-                    },
                     scales: {
                         yAxes: [{
                             type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
                             display: true,
                             position: 'left',
                             id: 'y-axis-1',
+                            ticks: {
+                                fontColor: "rgb(205,92,92)", // this here
+                                fontSize:18,
+
+                            },
                         }, {
                             type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
                             display: true,
                             position: 'right',
                             id: 'y-axis-2',
+                            ticks: {
+                                fontColor: "rgb(176,196,222)", // this here
+                                fontSize:18,
+                            },
 
                             // grid line settings
                             gridLines: {
