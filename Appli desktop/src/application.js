@@ -4,7 +4,7 @@
     this.listeTemperature = [];
     this.date = "annee";
 
-    window.API_URL = "http://54.39.145.59:8080";
+    window.API_URL = "http://54.39.145.59:8085";
 
     var initialiser = function () {
         this.humiditeDAO = new HumiditeDAO();
