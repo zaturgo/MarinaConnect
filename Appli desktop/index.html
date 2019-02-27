@@ -12,7 +12,10 @@
 <div id="menuDeroulant" class="text-center"></div>
     <div id="header" class="text-center"><h1>Statistiques</h1><h2>Graphique du X</h2></div>
     <div id="controles"></div>
-    <div id="graphique"></div>
+    <div id="graphique">
+        <canvas id="myChart"></canvas>
+
+</div>
 </div>
 
     </script>
@@ -22,6 +25,7 @@
 
 <!--import fichiers vue-->
 <script src="src/vue/VuePrincipale.js"></script>
+<script src="src/vue/VueErreur.js"></script>
 
 <!--import dao-->
 <script src="src/donnees/TemperatureDAO.js"></script>
@@ -35,4 +39,8 @@
 
 <!--import projet-->
 <script src="src/application.js"></script>
+
+<!--import lib-->
+<script src="libs/Chart.js"></script>
+
 

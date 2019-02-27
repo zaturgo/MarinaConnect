@@ -1,21 +1,86 @@
-var DonneeDAO = (function () {
+var DonneeDAO = function () {
 
-    this.lister = function lister (callback) {
-        var url = API_URL + "/AZERTY";
+    this.listerHumidites = function lister(callback) {
+        console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
 
-        var request = new XMLHttpRequest();
-        request.withCredentials = true;
+        var url = API_MOBILE_URL + "humidites";
 
-        request.addEventListener("readystatechange", function () {
-            if (request.readyState == 4 && request.status == 200) {
-                callback(request.responseText);
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                //console.log(this.responseText);
+                callback(this.responseText);
             }
         });
 
-        request.open("GET", url);
-        request.setRequestHeader("authentification", "paul");
-        request.setRequestHeader("Content-Type", "application/json");
+        xhr.open("GET", url,true);
+        xhr.setRequestHeader("Content-Type", "application/json");
 
-        request.send(null);
+        xhr.send(data);
     };
-})();
+    this.listerPression = function lister(callback) {
+        console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
+
+        var url = API_MOBILE_URL + "pression";
+
+        var data = null;
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                //console.log(this.responseText);
+            }
+        });
+
+        xhr.open("GET", url,true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
+    this.listerTemperature = function lister(callback) {
+        console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
+
+        var url = API_MOBILE_URL + "temperatures";
+
+        var data = null;
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                //console.log(this.responseText);
+                callback(this.responseText);
+            }
+        });
+
+        xhr.open("GET", url,true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
+    this.listerMarina = function lister(callback) {
+        console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
+
+        var url = API_MOBILE_URL + "marina";
+
+        var data = null;
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                //console.log(this.responseText);
+                callback(this.responseText)
+            }
+        });
+
+        xhr.open("GET", url,true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
+
+};

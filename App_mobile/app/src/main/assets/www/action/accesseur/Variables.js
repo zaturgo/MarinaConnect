@@ -1,1 +1,1 @@
-let API_URL = '';
+const API_MOBILE_URL = "http://54.39.145.59:8085/";

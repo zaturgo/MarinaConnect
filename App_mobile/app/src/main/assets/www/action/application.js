@@ -1,10 +1,11 @@
 (function () {
     Loader();
     var instance = this;
-
+    var idMarina;
     this.initialiser = function () {
-        // DAO init
+        this.donneeDAO = new DonneeDAO();
 
+        idMarina = 0;
         window.addEventListener("hashchange", naviguer);
 
         this.naviguer();
@@ -20,33 +21,33 @@
 
         } else if (hash.match(/^#marinas/)) {
             Loader();
-            var vueMap = new VueMap();
-            vueMap.afficher();
+
+            donneeDAO.listerMarina(callbackMarina);
 
         } else if (hash.match(/^#settings/)) {
 
         } else if (hash.match(/^#contact/)) {
 
         } else if (hash.match(/^#marina\/([0-9]+)/)) {
-            var idMarina = 1;
-            //appelle bdd pour info de la marina
+            var navigation = hash.match(/^#marina\/([0-9]+)/);
+            idMarina= navigation[1];
 
-            var vueDetail = new VueDetail();
-            vueDetail.afficher();
-
+            donneeDAO.listerHumidites(callbackHumidite);
         }
     };
 
-    var actionEnregistrerLivre = function (livre) {
-        console.log(livre);
-        this.livreDAO.ajouterLivre(livre);
-        naviguerAccueil();
+    var callbackHumidite = function callbackHumidite(result) {
+        var donnees = JSON.parse(result).humidites;
+        var vueDetail = new VueDetail();
+        vueDetail.afficher(donnees,idMarina);
     };
 
-    var actionModifierLivre = function (livre) {
-        console.log(livre);
-        this.livreDAO.modifierLivre(livre);
-        naviguerAccueil();
+    var callbackMarina = function (result) {
+        var marinas = JSON.parse(result).marina;
+        console.log("Marina : "+marinas);
+
+        var vueMap = new VueMap();
+        vueMap.afficher(marinas);
     };
 
     var naviguerAccueil = function () {
