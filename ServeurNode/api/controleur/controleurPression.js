@@ -26,6 +26,17 @@ exports.listerPressionJour = async function(requete, reponse) {
     }
 }
 
+  
+exports.listerPressionSemaine = async function(requete, reponse) {
+    try {
+        const { rows : pression } = await pressionDAO.listerPressionSemaine();
+        return reponse.status(200).send({ pression });
+    } catch(error) {
+        console.log(error);
+        return reponse.status(400).send(error);
+    }
+}
+
 exports.listerPressionMois = async function(requete, reponse) {
     try {
         const { rows : pression } = await pressionDAO.listerPressionMois();

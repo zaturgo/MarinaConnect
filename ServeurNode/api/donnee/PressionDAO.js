@@ -11,9 +11,14 @@ exports.listerPression = async function() {
 }
 
 
-
 exports.listerPressionJour = async function() {
     const SELECT_TOUTES_LES_PRESSIONS = 'SELECT * FROM pression where date >= DATE(NOW() + INTERVAL \'-1 day\');';
+    return await baseDeDonnees.query(SELECT_TOUTES_LES_PRESSIONS);
+}
+
+
+exports.listerPressionSemaine = async function() {
+    const SELECT_TOUTES_LES_PRESSIONS = 'SELECT * FROM pression where date >= DATE(NOW() + INTERVAL \'-7 day\');';
     return await baseDeDonnees.query(SELECT_TOUTES_LES_PRESSIONS);
 }
 

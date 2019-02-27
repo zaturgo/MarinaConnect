@@ -11,9 +11,14 @@ exports.listerTemperature = async function() {
 }
 
 
-
 exports.listerTemperatureJour = async function() {
     const SELECT_TOUTES_LES_TEMPERATURES = 'SELECT * FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 day\');';
+    return await baseDeDonnees.query(SELECT_TOUTES_LES_TEMPERATURES);
+}
+
+
+exports.listerTemperatureSemaine = async function() {
+    const SELECT_TOUTES_LES_TEMPERATURES = 'SELECT * FROM temperature where date >= DATE(NOW() + INTERVAL \'-7 day\');';
     return await baseDeDonnees.query(SELECT_TOUTES_LES_TEMPERATURES);
 }
 

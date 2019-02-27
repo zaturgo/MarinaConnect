@@ -15,10 +15,21 @@ exports.listerHumite = async function(requete, reponse) {
         return reponse.status(400).send(error);
     }
 }
-   
+
 exports.listerHumiteJour = async function(requete, reponse) {
     try {
         const { rows : humidites } = await humiditeDAO.listerHumiditeJour();
+        return reponse.status(200).send({ humidites });
+    } catch(error) {
+        console.log(error);
+        return reponse.status(400).send(error);
+    }
+}
+
+  
+exports.listerHumiteSemaine = async function(requete, reponse) {
+    try {
+        const { rows : humidites } = await humiditeDAO.listerHumiditeSemaine();
         return reponse.status(200).send({ humidites });
     } catch(error) {
         console.log(error);
