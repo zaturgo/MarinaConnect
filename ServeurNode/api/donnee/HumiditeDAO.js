@@ -11,9 +11,14 @@ exports.listerHumidite = async function() {
 }
 
 
-
 exports.listerHumiditeJour = async function() {
     const SELECT_TOUTES_LES_HUMIDITES = 'SELECT * FROM humidite where date >= DATE(NOW() + INTERVAL \'-1 day\');';
+    return await baseDeDonnees.query(SELECT_TOUTES_LES_HUMIDITES);
+}
+
+
+exports.listerHumiditeSemaine = async function() {
+    const SELECT_TOUTES_LES_HUMIDITES = 'SELECT * FROM humidite where date >= DATE(NOW() + INTERVAL \'-7 day\');';
     return await baseDeDonnees.query(SELECT_TOUTES_LES_HUMIDITES);
 }
 
