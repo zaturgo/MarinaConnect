@@ -2,8 +2,16 @@
     Loader();
     var instance = this;
     var idMarina;
+
+    var donneeHumidite;
+    var donneeTemp;
+    var donneePression;
+
     this.initialiser = function () {
-        this.donneeDAO = new DonneeDAO();
+        this.marinaDAO = new MarinaDAO();
+        this.humiditesDAO = new HumiditesDAO();
+        this.pressionDAO = new PressionDAO();
+        this.temperatureDAO = new TemperatureDAO();
 
         idMarina = 0;
         window.addEventListener("hashchange", naviguer);
@@ -13,6 +21,7 @@
 
     this.naviguer = function () {
         Loader();
+
         var hash = window.location.hash;
 
         if (!hash) {
@@ -22,7 +31,7 @@
         } else if (hash.match(/^#marinas/)) {
             Loader();
 
-            donneeDAO.listerMarina(callbackMarina);
+            marinaDAO.listerMarina(callbackMarina);
 
         } else if (hash.match(/^#settings/)) {
 
@@ -32,14 +41,29 @@
             var navigation = hash.match(/^#marina\/([0-9]+)/);
             idMarina= navigation[1];
 
-            donneeDAO.listerHumidites(callbackHumidite);
+            //humiditesDAO.listerHumiditesAnnee(callbackHumidite);
+            humiditesDAO.listerHumiditesAnnee(callbackHumidite);
         }
     };
 
     var callbackHumidite = function callbackHumidite(result) {
-        var donnees = JSON.parse(result).humidites;
-        var vueDetail = new VueDetail();
-        vueDetail.afficher(donnees,idMarina);
+        donneeHumidite = JSON.parse(result).humidites;
+
+        temperatureDAO.listerTemperatureAnnee(callbackTemperature);
+
+    };
+
+    var callbackTemperature = function (result) {
+        donneeTemp = JSON.parse(result).temperatures;
+
+        pressionDAO.listerPressionAnnee(callbackPression);
+    };
+
+    var callbackPression = function (result) {
+        donneePression = JSON.parse(result).pressions;
+
+        var vueDetail = new VueDetail(donneeHumidite, donneeTemp, donneePression, idMarina);
+        vueDetail.afficher();
     };
 
     var callbackMarina = function (result) {
@@ -49,6 +73,8 @@
         var vueMap = new VueMap();
         vueMap.afficher(marinas);
     };
+
+
 
     var naviguerAccueil = function () {
         window.location.hash = "";
