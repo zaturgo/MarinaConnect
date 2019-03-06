@@ -2,17 +2,38 @@ var VueDetail = (function () {
     var pageDetail = document.getElementById("page-detail").innerHTML;
 
     return function () {
-        var chart;
+
         var humidites = [];
         var humiditesVal = [];
-        this.afficher = function(donnees, id){
-            console.log("ID : "+id)
 
-            for (let i = 0; i < donnees.length; i++) {
-                console.log(donnees[i].idmarina);
-                if (donnees[i].idmarina == id){
-                    humidites.push(donnees[i]);
-                    humiditesVal.push([new Date(donnees[i].date),donnees[i].valeur])
+        var temp = [];
+        var tempVal = [];
+
+        var pression = [];
+        var pressionVal = [];
+
+        this.afficher = function(donneesHumidites, donneesTemp, donneesPression, id){
+            console.log("ID marina : "+id)
+
+            for (let i = 0; i < donneesHumidites.length; i++) {
+                console.log(donneesHumidites[i].idmarina);
+                if (donneesHumidites[i].idmarina == id){
+                    humidites.push(donneesHumidites[i]);
+                    humiditesVal.push([new Date(donneesHumidites[i].date),donneesHumidites[i].valeur])
+                }
+            }
+            for (let i = 0; i < donneesTemp.length; i++) {
+                console.log(donneesTemp[i].idmarina);
+                if (donneesTemp[i].idmarina == id){
+                    temp.push(donneesTemp[i]);
+                    tempVal.push([new Date(donneesTemp[i].date),donneesTemp[i].valeur])
+                }
+            }
+            for (let i = 0; i < donneesPression.length; i++) {
+                console.log(donneesPression[i].idmarina);
+                if (donneesPression[i].idmarina == id){
+                    pression.push(donneesPression[i]);
+                    pressionVal.push([new Date(donneesPression[i].date),donneesPression[i].valeur])
                 }
             }
 
@@ -23,25 +44,26 @@ var VueDetail = (function () {
             google.charts.setOnLoadCallback(drawBasic);
 
             function drawBasic() {
+                // HUMIDITES
 
-                var data = new google.visualization.DataTable();
-                data.addColumn('date', 'X');
-                data.addColumn('number', 'degre celsus');
+                var dataHumidites = new google.visualization.DataTable();
+                dataHumidites.addColumn('date', 'X');
+                dataHumidites.addColumn('number', '%');
 
-                data.addRows(humiditesVal);
+                dataHumidites.addRows(humiditesVal);
 
-                var options = {
+                var optionsHumidites = {
                     hAxis: {
-                        title: 'Time'
+                        title: 'Temps'
                     },
                     vAxis: {
-                        title: 'Température'
+                        title: 'Humidités'
                     }
                 };
 
-                var chart = new google.visualization.LineChart(document.getElementById('graph'));
+                var charthumidites = new google.visualization.LineChart(document.getElementById('graphHumidites'));
 
-                chart.draw(data, options);
+                charthumidites.draw(dataHumidites, optionsHumidites);
             }
         }
     }
