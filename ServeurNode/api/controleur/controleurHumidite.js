@@ -8,7 +8,7 @@ var humiditeDAO = require('../donnee/HumiditeDAO');
  */ 
 exports.listerHumite = async function(requete, reponse) {
     try {
-        const { rows : humidites } = await humiditeDAO.listerHumidite();
+        const { rows : humidites } = await humiditeDAO.listerHumidite(requete);
         return reponse.status(200).send({ humidites });
     } catch(error) {
         console.log(error);
@@ -18,7 +18,7 @@ exports.listerHumite = async function(requete, reponse) {
 
 exports.listerHumiteJour = async function(requete, reponse) {
     try {
-        const { rows : humidites } = await humiditeDAO.listerHumiditeJour();
+        const { rows : humidites } = await humiditeDAO.listerHumiditeJour(requete);
         return reponse.status(200).send({ humidites });
     } catch(error) {
         console.log(error);
@@ -29,7 +29,7 @@ exports.listerHumiteJour = async function(requete, reponse) {
   
 exports.listerHumiteSemaine = async function(requete, reponse) {
     try {
-        const { rows : humidites } = await humiditeDAO.listerHumiditeSemaine();
+        const { rows : humidites } = await humiditeDAO.listerHumiditeSemaine(requete);
         return reponse.status(200).send({ humidites });
     } catch(error) {
         console.log(error);
@@ -39,7 +39,7 @@ exports.listerHumiteSemaine = async function(requete, reponse) {
 
 exports.listerHumiteMois = async function(requete, reponse) {
     try {
-        const { rows : humidites } = await humiditeDAO.listerHumiditeMois();
+        const { rows : humidites } = await humiditeDAO.listerHumiditeMois(requete);
         return reponse.status(200).send({ humidites });
     } catch(error) {
         console.log(error);
@@ -49,7 +49,7 @@ exports.listerHumiteMois = async function(requete, reponse) {
 
 exports.listerHumiteAnnee = async function(requete, reponse) {
     try {
-        const { rows : humidites } = await humiditeDAO.listerHumiditeAnnee();
+        const { rows : humidites } = await humiditeDAO.listerHumiditeAnnee(requete);
         return reponse.status(200).send({ humidites });
     } catch(error) {
         console.log(error);

@@ -36,3 +36,41 @@ exports.listerPressionAnnee = async function() {
 
 
 
+
+
+
+
+
+exports.listerPressionMarina = async function(marina) {
+	const SELECT_TOUTES_LES_PRESSIONS = 'select * from pression where idmarina='+marina;
+	return await baseDeDonnees.query(SELECT_TOUTES_LES_PRESSIONS);
+}
+
+
+exports.listerPressionJourMarina = async function(marina) {
+	const SELECT_TOUTES_LES_PRESSIONS = 'SELECT * FROM pression where date >= DATE(NOW() + INTERVAL \'-1 day\') AND idmarina='+marina;
+	return await baseDeDonnees.query(SELECT_TOUTES_LES_PRESSIONS);
+}
+
+
+exports.listerPressionSemaineMarina = async function(marina) {
+	const SELECT_TOUTES_LES_PRESSIONS = 'SELECT * FROM pression where date >= DATE(NOW() + INTERVAL \'-7 day\') AND idmarina='+marina;
+	return await baseDeDonnees.query(SELECT_TOUTES_LES_PRESSIONS);
+}
+
+
+exports.listerPressionMoisMarina = async function(marina) {
+	const SELECT_TOUTES_LES_PRESSIONS = 'SELECT * FROM pression where date >= DATE(NOW() + INTERVAL \'-1 month\') AND idmarina='+marina;
+	return await baseDeDonnees.query(SELECT_TOUTES_LES_PRESSIONS);
+}
+
+
+exports.listerPressionAnneeMarina = async function(marina) {
+	const SELECT_TOUTES_LES_PRESSIONS = 'SELECT * FROM pression where date >= DATE(NOW() + INTERVAL \'-1 year\')  AND idmarina='+marina;
+	return await baseDeDonnees.query(SELECT_TOUTES_LES_PRESSIONS);
+}
+
+
+
+
+
