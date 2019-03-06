@@ -8,7 +8,7 @@ var temperatureDAO = require('../donnee/TemperatureDAO');
  */ 
 exports.listerTemperature = async function(requete, reponse) {
     try {
-        const { rows : temperature } = await temperatureDAO.listerTemperature();
+        const { rows : temperature } = await temperatureDAO.listerTemperature(requete);
         return reponse.status(200).send({ temperature });
     } catch(error) {
         console.log(error);
@@ -18,7 +18,7 @@ exports.listerTemperature = async function(requete, reponse) {
     
 exports.listerTemperatureJour = async function(requete, reponse) {
     try {
-        const { rows : temperature } = await temperatureDAO.listerTemperatureJour();
+        const { rows : temperature } = await temperatureDAO.listerTemperatureJour(requete);
         return reponse.status(200).send({ temperature });
     } catch(error) {
         console.log(error);
@@ -29,7 +29,7 @@ exports.listerTemperatureJour = async function(requete, reponse) {
   
 exports.listerTemperatureSemaine = async function(requete, reponse) {
     try {
-        const { rows : temperature } = await temperatureDAO.listerTemperatureSemaine();
+        const { rows : temperature } = await temperatureDAO.listerTemperatureSemaine(requete);
         return reponse.status(200).send({ temperature });
     } catch(error) {
         console.log(error);
@@ -39,7 +39,7 @@ exports.listerTemperatureSemaine = async function(requete, reponse) {
 
 exports.listerTemperatureMois = async function(requete, reponse) {
     try {
-        const { rows : temperature } = await temperatureDAO.listerTemperatureMois();
+        const { rows : temperature } = await temperatureDAO.listerTemperatureMois(requete);
         return reponse.status(200).send({ temperature });
     } catch(error) {
         console.log(error);
@@ -49,7 +49,7 @@ exports.listerTemperatureMois = async function(requete, reponse) {
 
 exports.listerTemperatureAnnee = async function(requete, reponse) {
     try {
-        const { rows : temperature } = await temperatureDAO.listerTemperatureAnnee();
+        const { rows : temperature } = await temperatureDAO.listerTemperatureAnnee(requete);
         return reponse.status(200).send({ temperature });
     } catch(error) {
         console.log(error);
