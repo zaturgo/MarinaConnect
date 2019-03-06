@@ -98,11 +98,11 @@
                 <summary>Options</summary>
                 <h5 class="mb-3 mt-3">Période :</h5>
 
-                <select class="custom-select w-100 mb-3">
-                    <option>Année</option>
-                    <option>Mois</option>
-                    <option>Semaine</option>
-                    <option>Jours</option>
+                <select id="custom-select" class="custom-select w-100 mb-3">
+                    <option value="annee">Année</option>
+                    <option value="mois">Mois</option>
+                    <option value="semaine">Semaine</option>
+                    <option value="jours">Jours</option>
                 </select>
 
                 <h5 class="mb-3">Données affichées :</h5>
@@ -110,24 +110,24 @@
                     <table style="width:40%">
                         <tr>
                             <td><label>Température : </label></td>
-                            <td><input type="checkbox" checked></td>
+                            <td><input id="checkBoxTemp" type="checkbox" checked></td>
                         </tr>
                         <tr>
                             <td><label>Humidité : </label></td>
-                            <td><input type="checkbox" value="" checked></td>
+                            <td><input id="checkBoxHumidite" type="checkbox" value="" checked></td>
                         </tr>
                         <tr>
                             <td><label>Pression : </label></td>
-                            <td><input type="checkbox" value="" checked></td>
+                            <td><input id="checkBoxPression" type="checkbox" value="" checked></td>
                         </tr>
                     </table>
                 </div>
             </details>
         </div>
     </div>
-    <div id="graphTemp"></div>
-    <div id="graphHumidites"></div>
-    <div id="graphPression"></div>
+    <div class="w-100" id="graphTemperature"></div>
+    <div class="w-100" id="graphHumidites"></div>
+    <div class="w-100" id="graphPression"></div>
 </script>
 
 <script type="text/html" id="page-settings">
@@ -135,7 +135,10 @@
 </script>
 
 <script type="text/html" id="page-contact">
-    <p>Nous contacter</p>
+    <div class="w-100 h-100">
+        <object type="text/html" data="http://158.69.113.110/site/vue/" class="w-100" style="height: 720px">
+        </object>
+    </div>
 </script>
 
 <script type="text/html" id="page-loader">
@@ -149,6 +152,18 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPdQulnWsrnX0wvs_WBoCrHkycdbREIww"></script>
 
+<script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+\
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
 <script src="action/accesseur/HumiditesDAO.js"></script>
 <script src="action/accesseur/TemperatureDAO.js"></script>
 <script src="action/accesseur/MarinaDAO.js"></script>
@@ -157,6 +172,7 @@
 
 <script src="action/vue/Loader.js"></script>
 <script src="action/vue/VueHome.js"></script>
+<script src="action/vue/VueContact.js"></script>
 <script src="action/vue/VueDetail.js"></script>
 <script src="action/vue/VueMap.js"></script>
 
@@ -168,19 +184,7 @@
 
 
 <!--<script type="text/javascript" charset="utf-8" src="lib/cordova.js"></script>-->
-<script type="text/javascript" charset="utf-8" src="lib/jquery.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
 
 </body>
 </html>

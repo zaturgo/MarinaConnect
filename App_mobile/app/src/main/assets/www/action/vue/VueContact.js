@@ -5,5 +5,5 @@ var VueContact = (function () {
         this.afficher = function(){
             document.getElementById("container").innerHTML = pageContact;
         }
-    }
+    };
 })();

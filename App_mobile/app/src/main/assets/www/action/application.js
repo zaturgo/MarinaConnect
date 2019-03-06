@@ -36,7 +36,8 @@
         } else if (hash.match(/^#settings/)) {
 
         } else if (hash.match(/^#contact/)) {
-
+            var vueContact = new VueContact();
+            vueContact.afficher();
         } else if (hash.match(/^#marina\/([0-9]+)/)) {
             var navigation = hash.match(/^#marina\/([0-9]+)/);
             idMarina = navigation[1];
