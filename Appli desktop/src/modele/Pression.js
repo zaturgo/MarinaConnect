@@ -1,4 +1,4 @@
-var Humidite = function(id, valeur, date, idMarina)
+var Pression = function(id, valeur, date, idMarina)
 {
     this.id = id;
     this.valeur = valeur;
