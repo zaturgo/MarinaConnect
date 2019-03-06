@@ -3,9 +3,9 @@ var MarinaDAO = function () {
     //MARINA
 
     this.listerMarina = function lister(callback) {
-        console.log("Envoi requete recuperation MARINAS en HTTP en get a : " + API_MOBILE_URL);
+        var url = API_MOBILE_URL + STRING_MARINA;
 
-        var url = API_MOBILE_URL + "marina";
+        console.log("Envoi requete recuperation MARINAS en HTTP en get a : " + url);
 
         var data = null;
 

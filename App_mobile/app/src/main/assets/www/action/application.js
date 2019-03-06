@@ -39,7 +39,7 @@
 
         } else if (hash.match(/^#marina\/([0-9]+)/)) {
             var navigation = hash.match(/^#marina\/([0-9]+)/);
-            idMarina= navigation[1];
+            idMarina = navigation[1];
 
             //humiditesDAO.listerHumiditesAnnee(callbackHumidite);
             humiditesDAO.listerHumiditesAnnee(callbackHumidite);
@@ -62,18 +62,17 @@
     var callbackPression = function (result) {
         donneePression = JSON.parse(result).pressions;
 
-        var vueDetail = new VueDetail(donneeHumidite, donneeTemp, donneePression, idMarina);
-        vueDetail.afficher();
+        var vueDetail = new VueDetail();
+        vueDetail.afficher(donneeHumidite, donneeTemp, donneePression, idMarina);
     };
 
     var callbackMarina = function (result) {
         var marinas = JSON.parse(result).marina;
-        console.log("Marina : "+marinas);
+        console.log("Marina : " + marinas);
 
         var vueMap = new VueMap();
         vueMap.afficher(marinas);
     };
-
 
 
     var naviguerAccueil = function () {

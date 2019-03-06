@@ -1,6 +1,16 @@
 var VueDetail = (function () {
     var pageDetail = document.getElementById("page-detail").innerHTML;
 
+    var checkEmpty = function (donnee) {
+        if(!donnee){
+            var donneeFictive = JSON.parse("{\n" +
+                "            \"valeur\": 1,\n" +
+                "            \"date\": \"2018-12-01T05:00:00.000Z\"\n" +
+                "        }");
+            return donneeFictive;
+        }else return donnee;
+    };
+
     return function () {
 
         var humidites = [];
@@ -13,7 +23,10 @@ var VueDetail = (function () {
         var pressionVal = [];
 
         this.afficher = function(donneesHumidites, donneesTemp, donneesPression, id){
-            console.log("ID marina : "+id)
+            console.log("Statistic de la marina ID : "+id);
+            donneesTemp = checkEmpty(donneesTemp);
+            donneesPression = checkEmpty(donneesPression);
+            donneesHumidites = checkEmpty(donneesHumidites);
 
             for (let i = 0; i < donneesHumidites.length; i++) {
                 console.log(donneesHumidites[i].idmarina);

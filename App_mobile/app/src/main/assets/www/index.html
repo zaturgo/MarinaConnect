@@ -27,8 +27,7 @@
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        var map = new google.maps.Map(document.getElementById("map"),
-            myOptions);
+        var map = new google.maps.Map(document.getElementById("map"), myOptions);
 
         return map;
     }
@@ -59,19 +58,6 @@
                 <li class="nav-item">
                     <a class="nav-link ico-menu" href="#settings"><i class="fas fa-cog"></i> Paramètres</a>
                 </li>
-
-                <!--<li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>-->
             </ul>
         </div>
     </nav>
@@ -106,13 +92,38 @@
 <script type="text/html" id="page-detail">
     <div class="container-fluid">
         <h2 class="mb-3">Marina de Marseille :</h2>
-        <h5 class="mb-3">Période :</h5>
-        <select class="custom-select w-100 mb-3">
-            <option>Année</option>
-            <option>Mois</option>
-            <option>Semaine</option>
-            <option>Jours</option>
-        </select>
+
+        <div>
+            <details>
+                <summary>Options</summary>
+                <h5 class="mb-3 mt-3">Période :</h5>
+
+                <select class="custom-select w-100 mb-3">
+                    <option>Année</option>
+                    <option>Mois</option>
+                    <option>Semaine</option>
+                    <option>Jours</option>
+                </select>
+
+                <h5 class="mb-3">Données affichées :</h5>
+                <div class="ml-3">
+                    <table style="width:40%">
+                        <tr>
+                            <td><label>Température : </label></td>
+                            <td><input type="checkbox" checked></td>
+                        </tr>
+                        <tr>
+                            <td><label>Humidité : </label></td>
+                            <td><input type="checkbox" value="" checked></td>
+                        </tr>
+                        <tr>
+                            <td><label>Pression : </label></td>
+                            <td><input type="checkbox" value="" checked></td>
+                        </tr>
+                    </table>
+                </div>
+            </details>
+        </div>
     </div>
     <div id="graphTemp"></div>
     <div id="graphHumidites"></div>
@@ -170,7 +181,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-
 
 </body>
 </html>

@@ -5,7 +5,7 @@ var PressionDAO = function () {
     this.listerPressionAnnee = function lister(callback, id) {
         console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
 
-        var url = API_MOBILE_URL + "pression/annee";
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_ANNEE;
 
         var data = null;
 
@@ -18,15 +18,15 @@ var PressionDAO = function () {
             }
         });
 
-        xhr.open("GET", url,true);
+        xhr.open("GET", url, true);
         xhr.setRequestHeader("Content-Type", "application/json");
 
         xhr.send(data);
     };
-    this.listerPressionMois = function lister(callback, id) {
+    this.listerPressionMois = function lister(callback) {
         console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
 
-        var url = API_MOBILE_URL + "pression/mois";
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_MOIS;
 
         var data = null;
 
@@ -39,38 +39,16 @@ var PressionDAO = function () {
             }
         });
 
-        xhr.open("GET", url,true);
-        xhr.setRequestHeader("Content-Type", "application/json");
-
-        xhr.send(data);
-    };
-
-    this.listerPressionSemaine = function lister(callback, id) {
-        console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
-
-        var url = API_MOBILE_URL + "pression/semaine";
-
-        var data = null;
-
-        var xhr = new XMLHttpRequest();
-
-        xhr.addEventListener("readystatechange", function () {
-            if (this.readyState === 4) {
-                //console.log(this.responseText);
-                callback(this.responseText);
-            }
-        });
-
-        xhr.open("GET", url,true);
+        xhr.open("GET", url, true);
         xhr.setRequestHeader("Content-Type", "application/json");
 
         xhr.send(data);
     };
 
-    this.listerPressionJours = function lister(callback, id) {
+    this.listerPressionSemaine = function lister(callback) {
         console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
 
-        var url = API_MOBILE_URL + "pression/jours";
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_SEMAINE;
 
         var data = null;
 
@@ -83,7 +61,29 @@ var PressionDAO = function () {
             }
         });
 
-        xhr.open("GET", url,true);
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
+
+    this.listerPressionJours = function lister(callback) {
+        console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
+
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_JOURS;
+
+        var data = null;
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                //console.log(this.responseText);
+                callback(this.responseText);
+            }
+        });
+
+        xhr.open("GET", url, true);
         xhr.setRequestHeader("Content-Type", "application/json");
 
         xhr.send(data);
