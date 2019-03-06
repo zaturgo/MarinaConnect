@@ -8,7 +8,7 @@ var pressionDAO = require('../donnee/PressionDAO');
  */ 
 exports.listerPression = async function(requete, reponse) {
     try {
-        const { rows : pression } = await pressionDAO.listerPression();
+        const { rows : pression } = await pressionDAO.listerPression(requete);
         return reponse.status(200).send({ pression });
     } catch(error) {
         console.log(error);
@@ -18,7 +18,7 @@ exports.listerPression = async function(requete, reponse) {
    
 exports.listerPressionJour = async function(requete, reponse) {
     try {
-        const { rows : pression } = await pressionDAO.listerPressionJour();
+        const { rows : pression } = await pressionDAO.listerPressionJour(requete);
         return reponse.status(200).send({ pression });
     } catch(error) {
         console.log(error);
@@ -29,7 +29,7 @@ exports.listerPressionJour = async function(requete, reponse) {
   
 exports.listerPressionSemaine = async function(requete, reponse) {
     try {
-        const { rows : pression } = await pressionDAO.listerPressionSemaine();
+        const { rows : pression } = await pressionDAO.listerPressionSemaine(requete);
         return reponse.status(200).send({ pression });
     } catch(error) {
         console.log(error);
@@ -39,7 +39,7 @@ exports.listerPressionSemaine = async function(requete, reponse) {
 
 exports.listerPressionMois = async function(requete, reponse) {
     try {
-        const { rows : pression } = await pressionDAO.listerPressionMois();
+        const { rows : pression } = await pressionDAO.listerPressionMois(requete);
         return reponse.status(200).send({ pression });
     } catch(error) {
         console.log(error);
@@ -49,7 +49,7 @@ exports.listerPressionMois = async function(requete, reponse) {
 
 exports.listerPressionAnnee = async function(requete, reponse) {
     try {
-        const { rows : pression } = await pressionDAO.listerPressionAnnee();
+        const { rows : pression } = await pressionDAO.listerPressionAnnee(requete);
         return reponse.status(200).send({ pression });
     } catch(error) {
         console.log(error);
