@@ -10,9 +10,9 @@ var VueDetail = (function () {
     var checkBoxHumidite = true;
     var periode = 'annee';
 
-    var notCheckedTemp = true;
+    /*var notCheckedTemp = true;
     var notCheckedHumidite = true;
-    var notCheckedPression = true;
+    var notCheckedPression = true;*/
 
     var firstUpdate = true;
 
@@ -47,9 +47,29 @@ var VueDetail = (function () {
         } else return donnee;
     };
 
+    var clearGraph = function () {
+        document.getElementById("grapheTemperature").innerHTML = "";
+        document.getElementById("graphePression").innerHTML = "";
+        document.getElementById("grapheHumidite").innerHTML = "";
+    };
+    var displayGraphTemp = function (donnees) {
+
+    };
+    var displayGraphHumidite = function (donnees) {
+
+    };
+    var displayGraphPression = function (donnees) {
+
+    };
+
     var actualiserGraph = function () {
-        console.log("update..")
-        if (firstUpdate) {
+        clearGraph();
+
+        getDonneeSelect();
+        getDonneeCheckBox();
+
+        console.log("update..");
+        /*if (firstUpdate) {
             getDonneeSelect();
             getDonneeCheckBox();
 
@@ -57,15 +77,14 @@ var VueDetail = (function () {
 
             console.log("|| Actualisation graphs ||\nPeriode : " + periode + "\nTemperature : " + checkBoxTemp + " \tPression : " + checkBoxPression + "\tHumidite : " + checkBoxHumidite);
             firstUpdate = false;
-        }
+        }*/
 
 
         if (periode == "annee") {
-            if (checkBoxHumidite && notCheckedHumidite) {
+            if (checkBoxHumidite) {
                 console.log("hello");
 
-                notCheckedHumidite = false;
-                actualiserGraph();
+
             }
             if (checkBoxPression) {
 
@@ -138,7 +157,7 @@ var VueDetail = (function () {
                     pression.push(donneesPression[i]);
                     pressionVal.push([new Date(donneesPression[i].date), donneesPression[i].valeur])
             }
-
+            console.log(tempVal)
             google.charts.load('current', {packages: ['corechart', 'line']});
             google.charts.setOnLoadCallback(drawBasic);
 
