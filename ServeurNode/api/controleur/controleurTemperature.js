@@ -57,3 +57,12 @@ exports.listerTemperatureAnnee = async function(requete, reponse) {
     }
 }
 
+exports.ajouterTemperature= async function(requete, reponse) {
+	try {
+		await temperatureDAO.ajouterTemperature(requete);
+		return reponse.status(200).send();
+	} catch(error) {
+		console.log(error);
+		return reponse.status(400).send(error);
+	}
+}
