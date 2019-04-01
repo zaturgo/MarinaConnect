@@ -1,7 +1,5 @@
 var PressionDAO = function () {
 
-    //Pression
-
     this.listerPressionAnnee = function lister(callback, id) {
         console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
 
@@ -78,7 +76,6 @@ var PressionDAO = function () {
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                //console.log(this.responseText);
                 callback(this.responseText);
             }
         });
@@ -89,4 +86,115 @@ var PressionDAO = function () {
         xhr.send(data);
     };
 
+
+    this.listerPressionAnneeUtil = function (callback, id) {
+        console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
+
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_ANNEE + "/" + id;
+
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                var donneesTab = [];
+                var donnees = JSON.parse(this.responseText).humidites;
+
+                if (donnees !== undefined) {
+                    for (let i = 0; i < donnees.length; i++) {
+                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                    }
+                }
+                callback(donneesTab);
+            }
+        });
+
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
+
+    this.listerPressionMoisUtil = function (callback, id) {
+        console.log("Envoi requete recuperation Pression en HTTP en get a : " + API_MOBILE_URL);
+
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_MOIS + "/" + id;
+
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                var donneesTab = [];
+                var donnees = JSON.parse(this.responseText).humidites;
+                if (donnees !== undefined) {
+                    for (let i = 0; i < donnees.length; i++) {
+                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                    }
+                }
+                callback(donneesTab);
+            }
+        });
+
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
+
+    this.listerPressionSemaineUtil = function (callback, id) {
+        console.log("Envoi requete recuperation Pression en HTTP en get a : " + API_MOBILE_URL);
+
+        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_SEMAINE + "/" + id;
+
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                var donneesTab = [];
+                var donnees = JSON.parse(this.responseText).humidites;
+
+                if (donnees !== undefined) {
+                    for (let i = 0; i < donnees.length; i++) {
+                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                    }
+                }
+
+                callback(donneesTab);
+            }
+        });
+
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
+
+    this.listerPressionJoursUtil = function (callback, id) {
+        console.log("Envoi requete recuperation Pression en HTTP en get a : " + API_MOBILE_URL);
+
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_JOURS + "/" + id;
+
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                var donneesTab = [];
+                var donnees = JSON.parse(this.responseText).humidites;
+
+                if (donnees !== undefined) {
+                    for (let i = 0; i < donnees.length; i++) {
+                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                    }
+                }
+                callback(donneesTab);
+            }
+        });
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
 };

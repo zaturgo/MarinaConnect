@@ -51,12 +51,10 @@
         donneeHumidite = JSON.parse(result).humidites;
 
         temperatureDAO.listerTemperatureAnnee(callbackTemperature);
-
     };
 
     var callbackTemperature = function (result) {
         donneeTemp = JSON.parse(result).temperatures;
-
         pressionDAO.listerPressionAnnee(callbackPression);
     };
 
