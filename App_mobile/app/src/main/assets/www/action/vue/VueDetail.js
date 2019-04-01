@@ -5,6 +5,8 @@ var VueDetail = (function () {
     this.pressionDAO = new PressionDAO();
     this.temperatureDAO = new TemperatureDAO();
 
+    var marinaID = 0;
+
     var checkBoxTemp = true;
     var checkBoxPression = true;
     var checkBoxHumidite = true;
@@ -48,9 +50,17 @@ var VueDetail = (function () {
     };
 
     var clearGraph = function () {
-        document.getElementById("grapheTemperature").innerHTML = "";
-        document.getElementById("graphePression").innerHTML = "";
-        document.getElementById("grapheHumidite").innerHTML = "";
+        $('#graphTemperature').remove();
+        $('#graphe-container').append('<canvas id="graphTemperature"><canvas>');
+        $('#graphTemperature').css("height", "0px");
+
+        $('#graphHumidites').remove();
+        $('#graphe-container').append('<canvas id="graphHumidites"><canvas>');
+        $('#graphHumidites').css("height", "0px");
+
+        $('#graphPression').remove();
+        $('#graphe-container').append('<canvas id="graphPression"><canvas>');
+        $('#graphHumidites').css("height", "0px");
     };
 
     var actualiserGraph = function () {
@@ -75,50 +85,53 @@ var VueDetail = (function () {
 
         if (periode === "annee") {
             if (checkBoxHumidite) {
-                afficheGrapheTemperature()
+                humiditesDAO.listerHumiditesAnneeUtil(afficheGrapheHumidite, marinaID)
             }
             if (checkBoxPression) {
-
+                pressionDAO.listerPressionAnneeUtil(afficheGraphePression, marinaID)
             }
             if (checkBoxTemp) {
-
+                temperatureDAO.listerTemperatureAnneeUtil(afficheGrapheTemperature, marinaID)
             }
         } else if (periode === "mois") {
             if (checkBoxHumidite) {
-
+                humiditesDAO.listerHumiditesMoisUtil(afficheGrapheHumidite, marinaID)
             }
             if (checkBoxPression) {
-
+                pressionDAO.listerPressionMoisUtil(afficheGraphePression, marinaID)
             }
             if (checkBoxTemp) {
-
+                temperatureDAO.listerTemperatureMoisUtil(afficheGrapheTemperature, marinaID)
             }
         } else if (periode === "semaine") {
             if (checkBoxHumidite) {
-
+                humiditesDAO.listerHumiditesSemaineUtil(afficheGrapheHumidite, marinaID)
             }
             if (checkBoxPression) {
-
+                pressionDAO.listerPressionSemaineUtil(afficheGraphePression, marinaID)
             }
             if (checkBoxTemp) {
-
+                temperatureDAO.listerTemperatureSemaineUtil(afficheGrapheTemperature, marinaID)
             }
         } else if (periode === "jours") {
             if (checkBoxHumidite) {
-
+                humiditesDAO.listerHumiditesJoursUtil(afficheGrapheHumidite, marinaID)
             }
             if (checkBoxPression) {
-
+                pressionDAO.listerPressionJoursUtil(afficheGraphePression, marinaID)
             }
             if (checkBoxTemp) {
-
+                temperatureDAO.listerTemperatureJoursUtil(afficheGrapheTemperature, marinaID)
             }
         }
     };
 
+
     return function () {
 
         this.afficher = function (donneesHumidites, donneesTemp, donneesPression, id) {
+
+            marinaID = id;
 
             document.getElementById("container").innerHTML = pageDetail;
 
@@ -135,9 +148,8 @@ var VueDetail = (function () {
 
             for (let i = 0; i < donneesHumidites.length; i++) {
                 humidites.push(donneesHumidites[i]);
-                humiditesData.push({x: Date(donneesHumidites[i].date), y: donneesHumidites[i].valeur});
+                humiditesData.push({x: new Date(donneesHumidites[i].date), y: donneesHumidites[i].valeur});
                 humiditesVal.push([new Date(donneesHumidites[i].date), donneesHumidites[i].valeur])
-
             }
             for (let i = 0; i < donneesTemp.length; i++) {
                 temp.push(donneesTemp[i]);
@@ -152,25 +164,22 @@ var VueDetail = (function () {
 
             afficheGrapheTemperature(temp, tempVal);
             afficheGrapheHumidite(humidites, humiditesVal);
-            afficheGraphePression(pression,pressionVal);
-
-
+            afficheGraphePression(pression, pressionVal);
         }
     };
 
 
-    function afficheGrapheTemperature(tempVal, tempTemps) {
+    function afficheGrapheTemperature(data) {
         var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
         var config = {
             type: 'line',
             data: {
-                //labels: tempTemps,
                 datasets: [{
                     label: 'Température en °C',
                     backgroundColor: new Color(255, 0, 0),
                     borderColor: new Color(255, 0, 0),
-                    data: tempVal,
+                    data: data,
                     fill: false,
                 },
                 ]
@@ -207,11 +216,14 @@ var VueDetail = (function () {
                 }
             }
         };
-        var ctx = document.getElementById('graphTemperature').getContext('2d');
-        window.myLine = new Chart(ctx, config);
+        if (data !== "undefined") {
+            var ctx = document.getElementById('graphTemperature').getContext('2d');
+            window.myLine = new Chart(ctx, config);
+            $("#graphTemperature").css("height","33%")
+        }
     }
 
-    function afficheGrapheHumidite(humiditeX, humiditeY) {
+    function afficheGrapheHumidite(data) {
         var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
         var config = {
@@ -221,7 +233,7 @@ var VueDetail = (function () {
                     label: 'Humiditée en %',
                     backgroundColor: new Color(255, 0, 0),
                     borderColor: new Color(255, 0, 0),
-                    data: humiditeY,
+                    data: data,
                     fill: false,
                 },
                 ]
@@ -258,22 +270,24 @@ var VueDetail = (function () {
                 }
             }
         };
-        var ctx = document.getElementById('graphHumidites').getContext('2d');
-        window.myLine = new Chart(ctx, config);
+        if (data !== "undefined") {
+            var ctx = document.getElementById('graphHumidites').getContext('2d');
+            window.myLine = new Chart(ctx, config);
+            $("#graphHumidites").css("height","33%")
+        }
     }
 
-    function afficheGraphePression(pressionX, pressionY) {
+    function afficheGraphePression(data) {
         var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
         var config = {
             type: 'line',
             data: {
-                labels: pressionX,
                 datasets: [{
                     label: 'Préssion en %',
                     backgroundColor: new Color(255, 0, 0),
                     borderColor: new Color(255, 0, 0),
-                    data: pressionY,
+                    data: data,
                     fill: false,
                 },
                 ]
@@ -310,8 +324,11 @@ var VueDetail = (function () {
                 }
             }
         };
-        var ctx = document.getElementById('graphPression').getContext('2d');
-        window.myLine = new Chart(ctx, config);
+        if (data !== "undefined") {
+            var ctx = document.getElementById('graphPression').getContext('2d');
+            window.myLine = new Chart(ctx, config);
+            $("#graphPression").css("height","33%")
+        }
     }
 
 })();
