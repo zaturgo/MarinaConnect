@@ -1,218 +1,218 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\cfbfe8f86fedab1effed4872e958e76b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\36faabf2f24f8a863852e922e5d2da27\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\888f22419d97dacd576218a9a58ac86b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\79eb1bdaa99f6f5f487f88b29eb2b031\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\3f65bf50ae23173848b1dd5cd77f621d\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\9ccdd7163c276eb0554ff58ff2f9a16b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\0719c6cac529dd0a568079c6fd03239b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\d1e78ec861bff8063ee026a7c05421b0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\9b2aeeed4be36ac6215c9d3f2e43e393\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\157fa8211bf88e335083df6d0cb1e07a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\9809b396de3d9e9d6382f8ecaab438d4\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\6a45f450a2eaf76ff5d03c3282875376\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\d6132b1c80b3f2f9745492e9602b1251\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\dc2a067f81919c20de3d1088dfe463c3\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\2408fc939f9948aabd75fdb371d55785\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\164596c0ed7af267040414304296e7f6\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\20a553e5f914543e18b234a570456115\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\008a000b159b9b85cbea58cc9017c502\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5e5056e5d15ed658e09cfe8b96c4d54f\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bc42751f405e257e01a098ddbb8e54d7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\b11c9b4a5b4cb5ea40e92257c3ee2aab\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\5b9eb29ffeec2ce76fb6ce8e41c9a278\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\c8d3ed8a98f181bc25834226723fe9dc\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\9134aee82b8666cd260db76d6943beef\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\657935127c43e0191fed56379fc1205d\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\fbcfb4ba78b4cff8e171d5f37ab6a641\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\4c39ff987adf5ac50d777acf8e3747b0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
-INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:2:1-38:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/758d00886f4c0109383ee754e9790792/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/36f0d54203ca9cbb4ad3ec4e71089927/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/14cdd5ed2d3cdae42e0a1ad844259794/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/7b7538a1c82bc68d6caee8000b7f06d2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/4039005e9b11da5540401327445a101d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/91a8c624804c4932992cd1586a81b50d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/c99bdd41b11e07ac533e2213f3854371/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/ab8c7d813ef9d0cd5e5e20be7a043d88/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/6dbc4bb711206d3ca4cdfac5b156c08b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/29bd90900ada380bbdb6d4ee222f1d33/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/a943659aa21fa276527996186f2a65b5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/1ab97d82c2de4d5412359010fb892588/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/98f64b5b3db5ece2b40f9d9cbed2e314/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/bc31e7f7af8092f4eaba869c8d1c18f8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/07b8e70939f9fdfbbf263543800c303f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8160e35d7f3231b865780f84ea157107/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/9505b862f8414ba967e5e55906464345/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/3fc0dd88309aedaf845d29f402eaed0a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/9efc2e3b13b43e841054a3e46c21a987/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/4f1b11b0029485fbfe2888109a0b8bdb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/82b089948adb2269a06254eeb1e566dd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/29eac51743d3497275af9133f86d3128/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/85638aed164ed2827ee999e63a808e38/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/a35cc8df6fe0e52175f21d0ba5151ff8/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/917f5cff7eaf85523c76b59a2af34809/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/3a523a3f1e0a84c8dcb8a3128ea513f2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/7bf5a8eb2f59c4432305e6647b0c2f62/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:2:1-38:12
+INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:2:1-38:12
 	package
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:3:5-69
-		INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:3:5-69
+		INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
+		INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
-		INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
+		INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:2:1-38:12
+		INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:1-38:12
-		INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
+		INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:2:1-38:12
+		INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.CAMERA
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:5:5-65
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:5:5-65
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:5:22-62
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:5:22-62
 uses-permission#android.permission.VIBRATE
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:6:5-66
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:6:5-66
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:6:22-63
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:6:22-63
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:7:5-81
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:7:5-81
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:7:22-78
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:7:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:8:5-79
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:8:5-79
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:8:22-76
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:8:22-76
 uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:9:5-89
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:9:5-89
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:9:22-86
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:9:22-86
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:10:5-67
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:10:5-67
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:10:22-64
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:10:22-64
 uses-permission#android.permission.RECEIVE_SMS
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:11:5-70
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:11:5-70
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:11:22-67
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:11:22-67
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:12:5-71
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:12:5-71
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:12:22-68
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:12:22-68
 uses-permission#android.permission.RECORD_VIDEO
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:13:5-70
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:13:5-70
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:13:22-68
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:13:22-68
 uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:14:5-80
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:14:5-80
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:14:22-77
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:14:22-77
 uses-permission#android.permission.READ_CONTACTS
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:15:5-72
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:15:5-72
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:15:22-69
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:15:22-69
 uses-permission#android.permission.WRITE_CONTACTS
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:16:5-73
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:16:5-73
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:16:22-70
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:16:22-70
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:17:5-81
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:17:5-81
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:17:22-78
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:17:22-78
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:18:5-79
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:18:5-79
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:18:22-76
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:18:22-76
 uses-permission#android.permission.GET_ACCOUNTS
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:19:5-71
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:19:5-71
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:19:22-68
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:19:22-68
 uses-permission#android.permission.BROADCAST_STICKY
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:20:5-75
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:20:5-75
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:20:22-72
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:20:22-72
 application
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:22:5-36:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\36faabf2f24f8a863852e922e5d2da27\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\36faabf2f24f8a863852e922e5d2da27\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\164596c0ed7af267040414304296e7f6\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\164596c0ed7af267040414304296e7f6\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\20a553e5f914543e18b234a570456115\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\20a553e5f914543e18b234a570456115\AndroidManifest.xml:22:5-23:19
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:22:5-36:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/36f0d54203ca9cbb4ad3ec4e71089927/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/36f0d54203ca9cbb4ad3ec4e71089927/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8160e35d7f3231b865780f84ea157107/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8160e35d7f3231b865780f84ea157107/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/9505b862f8414ba967e5e55906464345/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/9505b862f8414ba967e5e55906464345/AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\164596c0ed7af267040414304296e7f6\AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8160e35d7f3231b865780f84ea157107/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:27:9-35
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:27:9-35
 	android:label
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:25:9-41
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:25:9-41
 	android:roundIcon
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:26:9-54
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:26:9-54
 	android:icon
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:24:9-43
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:24:9-43
 	android:allowBackup
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:23:9-35
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:23:9-35
 	android:theme
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:28:9-40
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:28:9-40
 activity#fr.fcomte.iutbm.informatique.app_mobile_marina_connect.MainActivity
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:29:9-35:20
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:29:9-35:20
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:29:19-47
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:29:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:30:13-34:29
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:30:13-34:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:31:17-69
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:31:25-66
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:33:17-77
+ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:33:17-77
 	android:name
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml:33:27-74
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml:33:27-74
 uses-sdk
-INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\cfbfe8f86fedab1effed4872e958e76b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\cfbfe8f86fedab1effed4872e958e76b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\36faabf2f24f8a863852e922e5d2da27\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\36faabf2f24f8a863852e922e5d2da27\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\888f22419d97dacd576218a9a58ac86b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\888f22419d97dacd576218a9a58ac86b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\79eb1bdaa99f6f5f487f88b29eb2b031\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\79eb1bdaa99f6f5f487f88b29eb2b031\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\3f65bf50ae23173848b1dd5cd77f621d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\3f65bf50ae23173848b1dd5cd77f621d\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\9ccdd7163c276eb0554ff58ff2f9a16b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\9ccdd7163c276eb0554ff58ff2f9a16b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\0719c6cac529dd0a568079c6fd03239b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\0719c6cac529dd0a568079c6fd03239b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\d1e78ec861bff8063ee026a7c05421b0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\d1e78ec861bff8063ee026a7c05421b0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\9b2aeeed4be36ac6215c9d3f2e43e393\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\9b2aeeed4be36ac6215c9d3f2e43e393\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\157fa8211bf88e335083df6d0cb1e07a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\157fa8211bf88e335083df6d0cb1e07a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\9809b396de3d9e9d6382f8ecaab438d4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\9809b396de3d9e9d6382f8ecaab438d4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\6a45f450a2eaf76ff5d03c3282875376\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\6a45f450a2eaf76ff5d03c3282875376\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\d6132b1c80b3f2f9745492e9602b1251\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\d6132b1c80b3f2f9745492e9602b1251\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\dc2a067f81919c20de3d1088dfe463c3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\dc2a067f81919c20de3d1088dfe463c3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\2408fc939f9948aabd75fdb371d55785\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\2408fc939f9948aabd75fdb371d55785\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\164596c0ed7af267040414304296e7f6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\164596c0ed7af267040414304296e7f6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\20a553e5f914543e18b234a570456115\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\20a553e5f914543e18b234a570456115\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\008a000b159b9b85cbea58cc9017c502\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\008a000b159b9b85cbea58cc9017c502\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5e5056e5d15ed658e09cfe8b96c4d54f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\5e5056e5d15ed658e09cfe8b96c4d54f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bc42751f405e257e01a098ddbb8e54d7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bc42751f405e257e01a098ddbb8e54d7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\b11c9b4a5b4cb5ea40e92257c3ee2aab\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\b11c9b4a5b4cb5ea40e92257c3ee2aab\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\5b9eb29ffeec2ce76fb6ce8e41c9a278\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\5b9eb29ffeec2ce76fb6ce8e41c9a278\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\c8d3ed8a98f181bc25834226723fe9dc\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\c8d3ed8a98f181bc25834226723fe9dc\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\9134aee82b8666cd260db76d6943beef\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\9134aee82b8666cd260db76d6943beef\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\657935127c43e0191fed56379fc1205d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\657935127c43e0191fed56379fc1205d\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\fbcfb4ba78b4cff8e171d5f37ab6a641\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\fbcfb4ba78b4cff8e171d5f37ab6a641\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\4c39ff987adf5ac50d777acf8e3747b0\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Florent\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\4c39ff987adf5ac50d777acf8e3747b0\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
+INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
+INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/758d00886f4c0109383ee754e9790792/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/758d00886f4c0109383ee754e9790792/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/36f0d54203ca9cbb4ad3ec4e71089927/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/36f0d54203ca9cbb4ad3ec4e71089927/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/14cdd5ed2d3cdae42e0a1ad844259794/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/14cdd5ed2d3cdae42e0a1ad844259794/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/7b7538a1c82bc68d6caee8000b7f06d2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/7b7538a1c82bc68d6caee8000b7f06d2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/4039005e9b11da5540401327445a101d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/4039005e9b11da5540401327445a101d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/91a8c624804c4932992cd1586a81b50d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/91a8c624804c4932992cd1586a81b50d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/c99bdd41b11e07ac533e2213f3854371/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/c99bdd41b11e07ac533e2213f3854371/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/ab8c7d813ef9d0cd5e5e20be7a043d88/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/ab8c7d813ef9d0cd5e5e20be7a043d88/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/6dbc4bb711206d3ca4cdfac5b156c08b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/6dbc4bb711206d3ca4cdfac5b156c08b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/29bd90900ada380bbdb6d4ee222f1d33/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/29bd90900ada380bbdb6d4ee222f1d33/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/a943659aa21fa276527996186f2a65b5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/a943659aa21fa276527996186f2a65b5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/1ab97d82c2de4d5412359010fb892588/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/1ab97d82c2de4d5412359010fb892588/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/98f64b5b3db5ece2b40f9d9cbed2e314/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/98f64b5b3db5ece2b40f9d9cbed2e314/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/bc31e7f7af8092f4eaba869c8d1c18f8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/bc31e7f7af8092f4eaba869c8d1c18f8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/07b8e70939f9fdfbbf263543800c303f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/07b8e70939f9fdfbbf263543800c303f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8160e35d7f3231b865780f84ea157107/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8160e35d7f3231b865780f84ea157107/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/9505b862f8414ba967e5e55906464345/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/9505b862f8414ba967e5e55906464345/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/3fc0dd88309aedaf845d29f402eaed0a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/3fc0dd88309aedaf845d29f402eaed0a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/9efc2e3b13b43e841054a3e46c21a987/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/9efc2e3b13b43e841054a3e46c21a987/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/4f1b11b0029485fbfe2888109a0b8bdb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/4f1b11b0029485fbfe2888109a0b8bdb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/82b089948adb2269a06254eeb1e566dd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/82b089948adb2269a06254eeb1e566dd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/29eac51743d3497275af9133f86d3128/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/29eac51743d3497275af9133f86d3128/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/85638aed164ed2827ee999e63a808e38/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/85638aed164ed2827ee999e63a808e38/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/a35cc8df6fe0e52175f21d0ba5151ff8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/a35cc8df6fe0e52175f21d0ba5151ff8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/917f5cff7eaf85523c76b59a2af34809/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/917f5cff7eaf85523c76b59a2af34809/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/3a523a3f1e0a84c8dcb8a3128ea513f2/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/3a523a3f1e0a84c8dcb8a3128ea513f2/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/7bf5a8eb2f59c4432305e6647b0c2f62/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/zaturgo/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/7bf5a8eb2f59c4432305e6647b0c2f62/AndroidManifest.xml:20:5-44
+INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
+INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
+		INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
+		INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Florent\Desktop\PT\MarinaConnect-S4\App_mobile\app\src\main\AndroidManifest.xml
+		INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
+		ADDED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml
+		INJECTED from /home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/src/main/AndroidManifest.xml

@@ -74,7 +74,7 @@ var VuePrincipale = (function()
                                      id: 'y-axis-1',
                                      scaleLabel: {
                                          display: true,
-                                         labelString: 'Températures'
+                                         labelString: 'Températures (°C)'
                                      },
                                      ticks: {
                                          fontColor: "rgb(205,92,92)", // this here
@@ -88,7 +88,7 @@ var VuePrincipale = (function()
                                      id: 'y-axis-2',
                                      scaleLabel: {
                                          display: true,
-                                         labelString: 'Humidités'
+                                         labelString: 'Humidité (%)'
                                      },
                                      ticks: {
                                          fontColor: "rgb(176,196,222)", // this here
@@ -152,7 +152,7 @@ var VuePrincipale = (function()
                                      id: 'y-axis-1',
                                      scaleLabel: {
                                          display: true,
-                                         labelString: 'Températures'
+                                         labelString: 'Températures (°C)'
                                      },
                                      ticks: {
                                          fontColor: "rgb(205,92,92)", // this here
@@ -166,7 +166,7 @@ var VuePrincipale = (function()
                                      id: 'y-axis-2',
                                      scaleLabel: {
                                          display: true,
-                                         labelString: 'Humidités'
+                                         labelString: 'Humidité (%)'
                                      },
                                      ticks: {
                                          fontColor: "rgb(176,196,222)", // this here
@@ -229,7 +229,7 @@ var VuePrincipale = (function()
                                      id: 'y-axis-1',
                                      scaleLabel: {
                                          display: true,
-                                         labelString: 'Températures'
+                                         labelString: 'Températures (°C)'
                                      },
                                      ticks: {
                                          fontColor: "rgb(205,92,92)", // this here
@@ -243,7 +243,7 @@ var VuePrincipale = (function()
                                      id: 'y-axis-2',
                                      scaleLabel: {
                                          display: true,
-                                         labelString: 'Humidités'
+                                         labelString: 'Humidité (%)'
                                      },
                                      ticks: {
                                          fontColor: "rgb(176,196,222)", // this here
@@ -306,7 +306,7 @@ var VuePrincipale = (function()
                                      id: 'y-axis-1',
                                      scaleLabel: {
                                          display: true,
-                                         labelString: 'Températures'
+                                         labelString: 'Températures (°C)'
                                      },
                                      ticks: {
                                          fontColor: "rgb(205,92,92)", // this here
@@ -320,7 +320,7 @@ var VuePrincipale = (function()
                                      id: 'y-axis-2',
                                      scaleLabel: {
                                          display: true,
-                                         labelString: 'Humidités'
+                                         labelString: 'Humidité (%)'
                                      },
                                      ticks: {
                                          fontColor: "rgb(176,196,222)", // this here

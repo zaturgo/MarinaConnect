@@ -20,9 +20,9 @@ var HumiditeDAO = function () {
                     listeHumidite= [];
                     for (var i = 0; i < json.humidites.length; i++) {
                         var ligne = json.humidites[i];
-                        listeHumidite.push(new Humidite(ligne.id,ligne.valeur ,ligne.date ,ligne.idmarina));
+                        listeHumidite.push(new Humidite(ligne.valeur, ligne.date));
                     }
-
+                    console.log(listeHumidite)
                     callBackHumidite(listeHumidite, null);
                 }
             )
