@@ -2,6 +2,7 @@
   "name": "MarinaConnect Stats",
   "version": "1.0.0",
   "description": "Statistiques MarinaConnect",
+  "productName": "MarinaConnect Desktop",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
@@ -10,7 +11,8 @@
   "author": "zaturgo",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^3.1.3"
+    "electron": "^3.1.3",
+    "electron-packager": "^13.1.1"
   },
   "dependencies": {
     "chart.js": "^2.7.3"

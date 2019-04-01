@@ -1,46 +1,189 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>MarinaConnect&trade;</title>
-    <meta charset="utf8">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <title>Marina Connect Desktop</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="src/style/marinaStyle.css">
+
 </head>
 <body>
-<div id="corps">
-    Chargement...
-    <script type="plain/text" id="page-stat">
-<div id="page-stat" class="m-5">
-<div id="menuDeroulant" class="text-center"></div>
-    <div id="header" class="text-center"><h1>Statistiques</h1><h2>Graphique du X</h2></div>
-    <div id="controles"></div>
-    <div id="graphique">
-        <canvas id="myChart"></canvas>
+
+<script type="text/javascript">
+    function initMap() {
+
+        var latlng = new google.maps.LatLng(46.718021, 1.808943);
+        var myOptions = {
+            zoom: 5,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+        return map;
+    }
+</script>
+
+<div id="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="src/img/marina-0.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Marina Connect
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link ico-menu" href="#"><i class="fas fa-home"></i> Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ico-menu" href="#marinas"><i class="fas fa-map-marked-alt"></i> Marinas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ico-menu" href="#contact"><i class="far fa-handshake"></i> Gestion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ico-menu" href="#settings"><i class="fas fa-cog"></i> Paramètres</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div id="container">
+    <div class="alert alert-danger" role="alert">
+        Erreur dans le programme.
+    </div>
+</div>
+
+<div id="footer">
 
 </div>
-</div>
 
-    </script>
-</div>
-</body>
-</html>
+<script type="text/html" id="page-home">
+    <div class="container-fluid text-center">
+        <h4 class="mb-5 mt-5">Bienvenue sur l'application de monitoring de Marina Connect!</h4>
+        <img src="src/img/marina-0.png" class="mt-5 mb-5 img-responsive center-block" alt="Logo Marina Connect">
+        <a class="mt-5 btn btn-lg btn-info" href="#marinas">Voir les marinas !</a>
+    </div>
+</script>
 
-<!--import fichiers vue-->
-<script src="src/vue/VuePrincipale.js"></script>
-<script src="src/vue/VueErreur.js"></script>
+<script type="text/html" id="page-map">
+    <div class="container-fluid">
+        <h2>Carte des marinas équipées :</h2>
+    </div>
+    <div id="map" style="height: 32em"></div>
 
-<!--import dao-->
-<script src="src/donnees/TemperatureDAO.js"></script>
-<script src="src/donnees/HumiditeDAO.js"></script>
-<script src="src/donnees/PressionDAO.js"></script>
+</script>
 
-<!--import modele-->
-<script src="src/modele/Temperature.js"></script>
-<script src="src/modele/Humidite.js"></script>
-<script src="src/modele/Pression.js"></script>
+<script type="text/html" id="page-detail">
+    <div class="container-fluid">
+        <h2 class="mb-3">Marina de Marseille :</h2>
 
-<!--import projet-->
+        <div>
+            <details>
+                <summary>Options</summary>
+                <h5 class="mb-3 mt-3">Période :</h5>
+
+                <select id="custom-select" class="custom-select w-100 mb-3">
+                    <option value="annee">Année</option>
+                    <option value="mois">Mois</option>
+                    <option value="semaine">Semaine</option>
+                    <option value="jours">Jours</option>
+                </select>
+
+                <h5 class="mb-3">Données affichées :</h5>
+                <div class="ml-3">
+                    <table style="width:40%">
+                        <tr>
+                            <td><label>Température : </label></td>
+                            <td><input id="checkBoxTemp" type="checkbox" checked></td>
+                        </tr>
+                        <tr>
+                            <td><label>Humidité : </label></td>
+                            <td><input id="checkBoxHumidite" type="checkbox" value="" checked></td>
+                        </tr>
+                        <tr>
+                            <td><label>Pression : </label></td>
+                            <td><input id="checkBoxPression" type="checkbox" value="" checked></td>
+                        </tr>
+                    </table>
+                </div>
+            </details>
+        </div>
+    </div>
+    <div class="w-100" id="graphTemperature"></div>
+    <div class="w-100" id="graphHumidites"></div>
+    <div class="w-100" id="graphPression"></div>
+</script>
+
+<script type="text/html" id="page-settings">
+    <p> paramêtres </p>
+</script>
+
+<script type="text/html" id="page-contact">
+    <div class="w-100 h-100">
+        <object type="text/html" data="http://54.39.145.59/marinaConnect/Site%20public/vue/partieGerant.php" class="w-100" style="height: 93vh">
+        </object>
+    </div>
+</script>
+
+<script type="text/html" id="page-loader">
+    <div class="containerLoader">
+        <div class="item item-1"></div>
+        <div class="item item-2"></div>
+        <div class="item item-3"></div>
+        <div class="item item-4"></div>
+    </div>
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPdQulnWsrnX0wvs_WBoCrHkycdbREIww"></script>
+
+<script type="text/javascript" charset="utf-8" src="src/lib/jquery.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+<script src="src/accesseur/HumiditesDAO.js"></script>
+<script src="src/accesseur/TemperatureDAO.js"></script>
+<script src="src/accesseur/MarinaDAO.js"></script>
+<script src="src/accesseur/PressionDAO.js"></script>
+<script src="src/accesseur/Variables.js"></script>
+
+<script src="src/vue/Loader.js"></script>
+<script src="src/vue/VueHome.js"></script>
+<script src="src/vue/VueContact.js"></script>
+<script src="src/vue/VueDetail.js"></script>
+<script src="src/vue/VueMap.js"></script>
+
 <script src="src/application.js"></script>
 
-<!--import lib-->
-<script src="libs/Chart.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script>initialiser()</script>
 
 
+<!--<script type="text/javascript" charset="utf-8" src="lib/cordova.js"></script>-->
+
+
+</body>
+</html>

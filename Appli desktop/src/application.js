@@ -1,47 +1,89 @@
 (function () {
-    this.listeHumidite = [];
-    this.listePression = [];
-    this.listeTemperature = [];
-    window.API_URL = "http://54.39.145.59:8085";
+    Loader();
+    var instance = this;
+    var idMarina;
 
-    var initialiser = function () {
-        this.humiditeDAO = new HumiditeDAO();
+    var donneeHumidite;
+    var donneeTemp;
+    var donneePression;
+    var latReelle;
+    var lngReelle;
+    var donneeMaree;
+
+    this.initialiser = function () {
+        this.marinaDAO = new MarinaDAO();
+        this.humiditesDAO = new HumiditesDAO();
         this.pressionDAO = new PressionDAO();
         this.temperatureDAO = new TemperatureDAO();
+        this.mareeDAO = new MareeDAO();
+
+        idMarina = 0;
         window.addEventListener("hashchange", naviguer);
-        naviguer();
 
-    }
-    var naviguer = function () {
+        this.naviguer();
+    };
+
+    this.naviguer = function () {
+        Loader();
+
         var hash = window.location.hash;
-        var regex = /%20/gi;
-        var string = hash.replace(regex, ' ');
-        this.date = string.substr(1);
-        if (string === ''){
-            this.date="annee"
+
+        if (!hash) {
+            var vueHome = new VueHome();
+            vueHome.afficher();
+
+        } else if (hash.match(/^#marinas/)) {
+            Loader();
+
+            marinaDAO.listerMarina(callbackMarina);
+
+        } else if (hash.match(/^#settings/)) {
+
+        } else if (hash.match(/^#contact/)) {
+            var vueContact = new VueContact();
+            vueContact.afficher();
+        } else if (hash.match(/^#marina\/([0-9]+)/)) {
+            var navigation = hash.match(/^#marina\/([0-9]+)/);
+            idMarina = navigation[1];
+
+            //humiditesDAO.listerHumiditesAnnee(callbackHumidite);
+            humiditesDAO.listerHumiditesAnnee(callbackHumidite);
         }
-        this.humiditeDAO.lister(callBackHumidite, date);
+    };
 
-    }
+    var callbackHumidite = function callbackHumidite(result) {
+        donneeHumidite = JSON.parse(result).humidites;
 
-    var callBackHumidite = function (reponse) {
-        this.listeHumidite = reponse;
-        this.pressionDAO.lister(callBackPression, date);
-    }
+        temperatureDAO.listerTemperatureAnnee(callbackTemperature);
 
-    var callBackPression = function (reponse) {
-        this.listePression = reponse;
-        this.temperatureDAO.lister(callBackTemperature, date);
+    };
+
+    var callbackTemperature = function (result) {
+        donneeTemp = JSON.parse(result).temperatures;
+
+        mareeDAO.listerPressionAnnee(callbackPression);
+    };
+
+    var callbackPression = function (result) {
+        donneePression = JSON.parse(result).pressions;
+
+        var vueDetail = new VueDetail();
+        vueDetail.afficher(donneeHumidite, donneeTemp, donneePression, idMarina);
+    };
+
+    var callbackMarina = function (result) {
+        var marinas = JSON.parse(result).marina;
+        console.log("Marina : " + marinas);
+
+        var vueMap = new VueMap();
+        vueMap.afficher(marinas);
+    };
 
 
-    }
-    var callBackTemperature = function (reponse){
-        this.listeTemperature = reponse;
-        var global = new VuePrincipale();
-        global.afficher(this.listeHumidite, this.listeTemperature, this.listePression, this.date);
-    }
+    var naviguerAccueil = function () {
+        window.location.hash = "";
+    };
 
+    //initialiser();
 
-
-    initialiser();
 })();

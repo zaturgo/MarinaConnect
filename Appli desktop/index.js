@@ -6,7 +6,9 @@ const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
 
     function createWindow() {
-        mainWindow = new BrowserWindow({width: 1800, height: 1200});
+        mainWindow = new BrowserWindow({width: 1800,
+            height: 1200 ,
+            icon: 'src/icons/png/marina-0.png'});
 
         mainWindow.loadURL(`file://${__dirname}/index.html`);
 
