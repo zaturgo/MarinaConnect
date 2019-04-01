@@ -1,7 +1,5 @@
-var Humidite = function(id, valeur, date, idMarina)
+var Humidite = function(valeur,date)
 {
-    this.id = id;
     this.valeur = valeur;
     this.date = date;
-    this.idMarina = idMarina;
 }

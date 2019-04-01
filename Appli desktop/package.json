@@ -1,7 +1,7 @@
 {
-  "name": "statistiques-phaf",
+  "name": "MarinaConnect Stats",
   "version": "1.0.0",
-  "description": "Statistiques des mugs",
+  "description": "Statistiques MarinaConnect",
   "main": "index.js",
   "scripts": {
     "start": "electron .",

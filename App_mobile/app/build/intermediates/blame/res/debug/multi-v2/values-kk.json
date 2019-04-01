@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Florent\\Desktop\\PT\\MarinaConnect-S4\\App_mobile\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-kk\\values-kk.xml",
+            "outputFile": "/home/zaturgo/Documents/PT-S4/MarinaConnect-S4/App_mobile/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-kk/values-kk.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Florent\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\cfbfe8f86fedab1effed4872e958e76b\\res\\values-kk\\values-kk.xml",
+                    "source": "/home/zaturgo/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/758d00886f4c0109383ee754e9790792/res/values-kk/values-kk.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Florent\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\164596c0ed7af267040414304296e7f6\\res\\values-kk\\values-kk.xml",
+                    "source": "/home/zaturgo/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/8160e35d7f3231b865780f84ea157107/res/values-kk/values-kk.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
