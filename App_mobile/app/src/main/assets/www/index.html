@@ -82,6 +82,7 @@
 </script>
 
 <script type="text/html" id="page-map">
+
     <div class="container-fluid">
         <h2>Carte des marinas équipées :</h2>
     </div>
@@ -92,7 +93,6 @@
 <script type="text/html" id="page-detail">
     <div class="container-fluid">
         <h2 class="mb-3">Marina de Marseille :</h2>
-
         <div>
             <details>
                 <summary>Options</summary>
@@ -125,9 +125,11 @@
             </details>
         </div>
     </div>
-    <div class="w-100" id="graphTemperature"></div>
-    <div class="w-100" id="graphHumidites"></div>
-    <div class="w-100" id="graphPression"></div>
+
+    <canvas id="graphTemperature"></canvas><br>
+    <canvas id="graphHumidites"></canvas><br>
+    <canvas id="graphPression"></canvas>
+
 </script>
 
 <script type="text/html" id="page-settings">
@@ -177,7 +179,8 @@
 
 <script src="action/application.js"></script>
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
+<script src="lib/Chart.js"></script>
 
 <script>initialiser()</script>
 
