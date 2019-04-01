@@ -6,4 +6,4 @@ const STRING_HUMIDITES = "humidites";
 const STRING_ANNEE = "annee";
 const STRING_MOIS = "mois";
 const STRING_SEMAINE = "semaine";
-const STRING_JOURS = "jours";
+const STRING_JOURS = "jour";

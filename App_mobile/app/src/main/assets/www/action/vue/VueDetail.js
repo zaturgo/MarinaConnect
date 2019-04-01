@@ -12,12 +12,6 @@ var VueDetail = (function () {
     var checkBoxHumidite = true;
     var periode = 'annee';
 
-    /*var notCheckedTemp = true;
-    var notCheckedHumidite = true;
-    var notCheckedPression = true;*/
-
-    var firstUpdate = true;
-
     var humidites = [];
     var humiditesData = [];
     var humiditesVal = [];
@@ -80,8 +74,6 @@ var VueDetail = (function () {
             console.log("|| Actualisation graphs ||\nPeriode : " + periode + "\nTemperature : " + checkBoxTemp + " \tPression : " + checkBoxPression + "\tHumidite : " + checkBoxHumidite);
             firstUpdate = false;
         }*/
-
-        //TODO : callbacks...
 
         if (periode === "annee") {
             if (checkBoxHumidite) {
@@ -160,8 +152,6 @@ var VueDetail = (function () {
                 pressionVal.push([new Date(donneesPression[i].date), donneesPression[i].valeur])
             }
 
-            console.log(tempVal);
-
             afficheGrapheTemperature(temp, tempVal);
             afficheGrapheHumidite(humidites, humiditesVal);
             afficheGraphePression(pression, pressionVal);
@@ -216,7 +206,7 @@ var VueDetail = (function () {
                 }
             }
         };
-        if (data !== "undefined") {
+        if (data !== undefined) {
             var ctx = document.getElementById('graphTemperature').getContext('2d');
             window.myLine = new Chart(ctx, config);
             $("#graphTemperature").css("height","33%")
@@ -270,7 +260,7 @@ var VueDetail = (function () {
                 }
             }
         };
-        if (data !== "undefined") {
+        if (data !== undefined) {
             var ctx = document.getElementById('graphHumidites').getContext('2d');
             window.myLine = new Chart(ctx, config);
             $("#graphHumidites").css("height","33%")
@@ -324,7 +314,7 @@ var VueDetail = (function () {
                 }
             }
         };
-        if (data !== "undefined") {
+        if (data !== undefined) {
             var ctx = document.getElementById('graphPression').getContext('2d');
             window.myLine = new Chart(ctx, config);
             $("#graphPression").css("height","33%")

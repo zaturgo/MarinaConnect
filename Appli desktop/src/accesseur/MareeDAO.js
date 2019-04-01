@@ -13,7 +13,16 @@ var MareeDAO = function () {
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                callback(this.responseText);
+                var donneesTab = [];
+                var donnees = JSON.parse(this.responseText).extremes;
+                var lat = JSON.parse(this.responseText).responseLat;
+                var lng = JSON.parse(this.responseText).responseLon;
+                if (donnees !== undefined) {
+                    for (let i = 0; i < donnees.length; i++) {
+                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].height})
+                    }
+                }
+                callback(donneesTab, lat, lng);
             }
         });
 

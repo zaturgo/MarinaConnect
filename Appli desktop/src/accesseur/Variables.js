@@ -1,5 +1,5 @@
 const API_MOBILE_URL = "http://54.39.145.59:8085/";
-const API_MAREEL = "http://www.worldtides.info/api?";
+const API_MAREE = "http://www.worldtides.info/api?";
 const STRING_MARINA = "marina";
 const STRING_TEMPERATURE = "temperatures";
 const STRING_PRESSION = "pressions";
