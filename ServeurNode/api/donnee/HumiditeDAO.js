@@ -56,3 +56,14 @@ exports.listerHumiditeAnnee = async function(requete) {
 }
 
 
+exports.ajouterHumidite = async function(requete) {
+	if (typeof requete.body["valeur"] !== 'undefined' || typeof requete.body["marina"] !== 'undefined'){
+		const SELECT_TOUTES_LES_HUMIDITES = 'INSERT into humidite(valeur,date,idmarina) VALUES ('+requete.body["valeur"]+',DATE(NOW()),'+requete.body["marina"]+');';
+		return await baseDeDonnees.query(SELECT_TOUTES_LES_HUMIDITES);
+	}else{
+		console.log("error"+JSON.stringify(requete.body)); 
+		return "error";
+	}
+}
+
+
