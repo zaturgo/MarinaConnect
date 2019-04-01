@@ -82,6 +82,7 @@
 </script>
 
 <script type="text/html" id="page-map">
+
     <div class="container-fluid">
         <h2>Carte des marinas équipées :</h2>
     </div>
@@ -92,7 +93,6 @@
 <script type="text/html" id="page-detail">
     <div class="container-fluid">
         <h2 class="mb-3">Marina de Marseille :</h2>
-
         <div>
             <details>
                 <summary>Options</summary>
@@ -120,14 +120,22 @@
                             <td><label>Pression : </label></td>
                             <td><input id="checkBoxPression" type="checkbox" value="" checked></td>
                         </tr>
+                        <tr>
+                            <td><label>Marées : </label></td>
+                            <td><input id="checkBoxMaree" type="checkbox" value="" checked></td>
+                        </tr>
                     </table>
                 </div>
             </details>
         </div>
     </div>
-    <div class="w-100" id="graphTemperature"></div>
-    <div class="w-100" id="graphHumidites"></div>
-    <div class="w-100" id="graphPression"></div>
+    <div id="graphe-container">
+        <canvas id="graphTemperature"></canvas><br>
+        <canvas id="graphHumidites"></canvas><br>
+        <canvas id="graphPression"></canvas><br>
+        <canvas id="graphMaree"></canvas>
+    </div>
+
 </script>
 
 <script type="text/html" id="page-settings">
@@ -136,7 +144,7 @@
 
 <script type="text/html" id="page-contact">
     <div class="w-100 h-100">
-        <object type="text/html" data="http://54.39.145.59/marinaConnect/Site%20public/vue/partieGerant.php" class="w-100" style="height: 93vh">
+        <object type="text/html" data="http://158.69.113.110/site/vue/" class="w-100" style="height: 93vh">
         </object>
     </div>
 </script>
@@ -166,6 +174,7 @@
 <script src="src/accesseur/HumiditesDAO.js"></script>
 <script src="src/accesseur/TemperatureDAO.js"></script>
 <script src="src/accesseur/MarinaDAO.js"></script>
+<script src="src/accesseur/MareeDAO.js"></script>
 <script src="src/accesseur/PressionDAO.js"></script>
 <script src="src/accesseur/Variables.js"></script>
 
@@ -177,7 +186,8 @@
 
 <script src="src/application.js"></script>
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
+<script src="src/lib/Chart.js"></script>
 
 <script>initialiser()</script>
 
