@@ -57,3 +57,13 @@ exports.listerHumiteAnnee = async function(requete, reponse) {
     }
 }
 
+exports.ajouterHumidite = async function(requete, reponse) {
+    try {
+        await humiditeDAO.ajouterHumidite(requete);
+        return reponse.status(200).send();
+    } catch(error) {
+        console.log(error);
+        return reponse.status(400).send(error);
+    }
+}
+

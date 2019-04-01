@@ -57,4 +57,9 @@ module.exports = function(app) {
 		console.log('Routage humidite : get toutes les humidites Annee avec id');
 		return controleurHumidite.listerHumiteAnnee(req, res);
 	});
+	
+	app.post('/humidites' , (req, res) => {
+		console.log('Routage humidite : ajouter humidite avec id marina');
+		return controleurHumidite.ajouterHumidite(req, res);
+	});
 }
