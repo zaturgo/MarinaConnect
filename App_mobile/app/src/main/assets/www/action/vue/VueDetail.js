@@ -12,12 +12,6 @@ var VueDetail = (function () {
     var checkBoxHumidite = true;
     var periode = 'annee';
 
-    /*var notCheckedTemp = true;
-    var notCheckedHumidite = true;
-    var notCheckedPression = true;*/
-
-    var firstUpdate = true;
-
     var humidites = [];
     var humiditesData = [];
     var humiditesVal = [];
@@ -80,8 +74,6 @@ var VueDetail = (function () {
             console.log("|| Actualisation graphs ||\nPeriode : " + periode + "\nTemperature : " + checkBoxTemp + " \tPression : " + checkBoxPression + "\tHumidite : " + checkBoxHumidite);
             firstUpdate = false;
         }*/
-
-        //TODO : callbacks...
 
         if (periode === "annee") {
             if (checkBoxHumidite) {
@@ -159,8 +151,6 @@ var VueDetail = (function () {
                 pression.push(donneesPression[i]);
                 pressionVal.push([new Date(donneesPression[i].date), donneesPression[i].valeur])
             }
-
-            console.log(tempVal);
 
             afficheGrapheTemperature(temp, tempVal);
             afficheGrapheHumidite(humidites, humiditesVal);

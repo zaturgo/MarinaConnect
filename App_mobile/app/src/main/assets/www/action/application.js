@@ -43,19 +43,18 @@
             idMarina = navigation[1];
 
             //humiditesDAO.listerHumiditesAnnee(callbackHumidite);
-            humiditesDAO.listerHumiditesAnnee(callbackHumidite);
+            humiditesDAO.listerHumiditesAnnee(callbackHumidite,idMarina);
         }
     };
 
     var callbackHumidite = function callbackHumidite(result) {
         donneeHumidite = JSON.parse(result).humidites;
-
-        temperatureDAO.listerTemperatureAnnee(callbackTemperature);
+        temperatureDAO.listerTemperatureAnnee(callbackTemperature,idMarina);
     };
 
     var callbackTemperature = function (result) {
         donneeTemp = JSON.parse(result).temperatures;
-        pressionDAO.listerPressionAnnee(callbackPression);
+        pressionDAO.listerPressionAnnee(callbackPression,idMarina);
     };
 
     var callbackPression = function (result) {
