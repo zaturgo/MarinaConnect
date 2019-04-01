@@ -8,19 +8,18 @@ var VueMap = (function () {
 
             var map = initMap();
 
-            console.log(JSON.stringify(marinas))
 
             for (let i = 0; i < marinas.length; i++) {
-                console.log("Add marker : " + marinas[i].id)
+                console.log("Add marker : " + marinas[i].id);
 
                 var contentString = '<div id="content">' +
                     '<div id="siteNotice">' +
                     '</div>' +
                     '<h1 id="firstHeading" class="firstHeading">'+marinas[i].nom+'</h1>' +
                     '<div id="bodyContent">' +
-                    '<p><b>Tabernouche la pinouche</b> wouah</p>' +
-                    '<p>Teste lien mon gars : <a href="#marina/'+marinas[i].id+'">' +
-                    'Click ici</a></p>' +
+                    '<p>Clickez sur le bouton pour accédder au données de la marina de '+ marinas[i].nom +'.</p>' +
+                    '<div class="mx-auto text-center"><a href="#marina/'+marinas[i].id+'" class="btn btn-sm btn-primary">' +
+                    'Statistiques</a></div>' +
                     '</div>' +
                     '</div>';
 
