@@ -66,3 +66,13 @@ exports.ajouterTemperature= async function(requete, reponse) {
 		return reponse.status(400).send(error);
 	}
 }
+
+exports.liveTemperature= async function(requete, reponse) {
+	try {
+		const { rows : temperature } = await temperatureDAO.liveTemperature(requete);
+		return reponse.status(200).send({ temperature});
+	} catch(error) {
+		console.log(error);
+		return reponse.status(400).send(error);
+	}
+}

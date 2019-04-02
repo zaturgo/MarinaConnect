@@ -67,3 +67,12 @@ exports.ajouterHumidite = async function(requete, reponse) {
     }
 }
 
+exports.liveHumidite = async function(requete, reponse) {
+	try {
+		const { rows : humidites } = await humiditeDAO.liveHumidite(requete);
+		return reponse.status(200).send({humidites});
+	} catch(error) {
+		console.log(error);
+		return reponse.status(400).send(error);
+	}
+}

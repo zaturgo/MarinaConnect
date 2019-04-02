@@ -24,10 +24,10 @@ exports.listerTemperatureJour = async function(requete) {
 
 exports.listerTemperatureSemaine = async function(requete) {
 	if (typeof requete.params[0] !== 'undefined'){
-		const SELECT_TEMPERATURES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM temperature where date >= DATE(NOW() + INTERVAL \'-7 day\') and idmarina='+requete.params[0]+' GROUP BY date_trunc(\'day\', date) ORDER BY date;';
+		const SELECT_TEMPERATURES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM temperature where date >= DATE(NOW() + INTERVAL \'-6 day\') and idmarina='+requete.params[0]+' GROUP BY date_trunc(\'day\', date) ORDER BY date;';
 		return await baseDeDonnees.query(SELECT_TEMPERATURES);
 	}else{
-		const SELECT_TEMPERATURES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM temperature where date >= DATE(NOW() + INTERVAL \'-7 day\') GROUP BY date_trunc(\'day\', date) ORDER BY date;';
+		const SELECT_TEMPERATURES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM temperature where date >= DATE(NOW() + INTERVAL \'-6 day\') GROUP BY date_trunc(\'day\', date) ORDER BY date;';
 		return await baseDeDonnees.query(SELECT_TEMPERATURES);
 	}
 }
@@ -35,10 +35,10 @@ exports.listerTemperatureSemaine = async function(requete) {
 
 exports.listerTemperatureMois = async function(requete) {
 	if (typeof requete.params[0] !== 'undefined'){
-		const SELECT_TEMPERATURES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 month\') and idmarina='+requete.params[0]+' GROUP BY date_trunc(\'day\', date) ORDER BY date;';
+		const SELECT_TEMPERATURES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 month\'+ INTERVAL \'1 day\') and idmarina='+requete.params[0]+' GROUP BY date_trunc(\'day\', date) ORDER BY date;';
 		return await baseDeDonnees.query(SELECT_TEMPERATURES);
 	}else{
-		const SELECT_TEMPERATURES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 month\') GROUP BY date_trunc(\'day\', date) ORDER BY date;';
+		const SELECT_TEMPERATURES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 month\'+ INTERVAL \'1 day\') GROUP BY date_trunc(\'day\', date) ORDER BY date;';
 		return await baseDeDonnees.query(SELECT_TEMPERATURES);
 	}
 }
@@ -46,10 +46,10 @@ exports.listerTemperatureMois = async function(requete) {
 
 exports.listerTemperatureAnnee = async function(requete) {
 	if (typeof requete.params[0] !== 'undefined'){
-		const SELECT_TEMPERATURES = 'SELECT avg(valeur) as valeur, date_trunc(\'month\',date) as date FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 year\') and idmarina='+requete.params[0]+' GROUP BY date_trunc(\'month\', date) ORDER BY date;';
+		const SELECT_TEMPERATURES = 'SELECT avg(valeur) as valeur, date_trunc(\'month\',date) as date FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 year\' + INTERVAL \'1 month\') and idmarina='+requete.params[0]+' GROUP BY date_trunc(\'month\', date) ORDER BY date;';
 		return await baseDeDonnees.query(SELECT_TEMPERATURES);
 	}else{
-		const SELECT_TEMPERATURES = 'SELECT avg(valeur) as valeur, date_trunc(\'month\',date) as date FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 year\') GROUP BY date_trunc(\'month\', date) ORDER BY date;';
+		const SELECT_TEMPERATURES = 'SELECT avg(valeur) as valeur, date_trunc(\'month\',date) as date FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 year\' + INTERVAL \'1 month\') GROUP BY date_trunc(\'month\', date) ORDER BY date;';
 		return await baseDeDonnees.query(SELECT_TEMPERATURES);
 	}
 }
@@ -65,4 +65,15 @@ exports.ajouterTemperature = async function(requete) {
 		return "error";
 	}
 }
+
+exports.liveTemperature = async function(req) {
+	if (typeof req.params[0] !== 'undefined'){
+		const SELECT_DERNIERE_TEMPERATURE = 'SELECT * FROM temperature where idmarina = '+req.params[0]+' ORDER BY id DESC LIMIT 1';
+		return await baseDeDonnees.query(SELECT_DERNIERE_TEMPERATURE)
+	}else{
+		console.log("error"+JSON.stringify(requete.body)); 
+		return "error";
+	}
+}
+
 
