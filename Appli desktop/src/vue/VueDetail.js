@@ -176,244 +176,155 @@ var VueDetail = (function () {
             for (let i = 0; i < donneesPression.length; i++) {
                 pression.push(donneesPression[i]);
                 pressionVal.push([new Date(donneesPression[i].date), donneesPression[i].valeur])
-            }for (let i = 0; i < donneesMaree.length; i++) {
-                mareeVal.push([new Date(donneesMaree[i].date), donneesMaree[i].height])
+            }
                 latReel = lat;
                 lngReel = lng;
-            }
-
-            console.log(tempVal);
 
             afficheGrapheTemperature(temp, tempVal);
             afficheGrapheHumidite(humidites, humiditesVal);
             afficheGraphePression(pression, pressionVal);
-            afficheGrapheMaree(mareeVal);
+            afficheGrapheMaree(donneesMaree);
         }
     };
 
 
     function afficheGrapheTemperature(data) {
-        var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        console.log(data)
 
-        var config = {
-            type: 'line',
-            data: {
-                datasets: [{
-                    label: 'Température en °C',
-                    backgroundColor: new Color(255, 0, 0),
-                    borderColor: new Color(255, 0, 0),
-                    data: data,
-                    fill: false,
-                },
-                ]
-            },
-            options: {
-                responsive: true,
-                title: {
-                    display: false,
-                    text: 'Température'
-                },
-                tooltips: {
-                    mode: 'index',
-                    intersect: false,
-                },
-                hover: {
-                    mode: 'nearest',
-                    intersect: true
-                },
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Période'
-                        }
-                    }],
-                    yAxes: [{
-                        display: true,
-                        ticks: {
-                            suggestedMin: 0
-                        },
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Valeur (°C)'
-                        }
-                    }]
-                }
-            }
-        };
+        var x = [];
+        var y = [];
+        for (let i = 0; i < data.length; i++) {
+            var date = new Date(data[i].date)
+            x[i] = ""+date.getHours()+"h"+date.getMinutes()+" "+date.getDay()+"/"+date.getMonth()+"/"+date.getFullYear();
+            y[i] = data[i].valeur;
+        }
+
         if (data !== undefined) {
-            var ctx = document.getElementById('graphTemperature').getContext('2d');
-            window.myLine = new Chart(ctx, config);
+            new Chart(document.getElementById("graphTemperature").getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: x,
+                    datasets: [{
+                        data: y,
+                        label: "Température",
+                        borderColor: "#3e95cd",
+                        fill: false
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    title: {
+                        display: true,
+                        text: 'Température en °C'
+                    }
+                }
+            });
             $("#graphTemperature").css("height","33%")
         }
     }
 
     function afficheGrapheHumidite(data) {
-        var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        console.log(data)
 
-        var config = {
-            type: 'line',
-            data: {
-                datasets: [{
-                    label: 'Humiditée en %',
-                    backgroundColor: new Color(255, 0, 0),
-                    borderColor: new Color(255, 0, 0),
-                    data: data,
-                    fill: false,
-                },
-                ]
-            },
-            options: {
-                responsive: true,
-                title: {
-                    display: false,
-                    text: 'Humiditée'
-                },
-                tooltips: {
-                    mode: 'index',
-                    intersect: false,
-                },
-                hover: {
-                    mode: 'nearest',
-                    intersect: true
-                },
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Période'
-                        }
-                    }],
-                    yAxes: [{
-                        display: true,
-                        ticks: {
-                            suggestedMin: 0
-                        },
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Valeur (%)'
-                        }
-                    }]
-                }
-            }
-        };
+        var x = [];
+        var y = [];
+        for (let i = 0; i < data.length; i++) {
+            var date = new Date(data[i].date)
+            x[i] = ""+date.getHours()+"h"+date.getMinutes()+" "+date.getDay()+"/"+date.getMonth()+"/"+date.getFullYear();
+            y[i] = data[i].valeur;
+        }
+
         if (data !== undefined) {
-            var ctx = document.getElementById('graphHumidites').getContext('2d');
-            window.myLine = new Chart(ctx, config);
+            new Chart(document.getElementById("graphHumidites").getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: x,
+                    datasets: [{
+                        data: y,
+                        label: "Humidité",
+                        borderColor: "#3e95cd",
+                        fill: false
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    title: {
+                        display: true,
+                        text: 'Humidité en %'
+                    }
+                }
+            });
             $("#graphHumidites").css("height","33%")
         }
     }
 
     function afficheGraphePression(data) {
-        var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        console.log(data)
+        var x = [];
+        var y = [];
+        for (let i = 0; i < data.length; i++) {
+            var date = new Date(data[i].date)
+            x[i] = ""+date.getHours()+"h"+date.getMinutes()+" "+date.getDay()+"/"+date.getMonth()+"/"+date.getFullYear();
+            y[i] = data[i].valeur;
+        }
 
-        var config = {
-            type: 'line',
-            data: {
-                datasets: [{
-                    label: 'Préssion en %',
-                    backgroundColor: new Color(255, 0, 0),
-                    borderColor: new Color(255, 0, 0),
-                    data: data,
-                    fill: false,
-                },
-                ]
-            },
-            options: {
-                responsive: true,
-                title: {
-                    display: false,
-                    text: 'Pression'
-                },
-                tooltips: {
-                    mode: 'index',
-                    intersect: false,
-                },
-                hover: {
-                    mode: 'nearest',
-                    intersect: true
-                },
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Période'
-                        }
-                    }],
-                    yAxes: [{
-                        display: true,
-                        ticks: {
-                            suggestedMin: 0
-                        },
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Valeur (%)'
-                        }
-                    }]
-                }
-            }
-        };
         if (data !== undefined) {
-            var ctx = document.getElementById('graphPression').getContext('2d');
-            window.myLine = new Chart(ctx, config);
-            $("#graphPression").css("height","33%")
+            new Chart(document.getElementById("graphPression").getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: x,
+                    datasets: [{
+                        data: y,
+                        label: "Pression",
+                        borderColor: "#3e95cd",
+                        fill: false
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    title: {
+                        display: true,
+                        text: 'Pression en hPa'
+                    }
+                }
+            });
+            $("#graphMaree").css("height","33%")
         }
     }
     function afficheGrapheMaree(data) {
-        console.log(data);
-        var config = {
-            type: 'line',
-            data: {
-                datasets: [{
-                    label: 'Marée en m',
-                    backgroundColor: new Color(255, 0, 0),
-                    borderColor: new Color(255, 0, 0),
-                    data: data,
-                    fill: false,
-                },
-                ]
-            },
-            options: {
-                responsive: true,
-                title: {
-                    display: false,
-                    text: 'Pression'
-                },
-                tooltips: {
-                    mode: 'index',
-                    intersect: false,
-                },
-                hover: {
-                    mode: 'nearest',
-                    intersect: true
-                },
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Période'
-                        }
-                    }],
-                    yAxes: [{
-                        display: true,
-                        ticks: {
-                            suggestedMin: 0
-                        },
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Hauteur (m)'
-                        }
-                    }]
-                }
-            }
-        };
+        console.log(data)
+
+        var x = [];
+        var y = [];
+        for (let i = 0; i < data.length; i++) {
+            x[i] = ""+data[i].x.getHours()+"h"+data[i].x.getMinutes()+" "+data[i].x.getDay()+"/"+data[i].x.getMonth()+"/"+data[i].x.getFullYear();
+            y[i] = data[i].y;
+        }
+
         if (data !== undefined) {
-            var ctx = document.getElementById('graphMaree').getContext('2d');
-            window.myLine = new Chart(ctx, config);
+            new Chart(document.getElementById("graphMaree").getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: x,
+                    datasets: [{
+                        data: y,
+                        label: "Marée",
+                        borderColor: "#3e95cd",
+                        fill: false
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    title: {
+                        display: true,
+                        text: 'Marée en mètres'
+                    }
+                }
+            });
             $("#graphMaree").css("height","33%")
         }
     }

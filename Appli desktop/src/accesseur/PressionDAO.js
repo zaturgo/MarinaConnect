@@ -3,7 +3,7 @@ var PressionDAO = function () {
     this.listerPressionAnnee = function lister(callback, id) {
         console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
 
-        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_ANNEE;
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_ANNEE+ "/"+ id;
 
         var data = null;
 
@@ -98,13 +98,14 @@ var PressionDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 var donneesTab = [];
-                var donnees = JSON.parse(this.responseText).humidites;
+                var donnees = JSON.parse(this.responseText).pression;
 
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
-                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
+                console.log(donneesTab)
                 callback(donneesTab);
             }
         });
@@ -126,10 +127,10 @@ var PressionDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 var donneesTab = [];
-                var donnees = JSON.parse(this.responseText).humidites;
+                var donnees = JSON.parse(this.responseText).pression;
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
-                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
                 callback(donneesTab);
@@ -153,11 +154,11 @@ var PressionDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 var donneesTab = [];
-                var donnees = JSON.parse(this.responseText).humidites;
+                var donnees = JSON.parse(this.responseText).pression;
 
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
-                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
 
@@ -182,11 +183,11 @@ var PressionDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 var donneesTab = [];
-                var donnees = JSON.parse(this.responseText).humidites;
+                var donnees = JSON.parse(this.responseText).pression;
 
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
-                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
                 callback(donneesTab);

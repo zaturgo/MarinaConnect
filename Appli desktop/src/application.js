@@ -61,10 +61,9 @@
     };
 
     var callbackTemperature = function (result) {
-        donneeTemp = JSON.parse(result).temperatures;
+        donneeTemp = JSON.parse(result).temperature;
         var l1 = chercherLatParId(idMarina);
         var l2 = chercherLngParId(idMarina);
-        console.log(l1 + ""+ l2)
         mareeDAO.listerMarees(callBackMaree, l1,l2 );
     };
 
@@ -77,15 +76,8 @@
 
 
     var callbackPression = function (result) {
-        donneePression = JSON.parse(result).pressions;
-
+        donneePression = JSON.parse(result).pression;
         var vueDetail = new VueDetail();
-        console.log(donneeHumidite);
-        console.log(donneeTemp);
-        console.log(donneePression);
-        console.log(donneeMaree);
-        console.log(latReelle);
-        console.log(lngReelle);
         vueDetail.afficher(donneeHumidite, donneeTemp, donneePression, donneeMaree, latReelle, lngReelle,  idMarina);
     };
 

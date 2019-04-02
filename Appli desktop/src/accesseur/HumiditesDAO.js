@@ -91,7 +91,7 @@ var HumiditesDAO = function () {
                 var donnees = JSON.parse(this.responseText).humidites;
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
-                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
                 callback(donneesTab);
@@ -119,7 +119,7 @@ var HumiditesDAO = function () {
                 var donnees = JSON.parse(this.responseText).humidites;
                 if (donnees !== undefined) {
                 for (let i = 0; i < donnees.length; i++) {
-                    donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                    donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                 }}
 
                 callback(donneesTab);
@@ -146,7 +146,7 @@ var HumiditesDAO = function () {
                 var donnees = JSON.parse(this.responseText).humidites;
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
-                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
 
@@ -174,7 +174,7 @@ var HumiditesDAO = function () {
                 var donnees = JSON.parse(this.responseText).humidites;
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
-                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
                 callback(donneesTab);
