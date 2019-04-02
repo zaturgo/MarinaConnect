@@ -171,13 +171,15 @@ var HumiditesDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 var donneesTab = [];
+                var dataTime = [];
                 var donnees = JSON.parse(this.responseText).humidites;
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
                         donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        dataTime.push(new Date(donnees[i].date))
                     }
                 }
-                callback(donneesTab);
+                callback(donneesTab,dataTime);
             }
         });
 

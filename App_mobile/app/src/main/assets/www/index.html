@@ -15,25 +15,40 @@
     <link rel="stylesheet" type="text/css" href="style/marinaStyle.css">
 
 </head>
-<body>
+
+<body id="body">
+<div id="header"></div>
+<div id="container">
+    <div class="alert alert-danger" role="alert">
+        Erreur dans le programme.
+    </div>
+</div>
+
+
+<script type="text/html" id="page-loader">
+    <div class="containerLoader">
+        <div class="item item-1"></div>
+        <div class="item item-2"></div>
+        <div class="item item-3"></div>
+        <div class="item item-4"></div>
+    </div>
+</script>
 
 <script type="text/javascript">
     function initMap() {
-
         var latlng = new google.maps.LatLng(46.718021, 1.808943);
         var myOptions = {
             zoom: 5,
             center: latlng,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
-
         var map = new google.maps.Map(document.getElementById("map"), myOptions);
-
         return map;
     }
 </script>
 
-<div id="header">
+<script type="text/html" id="main-navbar">
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="img/marina-0.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -61,17 +76,8 @@
             </ul>
         </div>
     </nav>
-</div>
 
-<div id="container">
-    <div class="alert alert-danger" role="alert">
-        Erreur dans le programme.
-    </div>
-</div>
-
-<div id="footer">
-
-</div>
+</script>
 
 <script type="text/html" id="page-home">
     <div class="container-fluid text-center">
@@ -126,8 +132,10 @@
         </div>
     </div>
     <div id="graphe-container">
-        <canvas id="graphTemperature"></canvas><br>
-        <canvas id="graphHumidites"></canvas><br>
+        <canvas id="graphTemperature"></canvas>
+        <br>
+        <canvas id="graphHumidites"></canvas>
+        <br>
         <canvas id="graphPression"></canvas>
     </div>
 
@@ -138,20 +146,25 @@
 </script>
 
 <script type="text/html" id="page-contact">
-    <div class="w-100 h-100">
-        <object type="text/html" data="http://158.69.113.110/site/vue/" class="w-100" style="height: 93vh">
-        </object>
+    <div class="">
+        <object type="text/html" data="http://54.39.145.59/marinaConnect/Site%20public/vue/" class="w-100"
+                style="height: 93vh; bottom: 0;"></object>
     </div>
+</script>
+<script type="text/html" id="header-site">
+    <nav class="navbar">
+        <div class="container">
+            <div class=" navbar-header navbar-default">
+                <div class="align-middle">
+                    <a class="mybtn2 btn btn-link btn-xs" href="#"><i class="fas fa-arrow-left"
+                                                                      style="color: #424242"></i></i></a>
+                    <div class="navbar-brand" style="padding: 0;margin:0;">Retour</div>
+                </div>
+            </div>
+        </div>
+    </nav>
 </script>
 
-<script type="text/html" id="page-loader">
-    <div class="containerLoader">
-        <div class="item item-1"></div>
-        <div class="item item-2"></div>
-        <div class="item item-3"></div>
-        <div class="item item-4"></div>
-    </div>
-</script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPdQulnWsrnX0wvs_WBoCrHkycdbREIww"></script>
 
