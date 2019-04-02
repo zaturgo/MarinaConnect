@@ -126,6 +126,10 @@
                             <td><label>Pression : </label></td>
                             <td><input id="checkBoxPression" type="checkbox" value="" checked></td>
                         </tr>
+                        <tr>
+                            <td><label>Marées : </label></td>
+                            <td><input id="checkBoxMaree" type="checkbox" value="" checked></td>
+                        </tr>
                     </table>
                 </div>
             </details>
@@ -136,7 +140,8 @@
         <br>
         <canvas id="graphHumidites"></canvas>
         <br>
-        <canvas id="graphPression"></canvas>
+        <canvas id="graphPression"></canvas><br>
+        <canvas id="graphMaree"></canvas>
     </div>
 
 </script>
@@ -182,6 +187,7 @@
 <script src="action/accesseur/HumiditesDAO.js"></script>
 <script src="action/accesseur/TemperatureDAO.js"></script>
 <script src="action/accesseur/MarinaDAO.js"></script>
+<script src="action/accesseur/MareeDAO.js"></script>
 <script src="action/accesseur/PressionDAO.js"></script>
 <script src="action/accesseur/Variables.js"></script>
 

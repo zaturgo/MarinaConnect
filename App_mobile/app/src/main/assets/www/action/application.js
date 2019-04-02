@@ -10,6 +10,10 @@
     var donneeHumidite;
     var donneeTemp;
     var donneePression;
+    var donneeMaree;
+    var latReelle;
+    var lngReelle;
+    var marinas = [];
 
     this.initialiser = function () {
         this.marinaDAO = new MarinaDAO();
@@ -57,6 +61,15 @@
 
     var callbackTemperature = function (result) {
         donneeTemp = JSON.parse(result).temperature;
+        var l1 = chercherLatParId(idMarina);
+        var l2 = chercherLngParId(idMarina);
+        mareeDAO.listerMarees(callBackMaree, l1,l2 );
+    };
+
+    var callBackMaree = function (result, lat, lng) {
+        donneeMaree = result;
+        latReelle = lat;
+        lngReelle = lng;
         pressionDAO.listerPressionAnnee(callbackPression, idMarina);
     };
 
@@ -64,7 +77,7 @@
         donneePression = JSON.parse(result).pression;
 
         var vueDetail = new VueDetail();
-        vueDetail.afficher(donneeHumidite, donneeTemp, donneePression, idMarina);
+        vueDetail.afficher(donneeHumidite, donneeTemp, donneePression, donneeMaree,latReelle,lngReelle, idMarina);
     };
 
     var callbackMarina = function (result) {
@@ -75,6 +88,24 @@
         vueMap.afficher(marinas);
     };
 
+    var chercherLatParId = function(id){
+        for (let i = 0; i < marinas.length; i++) {
+            if (marinas[i].id == id){
+                return marinas[i].latitude;
+            }
+        }
+        return null;
+
+    }
+
+    var chercherLngParId = function(id){
+        for (let i = 0; i < marinas.length; i++) {
+            if (marinas[i].id == id){
+                return marinas[i].longitude;
+            }
+        }
+        return null;
+    }
 
     var naviguerAccueil = function () {
         window.location.hash = "";

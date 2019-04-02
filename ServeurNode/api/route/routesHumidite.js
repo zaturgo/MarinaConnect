@@ -59,7 +59,7 @@ module.exports = function(app) {
 	});
 	
 	app.post('/humidites' , (req, res) => {
-		console.log('Routage humidite : ajouter humidite avec id marina');
+		console.log('Routage humidite : ajoute humidite : '+req.body["valeur"]+"%");
 		return controleurHumidite.ajouterHumidite(req, res);
 	});
 }

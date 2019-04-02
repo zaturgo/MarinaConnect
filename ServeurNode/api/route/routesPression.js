@@ -61,7 +61,8 @@ app.get('/pressions/annee/*' , (req, res) => {
 });
 
 app.post('/pressions' , (req, res) => {
-	console.log('Routage pression : ajouter presson avec id marina');
+	console.log('Routage pression : ajoute pression : '+req.body["valeur"]+"hPa");
+	console.log("");
 	return controleurPression.ajouterPression(req, res);
 });
 
