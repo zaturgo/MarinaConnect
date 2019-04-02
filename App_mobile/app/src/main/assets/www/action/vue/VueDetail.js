@@ -123,6 +123,8 @@ var VueDetail = (function () {
 
         this.afficher = function (donneesHumidites, donneesTemp, donneesPression, id) {
 
+            $("#navbarSupportedContent").collapse('hide')
+
             marinaID = id;
 
             document.getElementById("container").innerHTML = pageDetail;
@@ -209,14 +211,15 @@ var VueDetail = (function () {
         if (data !== "undefined") {
             var ctx = document.getElementById('graphTemperature').getContext('2d');
             window.myLine = new Chart(ctx, config);
-            $("#graphTemperature").css("height","33%")
+            $("#graphTemperature").css("height", "33%")
         }
     }
 
-    function afficheGrapheHumidite(data) {
+    function afficheGrapheHumidite(data, dataTime) {
         var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
         var config = {
+            labels: dataTime,
             type: 'line',
             data: {
                 datasets: [{
@@ -252,6 +255,9 @@ var VueDetail = (function () {
                     }],
                     yAxes: [{
                         display: true,
+                        ticks: {
+                            suggestedMin: 0
+                        },
                         scaleLabel: {
                             display: true,
                             labelString: 'Valeur (%)'
@@ -263,7 +269,7 @@ var VueDetail = (function () {
         if (data !== "undefined") {
             var ctx = document.getElementById('graphHumidites').getContext('2d');
             window.myLine = new Chart(ctx, config);
-            $("#graphHumidites").css("height","33%")
+            $("#graphHumidites").css("height", "33%")
         }
     }
 
@@ -317,7 +323,7 @@ var VueDetail = (function () {
         if (data !== "undefined") {
             var ctx = document.getElementById('graphPression').getContext('2d');
             window.myLine = new Chart(ctx, config);
-            $("#graphPression").css("height","33%")
+            $("#graphPression").css("height", "33%")
         }
     }
 
