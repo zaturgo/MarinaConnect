@@ -53,70 +53,16 @@ exports.listerTemperatureAnnee = async function(requete) {
 		return await baseDeDonnees.query(SELECT_TEMPERATURES);
 	}
 }
-/*
 
 
-exports.listerTemperatureJour = async function() {
-    const SELECT_TOUTES_LES_TEMPERATURES = 'SELECT * FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 day\');';
-    return await baseDeDonnees.query(SELECT_TOUTES_LES_TEMPERATURES);
+
+exports.ajouterTemperature = async function(requete) {
+	if (typeof requete.body["valeur"] !== 'undefined' || typeof requete.body["marina"] !== 'undefined'){
+		const INSERT_TEMPERATURE = 'INSERT into temperature(valeur,date,idmarina) VALUES ('+requete.body["valeur"]+',NOW(),'+requete.body["marina"]+');';
+		return await baseDeDonnees.query(INSERT_TEMPERATURE);
+	}else{
+		console.log("error"+JSON.stringify(requete.body)); 
+		return "error";
+	}
 }
-
-
-exports.listerTemperatureSemaine = async function() {
-    const SELECT_TOUTES_LES_TEMPERATURES = 'SELECT * FROM temperature where date >= DATE(NOW() + INTERVAL \'-7 day\');';
-    return await baseDeDonnees.query(SELECT_TOUTES_LES_TEMPERATURES);
-}
-
-
-exports.listerTemperatureMois = async function() {
-    const SELECT_TOUTES_LES_TEMPERATURES = 'SELECT * FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 month\');';
-    return await baseDeDonnees.query(SELECT_TOUTES_LES_TEMPERATURES);
-}
-
-
-exports.listerTemperatureAnnee = async function() {
-    const SELECT_TOUTES_LES_TEMPERATURES = 'SELECT * FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 year\');';
-    return await baseDeDonnees.query(SELECT_TOUTES_LES_TEMPERATURES);
-}
-
-
-
-
-
-
-
-
-
-exports.listerTemperatureMarina = async function(marina) {
-	const SELECT_TOUTES_LES_TEMPERATURES = 'select * from temperature where idmarina='+marina;
-	return await baseDeDonnees.query(SELECT_TOUTES_LES_TEMPERATURES);
-}
-
-
-exports.listerTemperatureJourMarina = async function(marina) {
-	const SELECT_TOUTES_LES_TEMPERATURES = 'SELECT * FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 day\') AND idmarina='+marina;
-	return await baseDeDonnees.query(SELECT_TOUTES_LES_TEMPERATURES);
-}
-
-
-exports.listerTemperatureSemaineMarina = async function(marina) {
-	const SELECT_TOUTES_LES_TEMPERATURES = 'SELECT * FROM temperature where date >= DATE(NOW() + INTERVAL \'-7 day\') AND idmarina='+marina;
-	return await baseDeDonnees.query(SELECT_TOUTES_LES_TEMPERATURES);
-}
-
-
-exports.listerTemperatureMoisMarina = async function(marina) {
-	const SELECT_TOUTES_LES_TEMPERATURES = 'SELECT * FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 month\') AND idmarina='+marina;
-	return await baseDeDonnees.query(SELECT_TOUTES_LES_TEMPERATURES);
-}
-
-
-exports.listerTemperatureAnneeMarina = async function(marina) {
-	const SELECT_TOUTES_LES_TEMPERATURES = 'SELECT * FROM temperature where date >= DATE(NOW() + INTERVAL \'-1 year\')  AND idmarina='+marina;
-	return await baseDeDonnees.query(SELECT_TOUTES_LES_TEMPERATURES);
-}
-
-
-
-*/
 

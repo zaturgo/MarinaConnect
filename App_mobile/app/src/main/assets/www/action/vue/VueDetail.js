@@ -208,7 +208,7 @@ var VueDetail = (function () {
                 }
             }
         };
-        if (data !== "undefined") {
+        if (data !== undefined) {
             var ctx = document.getElementById('graphTemperature').getContext('2d');
             window.myLine = new Chart(ctx, config);
             $("#graphTemperature").css("height", "33%")
@@ -266,7 +266,7 @@ var VueDetail = (function () {
                 }
             }
         };
-        if (data !== "undefined") {
+        if (data !== undefined) {
             var ctx = document.getElementById('graphHumidites').getContext('2d');
             window.myLine = new Chart(ctx, config);
             $("#graphHumidites").css("height", "33%")
@@ -320,7 +320,7 @@ var VueDetail = (function () {
                 }
             }
         };
-        if (data !== "undefined") {
+        if (data !== undefined) {
             var ctx = document.getElementById('graphPression').getContext('2d');
             window.myLine = new Chart(ctx, config);
             $("#graphPression").css("height", "33%")

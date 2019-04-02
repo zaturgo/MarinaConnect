@@ -60,4 +60,9 @@ app.get('/pressions/annee/*' , (req, res) => {
        return controleurPression.listerPressionAnnee(req, res);
 });
 
+app.post('/pressions' , (req, res) => {
+	console.log('Routage pression : ajouter presson avec id marina');
+	return controleurPression.ajouterPression(req, res);
+});
+
 }

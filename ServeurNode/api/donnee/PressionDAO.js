@@ -58,31 +58,13 @@ exports.listerPressionAnnee = async function(requete) {
 	}
 }
 
-/*exports.listerPressionJour = async function() {
- * const SELECT_PRESSIONS = 'SELECT * FROM pression where date >= DATE(NOW() + INTERVAL \'-1 day\');';
- * return await baseDeDonnees.query(SELECT_PRESSIONS);
- } 
-
-
-exports.listerPressionSemaine = async function() {
-    const SELECT_PRESSIONS = 'SELECT * FROM pression where date >= DATE(NOW() + INTERVAL \'-7 day\');';
-    return await baseDeDonnees.query(SELECT_PRESSIONS);
+exports.ajouterPression = async function(requete) {
+	if (typeof requete.body["valeur"] !== 'undefined' || typeof requete.body["marina"] !== 'undefined'){
+		const INSERT_PRESSION = 'INSERT into pression(valeur,date,idmarina) VALUES ('+requete.body["valeur"]+',NOW(),'+requete.body["marina"]+');';
+		return await baseDeDonnees.query(INSERT_PRESSION);
+	}else{
+		console.log("error"+JSON.stringify(requete.body)); 
+		return "error";
+	}
 }
-
-
-exports.listerPressionMois = async function() {
-    const SELECT_PRESSIONS = 'SELECT * FROM pression where date >= DATE(NOW() + INTERVAL \'-1 month\');';
-    return await baseDeDonnees.query(SELECT_PRESSIONS);
-}
-
-
-exports.listerPressionAnnee = async function() {
-    const SELECT_PRESSIONS = 'SELECT * FROM pression where date >= DATE(NOW() + INTERVAL \'-1 year\');';
-    return await baseDeDonnees.query(SELECT_PRESSIONS);
-}
-
-
-
-
-*/
 

@@ -57,3 +57,14 @@ exports.listerPressionAnnee = async function(requete, reponse) {
     }
 }
 
+
+exports.ajouterPression = async function(requete, reponse) {
+	try {
+		await pressionDAO.ajouterPression(requete);
+		return reponse.status(200).send();
+	} catch(error) {
+		console.log(error);
+		return reponse.status(400).send(error);
+	}
+}
+

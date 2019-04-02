@@ -90,4 +90,114 @@ var TemperatureDAO = function () {
         xhr.send(data);
     };
 
+
+    this.listerTemperatureAnneeUtil = function (callback, id) {
+        console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
+
+        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_ANNEE + "/" + id;
+
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                var donneesTab = [];
+                var donnees = JSON.parse(this.responseText).humidites;
+
+                if (donnees !== undefined) {
+                    for (let i = 0; i < donnees.length; i++) {
+                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                    }
+                }
+                callback(donneesTab);
+            }
+        });
+
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
+
+    this.listerTemperatureMoisUtil = function (callback, id) {
+        console.log("Envoi requete recuperation Temperature en HTTP en get a : " + API_MOBILE_URL);
+
+        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_MOIS + "/" + id;
+
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                var donneesTab = [];
+                var donnees = JSON.parse(this.responseText).humidites;
+                if (donnees !== undefined) {
+                    for (let i = 0; i < donnees.length; i++) {
+                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                    }
+                }
+
+                callback(donneesTab);
+            }
+        });
+
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
+
+    this.listerTemperatureSemaineUtil = function (callback, id) {
+        console.log("Envoi requete recuperation Temperature en HTTP en get a : " + API_MOBILE_URL);
+
+        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_SEMAINE + "/" + id;
+
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                var donneesTab = [];
+                var donnees = JSON.parse(this.responseText).humidites;
+                if (donnees !== undefined) {
+                    for (let i = 0; i < donnees.length; i++) {
+                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                    }
+                }
+
+                callback(donneesTab);
+            }
+        });
+
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
+
+    this.listerTemperatureJoursUtil = function (callback, id) {
+        console.log("Envoi requete recuperation Temperature en HTTP en get a : " + API_MOBILE_URL);
+
+        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_JOURS + "/" + id;
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                var donneesTab = [];
+                var donnees = JSON.parse(this.responseText).humidites;
+                if (donnees !== undefined) {
+                    for (let i = 0; i < donnees.length; i++) {
+                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                    }
+                }
+                callback(donneesTab);
+            }
+        });
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
+
 };

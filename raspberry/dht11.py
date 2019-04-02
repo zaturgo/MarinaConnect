@@ -1,17 +1,38 @@
 #!/usr/bin/python
 import sys
 import Adafruit_DHT
-
+import requests
+import json
     
 
 sensor_args = { '11': Adafruit_DHT.DHT11,
                 '22': Adafruit_DHT.DHT22,
                 '2302': Adafruit_DHT.AM2302 }
+global idMarina
 idMarina = 1
 
 
-def send(humididte):
-    
+def send(humidite,temperature,pression):
+    url = "http://54.39.145.59:8085/humidites"
+    params = {'valeur':str(humidite),'marina':str(idMarina)}
+    print params
+    r=requests.post(url = url, json = params)
+    print r.text
+
+    url = "http://54.39.145.59:8085/temperatures"
+    params = {'valeur':str(temperature),'marina':str(idMarina)}
+    print params
+    r=requests.post(url = url, json = params)
+    print r.text
+
+    url = "http://54.39.145.59:8085/pressions"
+    params = {'valeur':str(pression),'marina':str(idMarina)}
+    print params
+#    r=requests.post(url = url, json = params)
+#    print r.text
+
+
+
 
 
 if len(sys.argv) == 3 and sys.argv[1] in sensor_args:
@@ -23,18 +44,12 @@ else:
     sys.exit(1)
 
 while True:
-	# Try to grab a sensor reading.  Use the read_retry method which will retry up
-	# to 15 times to get a sensor reading (waiting 2 seconds between each retry).
 	humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 
-
-	# Note that sometimes you won't get a reading and
-	# the results will be null (because Linux can't
-	# guarantee the timing of calls to read the sensor).
-	# If this happens try again!
         if humidity is not None and temperature is not None :
             if humidity < 100:
                 print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
+                send(humidity,temperature,0)
             else :
                 print(' error Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
 	else:
