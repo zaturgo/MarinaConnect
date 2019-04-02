@@ -16,6 +16,12 @@
 
 </head>
 <body>
+<div id="header"></div>
+<div id="container">
+    <div class="alert alert-danger" role="alert">
+        Erreur dans le programme.
+    </div>
+</div>
 
 <script type="text/javascript">
     function initMap() {
@@ -33,7 +39,7 @@
     }
 </script>
 
-<div id="header">
+<script type="text/html" id="main-navbar">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="src/img/marina-0.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -61,18 +67,7 @@
             </ul>
         </div>
     </nav>
-</div>
-
-<div id="container">
-    <div class="alert alert-danger" role="alert">
-        Erreur dans le programme.
-    </div>
-</div>
-
-<div id="footer">
-
-</div>
-
+</script>
 <script type="text/html" id="page-home">
     <div class="container-fluid text-center">
         <h4 class="mb-5 mt-5">Bienvenue sur l'application de monitoring de Marina Connect!</h4>
@@ -129,12 +124,24 @@
             </details>
         </div>
     </div>
-    <div id="graphe-container">
-        <canvas id="graphTemperature"></canvas><br>
-        <canvas id="graphHumidites"></canvas><br>
-        <canvas id="graphPression"></canvas><br>
-        <canvas id="graphMaree"></canvas>
-    </div>
+        <div id="graphe-container" class="container">
+            <div class = 'row' id="row1">
+                <div id="containerTemp" class="col">
+                    <canvas id="graphTemperature" ></canvas>
+                </div>
+                <div id="containerHum" class="col">
+                    <canvas id="graphHumidites" ></canvas>
+                </div>
+            </div>
+            <div class = 'row' id="row2">
+                <div  id="containerPress" class="col">
+                    <canvas id="graphPression" ></canvas>
+                </div>
+                <div  id="containerMaree" class="col">
+                    <canvas id="graphMaree" ></canvas>
+                </div>
+            </div>
+        </div>
 
 </script>
 
@@ -148,7 +155,19 @@
         </object>
     </div>
 </script>
-
+<script type="text/html" id="header-site">
+    <nav class="navbar">
+        <div class="container">
+            <div class=" navbar-header navbar-default">
+                <div class="align-middle">
+                    <a class="mybtn2 btn btn-link btn-xs" href="#"><i class="fas fa-arrow-left"
+                                                                      style="color: #424242"></i></i></a>
+                    <div class="navbar-brand" style="padding: 0;margin:0;">Retour</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</script>
 <script type="text/html" id="page-loader">
     <div class="containerLoader">
         <div class="item item-1"></div>

@@ -146,7 +146,7 @@ var PressionDAO = function () {
     this.listerPressionSemaineUtil = function (callback, id) {
         console.log("Envoi requete recuperation Pression en HTTP en get a : " + API_MOBILE_URL);
 
-        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_SEMAINE + "/" + id;
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_SEMAINE + "/" + id;
 
         var data = null;
         var xhr = new XMLHttpRequest();
