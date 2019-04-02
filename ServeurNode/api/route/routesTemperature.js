@@ -60,7 +60,7 @@ app.get('/temperatures/annee/*' , (req, res) => {
 
 
 app.post('/temperatures' , (req, res) => {
-	console.log('Routage temperature : ajouter temperature avec id marina');
+	console.log('Routage temperature : ajoute temperature : '+req.body["valeur"]+"°C");
        return controleurTemperature.ajouterTemperature(req, res);
 });
 

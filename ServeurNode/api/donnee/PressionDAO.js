@@ -6,7 +6,7 @@ export const NOM_CHAMP_VALEUR = "valeur";
 export const NOM_CHAMP_DATE = "date";
 
 exports.listerPression = async function() {
-	const SELECT_PRESSIONS = 'SELECT avg(valeur) as valeur, date_trunc(\'hour\',date) as date FROM pression GROUP BY date_trunc(\'hour\', date) ORDER BY date;';
+	const SELECT_PRESSIONS = 'SELECT valeur, date FROM pression;';
     return await baseDeDonnees.query(SELECT_PRESSIONS);
 }
 
