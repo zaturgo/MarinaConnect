@@ -3,8 +3,8 @@ var PressionDAO = function () {
     this.listerPressionAnnee = function lister(callback, id) {
         console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
 
-        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_ANNEE;
-
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_ANNEE+ "/"+ id;
+        console.log(url)
         var data = null;
 
         var xhr = new XMLHttpRequest();
@@ -91,20 +91,21 @@ var PressionDAO = function () {
         console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_ANNEE + "/" + id;
-
+        console.log(url)
         var data = null;
         var xhr = new XMLHttpRequest();
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 var donneesTab = [];
-                var donnees = JSON.parse(this.responseText).humidites;
+                var donnees = JSON.parse(this.responseText).pression;
 
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
-                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
+                console.log(donneesTab);
                 callback(donneesTab);
             }
         });
@@ -126,10 +127,10 @@ var PressionDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 var donneesTab = [];
-                var donnees = JSON.parse(this.responseText).humidites;
+                var donnees = JSON.parse(this.responseText).pression;
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
-                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
                 callback(donneesTab);
@@ -145,7 +146,7 @@ var PressionDAO = function () {
     this.listerPressionSemaineUtil = function (callback, id) {
         console.log("Envoi requete recuperation Pression en HTTP en get a : " + API_MOBILE_URL);
 
-        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_SEMAINE + "/" + id;
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_SEMAINE + "/" + id;
 
         var data = null;
         var xhr = new XMLHttpRequest();
@@ -153,14 +154,14 @@ var PressionDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 var donneesTab = [];
-                var donnees = JSON.parse(this.responseText).humidites;
+                var donnees = JSON.parse(this.responseText).pression;
 
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
-                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
-
+                console.log(donneesTab);
                 callback(donneesTab);
             }
         });
@@ -182,11 +183,11 @@ var PressionDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 var donneesTab = [];
-                var donnees = JSON.parse(this.responseText).humidites;
+                var donnees = JSON.parse(this.responseText).pression;
 
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
-                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
                 callback(donneesTab);

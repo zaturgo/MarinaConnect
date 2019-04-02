@@ -102,11 +102,11 @@ var TemperatureDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 var donneesTab = [];
-                var donnees = JSON.parse(this.responseText).humidites;
+                var donnees = JSON.parse(this.responseText).temperature;
 
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
-                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
                 callback(donneesTab);
@@ -130,10 +130,10 @@ var TemperatureDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 var donneesTab = [];
-                var donnees = JSON.parse(this.responseText).humidites;
+                var donnees = JSON.parse(this.responseText).temperature;
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
-                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
 
@@ -158,10 +158,10 @@ var TemperatureDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 var donneesTab = [];
-                var donnees = JSON.parse(this.responseText).humidites;
+                var donnees = JSON.parse(this.responseText).temperature;
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
-                        donneesTab.push({x: new Date(donnees[i].date), y: donnees[i].valeur})
+                        donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
 
@@ -185,7 +185,7 @@ var TemperatureDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 var donneesTab = [];
-                var donnees = JSON.parse(this.responseText).humidites;
+                var donnees = JSON.parse(this.responseText).temperature;
                 if (donnees !== undefined) {
                     for (let i = 0; i < donnees.length; i++) {
                         donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
