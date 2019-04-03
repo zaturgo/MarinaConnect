@@ -6,6 +6,10 @@ var VueHome = (function () {
         this.afficher = function(){
             document.getElementById("header").innerHTML = mainNavbar;
             document.getElementById("container").innerHTML = pageHome;
+
+            if (!localStorage.getItem("zoom")){
+                localStorage.setItem("zoom","france")
+            }
         }
     }
 })();

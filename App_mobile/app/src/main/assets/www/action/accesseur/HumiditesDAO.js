@@ -149,7 +149,6 @@ var HumiditesDAO = function () {
                         donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
-
                 callback(donneesTab);
             }
         });

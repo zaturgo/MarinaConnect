@@ -68,10 +68,10 @@ var TemperatureDAO = function () {
         xhr.send(data);
     };
 
-    this.listerTemperatureJours = function lister(callback) {
+    this.listerTemperatureJours = function lister(callback, id) {
         console.log("Envoi requete recuperation temperature en HTTP en get a : " + API_MOBILE_URL);
 
-        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_JOURS;
+        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_JOURS + "/" + id;
 
         var data = null;
 
@@ -79,7 +79,6 @@ var TemperatureDAO = function () {
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                //console.log(this.responseText);
                 callback(this.responseText);
             }
         });

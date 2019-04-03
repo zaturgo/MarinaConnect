@@ -22,6 +22,7 @@
 
     this.initialiser = function () {
         this.marinaDAO = new MarinaDAO();
+        this.mareeDAO = new MareeDAO();
         this.humiditesDAO = new HumiditesDAO();
         this.pressionDAO = new PressionDAO();
         this.temperatureDAO = new TemperatureDAO();
@@ -34,38 +35,36 @@
 
     this.naviguer = function () {
         Loader();
-
         var hash = window.location.hash;
 
         if (!hash) {
             var vueHome = new VueHome();
             vueHome.afficher();
-
         } else if (hash.match(/^#marinas/)) {
             Loader();
             marinaDAO.listerMarina(callbackMarina);
         } else if (hash.match(/^#settings/)) {
-
+            var vueSettings = new VueSettings();
+            vueSettings.afficher();
+        } else if (hash.match(/^#site/)) {
+            var vueSite = new VueSite();
+            vueSite.afficher();
         } else if (hash.match(/^#contact/)) {
-            var vueContact = new VueSite();
+            var vueContact = new VueContact();
             vueContact.afficher();
         } else if (hash.match(/^#marina\/([0-9]+)/)) {
             var navigation = hash.match(/^#marina\/([0-9]+)/);
             idMarina = navigation[1];
-
             humiditesDAO.listerHumiditesJours(callbackHumidite, idMarina);
-            console.log("1")
         }
     };
 
     var callbackHumidite = function callbackHumidite(result) {
         donneeHumidite = JSON.parse(result).humidites;
-        console.log("2")
         temperatureDAO.listerTemperatureJours(callbackTemperature, idMarina);
     };
 
     var callbackTemperature = function (result) {
-        console.log("3")
         donneeTemp = JSON.parse(result).temperature;
         marineActive = chercherMarina(listeMarinas, idMarina);
         var lat = marineActive.latitude;
@@ -75,26 +74,22 @@
 
     var callBackMaree = function (result, lat, lng) {
         donneeMaree = result;
-        console.log("4")
         latReelle = lat;
         lngReelle = lng;
         pressionDAO.listerPressionJours(callbackPression, idMarina);
     };
 
     var callbackPression = function (result) {
-        console.log("5")
         donneePression = JSON.parse(result).pression;
         humiditesDAO.getHumiditesLive(callbackLiveHumidite, idMarina);
     };
 
     var callbackLiveHumidite = function (result) {
-        console.log("6")
         donneeHumiditeLive = result;
         pressionDAO.getPressionLive(callbackLivePression, idMarina);
     };
 
     var callbackLivePression = function (result) {
-        console.log("7")
         donneePressionLive = result;
         mareeDAO.niveauActuel(callbackLiveMaree, marineActive.latitude, marineActive.longitude);
     };
