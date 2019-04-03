@@ -24,10 +24,10 @@ exports.listerHumiditeJour = async function(requete) {
 
 exports.listerHumiditeSemaine = async function(requete) {
 	if (typeof requete.params[0] !== 'undefined'){
-		const SELECT_TOUTES_LES_HUMIDITES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM humidite where date >= DATE(NOW() + INTERVAL \'-7 day\') and idmarina='+requete.params[0]+' GROUP BY date_trunc(\'day\', date) ORDER BY date;';
+		const SELECT_TOUTES_LES_HUMIDITES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM humidite where date >= DATE(NOW() + INTERVAL \'-6 day\') and idmarina='+requete.params[0]+' GROUP BY date_trunc(\'day\', date) ORDER BY date;';
 		return await baseDeDonnees.query(SELECT_TOUTES_LES_HUMIDITES);
 	}else{
-		const SELECT_TOUTES_LES_HUMIDITES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM humidite where date >= DATE(NOW() + INTERVAL \'-7 day\') GROUP BY date_trunc(\'day\', date) ORDER BY date;';
+		const SELECT_TOUTES_LES_HUMIDITES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM humidite where date >= DATE(NOW() + INTERVAL \'-6 day\') GROUP BY date_trunc(\'day\', date) ORDER BY date;';
 		return await baseDeDonnees.query(SELECT_TOUTES_LES_HUMIDITES);
 	}
 }
@@ -35,10 +35,10 @@ exports.listerHumiditeSemaine = async function(requete) {
 
 exports.listerHumiditeMois = async function(requete) { 
 	if (typeof requete.params[0] !== 'undefined'){
-		const SELECT_TOUTES_LES_HUMIDITES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM humidite where date >= DATE(NOW() + INTERVAL \'-1 month\') and idmarina='+requete.params[0]+' GROUP BY date_trunc(\'day\', date) ORDER BY date;';
+		const SELECT_TOUTES_LES_HUMIDITES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM humidite where date >= DATE(NOW() + INTERVAL \'-1 month\' + INTERVAL \'1 day\') and idmarina='+requete.params[0]+' GROUP BY date_trunc(\'day\', date) ORDER BY date;';
     return await baseDeDonnees.query(SELECT_TOUTES_LES_HUMIDITES);
 	}else{
-		const SELECT_TOUTES_LES_HUMIDITES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM humidite where date >= DATE(NOW() + INTERVAL \'-1 month\') GROUP BY date_trunc(\'day\', date) ORDER BY date;';
+		const SELECT_TOUTES_LES_HUMIDITES = 'SELECT avg(valeur) as valeur, date_trunc(\'day\',date) as date FROM humidite where date >= DATE(NOW() + INTERVAL \'-1 month\') + INTERVAL \'1 day\' GROUP BY date_trunc(\'day\', date) ORDER BY date;';
     return await baseDeDonnees.query(SELECT_TOUTES_LES_HUMIDITES);
 	}
 
@@ -47,10 +47,10 @@ exports.listerHumiditeMois = async function(requete) {
 
 exports.listerHumiditeAnnee = async function(requete) {
 	if (typeof requete.params[0] !== 'undefined'){
-		const SELECT_TOUTES_LES_HUMIDITES = 'SELECT avg(valeur) as valeur, date_trunc(\'month\',date) as date FROM humidite where date >= DATE(NOW() + INTERVAL \'-1 year\') and idmarina='+requete.params[0]+' GROUP BY date_trunc(\'month\', date) ORDER BY date;';
+		const SELECT_TOUTES_LES_HUMIDITES = 'SELECT avg(valeur) as valeur, date_trunc(\'month\',date) as date FROM humidite where date >= DATE(NOW() + INTERVAL \'-1 year\' + INTERVAL \'1 month\') and idmarina='+requete.params[0]+' GROUP BY date_trunc(\'month\', date) ORDER BY date;';
     return await baseDeDonnees.query(SELECT_TOUTES_LES_HUMIDITES);
 	}else{
-		const SELECT_TOUTES_LES_HUMIDITES = 'SELECT avg(valeur) as valeur, date_trunc(\'month\',date) as date FROM humidite where date >= DATE(NOW() + INTERVAL \'-1 year\') GROUP BY date_trunc(\'month\', date) ORDER BY date;';
+		const SELECT_TOUTES_LES_HUMIDITES = 'SELECT avg(valeur) as valeur, date_trunc(\'month\',date) as date FROM humidite where date >= DATE(NOW() + INTERVAL \'-1 year\' + INTERVAL \'1 month\') GROUP BY date_trunc(\'month\', date) ORDER BY date;';
     return await baseDeDonnees.query(SELECT_TOUTES_LES_HUMIDITES);
 	}
 }
@@ -60,6 +60,17 @@ exports.ajouterHumidite = async function(requete) {
 	if (typeof requete.body["valeur"] !== 'undefined' || typeof requete.body["marina"] !== 'undefined'){
 		const INSERT_HUMIDITE = 'INSERT into humidite(valeur,date,idmarina) VALUES ('+requete.body["valeur"]+',NOW(),'+requete.body["marina"]+');';
 		return await baseDeDonnees.query(INSERT_HUMIDITE);
+	}else{
+		console.log("error"+JSON.stringify(requete.body)); 
+		return "error";
+	}
+}
+
+
+exports.liveHumidite = async function(req) {
+	if (typeof req.params[0] !== 'undefined'){
+		const SELECT_DERNIERE_HUMIDITE = 'SELECT * FROM humidite where idmarina = '+req.params[0]+' ORDER BY id DESC LIMIT 1';
+		return await baseDeDonnees.query(SELECT_DERNIERE_HUMIDITE)
 	}else{
 		console.log("error"+JSON.stringify(requete.body)); 
 		return "error";

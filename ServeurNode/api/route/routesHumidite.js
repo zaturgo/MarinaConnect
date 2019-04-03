@@ -58,6 +58,11 @@ module.exports = function(app) {
 		return controleurHumidite.listerHumiteAnnee(req, res);
 	});
 	
+	app.get('/humidites/live/*' , (req, res) => {
+		console.log('Routage temperature : get live humidite');
+	return controleurHumidite.liveHumidite(req, res);
+	});
+	
 	app.post('/humidites' , (req, res) => {
 		console.log('Routage humidite : ajoute humidite : '+req.body["valeur"]+"%");
 		return controleurHumidite.ajouterHumidite(req, res);

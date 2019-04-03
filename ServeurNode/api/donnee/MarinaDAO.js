@@ -5,3 +5,9 @@ exports.listerMarina = async function() {
     return await baseDeDonnees.query(SELECT_TOUTES_LES_MARINA);
 }
 
+exports.live = async function(req) {
+    var temperature = await baseDeDonnees.query(SELECT_DERNIERE_TEMPERATURE);
+    var pression = await baseDeDonnees.query(SELECT_DERNIERE_TEMPERATURE);
+	return {temperature,pression};
+}
+
