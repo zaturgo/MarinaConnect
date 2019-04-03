@@ -34,33 +34,33 @@ app.get('/temperatures/annee' , (req, res) => {
 
     // temperature Routes
 app.get('/temperatures/tout/*' , (req, res) => {
-        console.log('Routage temperature : get toutes les temperatures');
+        console.log('Routage temperature : get toutes les temperatures avec id');
        return controleurTemperature.listerTemperature(req, res);
 });
 
 app.get('/temperatures/jour/*' , (req, res) => {
-        console.log('Routage temperature : get toutes les temperatures jour');
+        console.log('Routage temperature : get toutes les temperatures jour avec id');
        return controleurTemperature.listerTemperatureJour(req, res);
 });
 
 app.get('/temperatures/semaine/*' , (req, res) => {
-        console.log('Routage temperature : get toutes les temperatures semaine');
+        console.log('Routage temperature : get toutes les temperatures semaine avec id');
        return controleurTemperature.listerTemperatureSemaine(req, res);
 });
 
 app.get('/temperatures/mois/*' , (req, res) => {
-        console.log('Routage temperature : get toutes les temperatures mois');
+        console.log('Routage temperature : get toutes les temperatures mois avec id');
        return controleurTemperature.listerTemperatureMois(req, res);
 });
 
 app.get('/temperatures/annee/*' , (req, res) => {
-        console.log('Routage temperature : get toutes les temperatures annee');
+        console.log('Routage temperature : get toutes les temperatures annee avec id');
        return controleurTemperature.listerTemperatureAnnee(req, res);
 });
 
 
 app.get('/temperatures/live/*' , (req, res) => {
-        console.log('Routage temperature : get live temperature');
+        console.log('Routage temperature : get live temperature avec id');
        return controleurTemperature.liveTemperature(req, res);
 });
 
