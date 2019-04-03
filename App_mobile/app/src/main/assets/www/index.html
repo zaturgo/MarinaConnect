@@ -36,11 +36,26 @@
 
 <script type="text/javascript">
     function initMap() {
-        var latlng = new google.maps.LatLng(46.718021, 1.808943);
+        var string = localStorage.getItem("zoom");
+        var zoom;
+        if (string == "france") {
+            zoom = 5;
+        } else if (string == "europe") {
+            zoom = 4;
+        } else if (string == "monde") {
+            zoom = 1;
+        } else {
+            zoom = 1;
+        }
+        var position = new google.maps.LatLng(46.718021, 1.808943);
         var myOptions = {
-            zoom: 5,
-            center: latlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            zoom: zoom,
+            center: position,
+            disableDefaultUI: true,
+            mapTypeId: 'hybrid',
+            zoomControl: false,
+            scrollwheel: false,
+            disableDoubleClickZoom: true
         };
         var map = new google.maps.Map(document.getElementById("map"), myOptions);
         return map;
@@ -176,7 +191,6 @@
         <label>Zoom :</label>
 
         <select id="zoom-select" class="custom-select">
-            <option value="region">Ma région</option>
             <option value="france" selected>France</option>
             <option value="europe">Europe</option>
             <option value="monde">Monde</option>
@@ -187,14 +201,16 @@
 
 <script type="text/html" id="page-site">
     <div class="">
-        <object type="text/html" data="http://54.39.145.59/marinaConnect/Site%20public/vue/vueAjouterReservationClient.php" class="w-100"
+        <object type="text/html"
+                data="http://54.39.145.59/marinaConnect/Site%20public/vue/vueAjouterReservationClient.php" class="w-100"
                 style="height: 93vh; bottom: 0;"></object>
     </div>
 </script>
 
 <script type="text/html" id="page-contact">
     <div class="">
-        <object type="text/html" data="http://54.39.145.59/marinaConnect/Site%20public/vue/vueContact.php" class="w-100" style="height: 93vh; bottom: 0;"></object>
+        <object type="text/html" data="http://54.39.145.59/marinaConnect/Site%20public/vue/vueContact.php" class="w-100"
+                style="height: 93vh; bottom: 0;"></object>
     </div>
 </script>
 
@@ -203,7 +219,8 @@
         <div class="container">
             <div class=" navbar-header navbar-default">
                 <div class="align-middle">
-                    <a class="mybtn2 btn btn-link btn-xs" href="#"><i class="fas fa-arrow-left" style="color: #424242"></i></i></a>
+                    <a class="mybtn2 btn btn-link btn-xs" href="#"><i class="fas fa-arrow-left"
+                                                                      style="color: #424242"></i></i></a>
                     <div class="navbar-brand" style="padding: 0;margin:0;">Retour</div>
                 </div>
             </div>
