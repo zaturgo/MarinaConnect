@@ -61,7 +61,7 @@ app.get('/pressions/annee/*' , (req, res) => {
 });
 
 app.get('/pressions/live/*' , (req, res) => {
-        console.log('Routage pression : get live pression');
+        console.log('Routage pression : get live pression avec id');
        return controleurPression.livePression(req, res);
 });
 

@@ -2,10 +2,10 @@ var TemperatureDAO = function () {
 
     //TEMPERATURE
 
-    this.listerTemperatureAnnee = function lister(callback) {
+    this.listerTemperatureAnnee = function lister(callback, id) {
         console.log("Envoi requete recuperation temperature en HTTP en get a : " + API_MOBILE_URL);
 
-        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_ANNEE;
+        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_ANNEE+"/"+id;
 
         var data = null;
 

@@ -6,27 +6,21 @@ var VueDetail = (function () {
     this.temperatureDAO = new TemperatureDAO();
     this.mareeDAO = new MareeDAO();
 
-    var marinaID = 0;
+    var marinaID;
 
     var checkBoxTemp = true;
     var checkBoxPression = true;
     var checkBoxHumidite = true;
     var checkBoxMaree = true;
-    var periode = 'annee';
+    var periode = 'jours';
 
-    var humidites = [];
-    var humiditesData = [];
-    var humiditesVal = [];
-
-    var temp = [];
-    var tempVal = [];
-
-    var pression = [];
-    var pressionVal = [];
-
-    var mareeVal  = [];
     var latReel;
     var lngReel;
+
+    var donneeHumiditeLive;
+    var donneeTempLive;
+    var donneePressionLive;
+    var donneeMareeLive;
 
     var getDonneeCheckBox = function () {
         checkBoxPression = document.getElementById("checkBoxPression").checked;
@@ -51,21 +45,7 @@ var VueDetail = (function () {
     };
 
     var clearGraph = function () {
-        $('#graphTemperature').remove();
-        $('#graphe-container').append('<canvas id="graphTemperature"><canvas>');
-        $('#graphTemperature').css("height", "0px");
-
-        $('#graphHumidites').remove();
-        $('#graphe-container').append('<canvas id="graphHumidites"><canvas>');
-        $('#graphHumidites').css("height", "0px");
-
-        $('#graphPression').remove();
-        $('#graphe-container').append('<canvas id="graphPression"><canvas>');
-        $('#graphHumidites').css("height", "0px");
-
-        $('#graphMaree').remove();
-        $('#graphe-container').append('<canvas id="graphMaree"><canvas>');
-        $('#graphMaree').css("height", "0px");
+        $('#graphe-container').empty();
     };
 
     var actualiserGraph = function () {
@@ -76,7 +56,67 @@ var VueDetail = (function () {
 
         console.log("update..");
 
+        var compteur = 0;
+        if (checkBoxHumidite) {
+            compteur++;
+        }
+        if (checkBoxTemp) {
+            compteur++;
+        }
+        if (checkBoxPression) {
+            compteur++;
+        }
+        if (checkBoxMaree) {
+            compteur++;
+        }
+        if (compteur > 2) {
+            $("#graphe-container").append("<div id='row1' class = 'row'></div><div id='row2' class = 'row'></div>");
+            if (checkBoxTemp) {
+                $("#row1").append("<div id=\"containerTemp\" class=\"col\">\n" +
+                    "                    <canvas id=\"graphTemperature\" ></canvas>\n" +
+                    "                </div>")
+            }
+            if (checkBoxHumidite) {
+                $("#row1").append("<div id=\"containerHum\" class=\"col\">\n" +
+                    "                    <canvas id=\"graphHumidites\" ></canvas>\n" +
+                    "                </div>")
+            }
+            if (checkBoxPression) {
+                $("#row2").append("<div  id=\"containerPress\" class=\"col\">\n" +
+                    "                    <canvas id=\"graphPression\" ></canvas>\n" +
+                    "                </div>")
+            }
+            if (checkBoxMaree) {
+                $("#row2").append("<div  id=\"containerMaree\" class=\"col\">\n" +
+                    "                    <canvas id=\"graphMaree\" ></canvas>\n" +
+                    "                </div>")
+            }
+        } else {
+            $("#graphe-container").append("<div id='row1' class = 'row'></div>")
+            if (checkBoxTemp) {
+                $("#row1").append("<div id=\"containerTemp\" class=\"col\">\n" +
+                    "                    <canvas id=\"graphTemperature\" ></canvas>\n" +
+                    "                </div>")
+            }
+            if (checkBoxHumidite) {
+                $("#row1").append("<div id=\"containerHum\" class=\"col\">\n" +
+                    "                    <canvas id=\"graphHumidites\" ></canvas>\n" +
+                    "                </div>")
+            }
+            if (checkBoxPression) {
+                $("#row1").append("<div  id=\"containerPress\" class=\"col\">\n" +
+                    "                    <canvas id=\"graphPression\" ></canvas>\n" +
+                    "                </div>")
+            }
+            if (checkBoxMaree) {
+                $("#row1").append("<div  id=\"containerMaree\" class=\"col\">\n" +
+                    "                    <canvas id=\"graphMaree\" ></canvas>\n" +
+                    "                </div>")
+            }
+        }
+
         if (periode === "annee") {
+            document.getElementById("historique-titre").innerText = "Historique annuel";
             if (checkBoxHumidite) {
                 humiditesDAO.listerHumiditesAnneeUtil(afficheGrapheHumidite, marinaID)
             }
@@ -87,6 +127,7 @@ var VueDetail = (function () {
                 temperatureDAO.listerTemperatureAnneeUtil(afficheGrapheTemperature, marinaID)
             }
         } else if (periode === "mois") {
+            document.getElementById("historique-titre").innerText = "Historique mensuel";
             if (checkBoxHumidite) {
                 humiditesDAO.listerHumiditesMoisUtil(afficheGrapheHumidite, marinaID)
             }
@@ -97,6 +138,7 @@ var VueDetail = (function () {
                 temperatureDAO.listerTemperatureMoisUtil(afficheGrapheTemperature, marinaID)
             }
         } else if (periode === "semaine") {
+            document.getElementById("historique-titre").innerText = "Historique hebdomadaire";
             if (checkBoxHumidite) {
                 humiditesDAO.listerHumiditesSemaineUtil(afficheGrapheHumidite, marinaID)
             }
@@ -107,6 +149,7 @@ var VueDetail = (function () {
                 temperatureDAO.listerTemperatureSemaineUtil(afficheGrapheTemperature, marinaID)
             }
         } else if (periode === "jours") {
+            document.getElementById("historique-titre").innerText = "Historique journalier";
             if (checkBoxHumidite) {
                 humiditesDAO.listerHumiditesJoursUtil(afficheGrapheHumidite, marinaID)
             }
@@ -117,66 +160,70 @@ var VueDetail = (function () {
                 temperatureDAO.listerTemperatureJoursUtil(afficheGrapheTemperature, marinaID)
             }
         }
-        if (checkBoxMaree){
-            mareeDAO.listerMarees(callbackMaree)
+        if (checkBoxMaree) {
+            mareeDAO.listerMarees(callbackMareeUtil, marina.latitude, marina.longitude)
         }
     };
 
 
     return function () {
 
-        this.afficher = function (donneesHumidites, donneesTemp, donneesPression, donneesMaree,lat,lng, id) {
-
-            $("#navbarSupportedContent").collapse('hide')
-
-            marinaID = id;
-
+        this.afficher = function (donneesHumidites, donneesTemp, donneesPression, donneesMaree, marina, latAPI, lngAPI, tempLive, humiLive, pressionLive, mareeLive) {
             document.getElementById("container").innerHTML = pageDetail;
+            document.getElementById("nom-marina").innerHTML = "Marina de " + marina.nom + " :";
+            $("#navbarSupportedContent").collapse('hide');
+
+            marinaID = marina.id;
+            latReel = latAPI;
+            lngReel = lngAPI;
+
+
+            // GESTION DU LIVE
+
+            donneePressionLive = pressionLive;
+            donneeHumiditeLive = humiLive;
+            donneeTempLive = tempLive;
+            donneeMareeLive = mareeLive;
+
+            document.getElementById("valeur-temperature-live").innerHTML = "<span style='font-size: 0.82em'>Température: </span><b>" + donneeTempLive.valeur + "°C</b>";
+            document.getElementById("valeur-humidite-live").innerHTML = "<span style='font-size: 0.82em'>Humidité: </span> <b>" + donneeHumiditeLive.valeur + "%</b>";
+            document.getElementById("valeur-pression-live").innerHTML = "<span style='font-size: 0.82em'>Préssion: </span><b>" + donneePressionLive.valeur + "hPa</b>";
+            document.getElementById("valeur-maree-live").innerHTML = "<span style='font-size: 0.82em'>Marée: </span> <b>" + donneeMareeLive + "m</b>";
+            var dateLive = new Date(donneeTempLive.date);
+            document.getElementById("date-live").innerHTML = "Donnée Live captés le " + dateLive.toLocaleString();
 
             document.getElementById("custom-select").addEventListener("change", actualiserGraph);
             document.getElementById("checkBoxHumidite").addEventListener("change", actualiserGraph);
             document.getElementById("checkBoxTemp").addEventListener("change", actualiserGraph);
             document.getElementById("checkBoxPression").addEventListener("change", actualiserGraph);
+
             document.getElementById("checkBoxMaree").addEventListener("change", actualiserGraph);
 
-            console.log("Statistic de la marina ID : " + id);
+
+            // GESTION  DES GRAPHES
+
+            console.log("Statistic de la marina ID : " + marinaID);
 
             donneesTemp = checkEmpty(donneesTemp);
             donneesPression = checkEmpty(donneesPression);
             donneesHumidites = checkEmpty(donneesHumidites);
             donneesMaree = checkEmpty(donneesMaree);
 
-            for (let i = 0; i < donneesHumidites.length; i++) {
-                humidites.push(donneesHumidites[i]);
-                humiditesData.push({x: new Date(donneesHumidites[i].date), y: donneesHumidites[i].valeur});
-                humiditesVal.push([new Date(donneesHumidites[i].date), donneesHumidites[i].valeur])
-            }
-            for (let i = 0; i < donneesTemp.length; i++) {
-                temp.push(donneesTemp[i]);
-                tempVal.push([new Date(donneesTemp[i].date), donneesTemp[i].valeur])
-            }
-            for (let i = 0; i < donneesPression.length; i++) {
-                pression.push(donneesPression[i]);
-                pressionVal.push({date:new Date(donneesPression[i].date), valeur:donneesPression[i].valeur})
-            }
-            latReel = lat;
-            lngReel = lng;
-
-            afficheGrapheTemperature(temp, tempVal);
-            afficheGrapheHumidite(humidites, humiditesVal);
-            afficheGraphePression(pressionVal);
+            afficheGrapheTemperature(donneesTemp);
+            afficheGrapheHumidite(donneesHumidites);
+            afficheGraphePression(donneesPression);
             afficheGrapheMaree(donneesMaree);
+            console.log("FIN afficher")
+
         }
     };
 
     function afficheGrapheTemperature(data) {
-        console.log(data)
-
         var x = [];
         var y = [];
         for (let i = 0; i < data.length; i++) {
             var date = new Date(data[i].date)
-            x[i] = ""+date.getHours()+"h"+date.getMinutes()+" "+date.getDay()+"/"+date.getMonth()+"/"+date.getFullYear();
+            x[i] = "" + date.getHours() + "h" + date.getMinutes() + " " + date.getDay() + "/" + date.getMonth() + "/" + date.getFullYear();
             y[i] = data[i].valeur;
         }
 
@@ -187,32 +234,27 @@ var VueDetail = (function () {
                     labels: x,
                     datasets: [{
                         data: y,
-                        label: "Température",
-                        borderColor: "#3e95cd",
+                        label: "Température en °C",
+                        borderColor: "#FF5733",
                         fill: false
                     }
                     ]
                 },
                 options: {
                     responsive: true,
-                    title: {
-                        display: true,
-                        text: 'Température en °C'
-                    }
+                    maintainAspectRatio: true
                 }
             });
-            $("#graphTemperature").css("height","33%")
         }
     }
 
     function afficheGrapheHumidite(data) {
-        console.log(data)
 
         var x = [];
         var y = [];
         for (let i = 0; i < data.length; i++) {
-            var date = new Date(data[i].date)
-            x[i] = ""+date.getHours()+"h"+date.getMinutes()+" "+date.getDay()+"/"+date.getMonth()+"/"+date.getFullYear();
+            var date = new Date(data[i].date);
+            x[i] = "" + date.getHours() + "h" + date.getMinutes() + " " + date.getDay() + "/" + date.getMonth() + "/" + date.getFullYear();
             y[i] = data[i].valeur;
         }
 
@@ -223,31 +265,26 @@ var VueDetail = (function () {
                     labels: x,
                     datasets: [{
                         data: y,
-                        label: "Humidité",
-                        borderColor: "#3e95cd",
+                        label: "Humidité en %",
+                        borderColor: "#00B9FF",
                         fill: false
                     }
                     ]
                 },
                 options: {
-                    responsive: true,
-                    title: {
-                        display: true,
-                        text: 'Humidité en %'
-                    }
+                    maintainAspectRatio: true,
+                    responsive: true
                 }
             });
-            $("#graphHumidites").css("height","33%")
         }
     }
 
     function afficheGraphePression(data) {
-        console.log(data)
         var x = [];
         var y = [];
         for (let i = 0; i < data.length; i++) {
             var date = new Date(data[i].date)
-            x[i] = ""+date.getHours()+"h"+date.getMinutes()+" "+date.getDay()+"/"+date.getMonth()+"/"+date.getFullYear();
+            x[i] = "" + date.getHours() + "h" + date.getMinutes() + " " + date.getDay() + "/" + date.getMonth() + "/" + date.getFullYear();
             y[i] = data[i].valeur;
         }
 
@@ -258,29 +295,26 @@ var VueDetail = (function () {
                     labels: x,
                     datasets: [{
                         data: y,
-                        label: "Pression",
-                        borderColor: "#3e95cd",
+                        label: "Pression en hPa",
+                        borderColor: "#008940",
                         fill: false
                     }
                     ]
                 },
                 options: {
                     responsive: true,
-                    title: {
-                        display: true,
-                        text: 'Pression en hPa'
-                    }
+                    maintainAspectRatio: true
                 }
             });
-            $("#graphMaree").css("height","33%")
         }
     }
+
     function afficheGrapheMaree(data) {
-        console.log(data)
+
         var x = [];
         var y = [];
         for (let i = 0; i < data.length; i++) {
-            x[i] = ""+data[i].x.getHours()+"h"+data[i].x.getMinutes()+" "+data[i].x.getDay()+"/"+data[i].x.getMonth()+"/"+data[i].x.getFullYear();
+            x[i] = "" + data[i].x.getHours() + "h" + data[i].x.getMinutes() + " " + data[i].x.getDay() + "/" + data[i].x.getMonth() + "/" + data[i].x.getFullYear();
             y[i] = data[i].y;
         }
 
@@ -291,28 +325,43 @@ var VueDetail = (function () {
                     labels: x,
                     datasets: [{
                         data: y,
-                        label: "Marée",
-                        borderColor: "#3e95cd",
+                        label: "Marée en mètres",
+                        borderColor: "#0032FF",
                         fill: false
                     }
                     ]
                 },
                 options: {
                     responsive: true,
-                    title: {
-                        display: true,
-                        text: 'Marée en mètres'
-                    }
+                    maintainAspectRatio: true
                 }
             });
-            $("#graphMaree").css("height","33%")
         }
     }
 
-    function callbackMaree(data, lat, lng){
+    function callbackMareeUtil(data, lat, lng) {
         latReel = lat;
         lngReel = lng;
         afficheGrapheMaree(data);
     }
 
+
+    function calculDistanceEntreCoord(lat1, lon1, lat2, lon2) {
+        var R = 6371; // km
+        var dLat = toRad(lat2 - lat1);
+        var dLon = toRad(lon2 - lon1);
+        var lat1 = toRad(lat1);
+        var lat2 = toRad(lat2);
+
+        var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        var d = R * c;
+        return d.toFixed(1);
+    }
+
+    // Converts numeric degrees to radians
+    function toRad(Value) {
+        return Value * Math.PI / 180;
+    }
 })();
