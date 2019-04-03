@@ -68,17 +68,6 @@ var VueDetail = (function () {
 
         console.log("update..");
 
-        /*if (firstUpdate) {
-            getDonneeSelect();
-            getDonneeCheckBox();
-
-            //Loader();
-
-            console.log("|| Actualisation graphs ||\nPeriode : " + periode + "\nTemperature : " + checkBoxTemp + " \tPression : " + checkBoxPression + "\tHumidite : " + checkBoxHumidite);
-            firstUpdate = false;
-        }*/
-
-        //TODO : callbacks...
         var compteur = 0;
         if (checkBoxHumidite){
             compteur++;

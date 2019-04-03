@@ -90,15 +90,15 @@
 <script type="text/html" id="page-map">
 
     <div class="container-fluid">
-        <h2>Carte des marinas équipées :</h2>
+        <h3>Carte des marinas équipées :</h3>
     </div>
-    <div id="map" style="height: 32em"></div>
+    <div id="map" style="height: 40em"></div>
 
 </script>
 
 <script type="text/html" id="page-detail">
     <div class="container-fluid">
-        <h2 class="mb-3">Marina de Marseille :</h2>
+        <h2 class="mb-3" id="nom-marina">Marina de ----- :</h2>
         <div>
             <details>
                 <summary>Options</summary>
@@ -135,13 +135,41 @@
             </details>
         </div>
     </div>
-    <div id="graphe-container">
-        <canvas id="graphTemperature"></canvas>
-        <br>
-        <canvas id="graphHumidites"></canvas>
-        <br>
-        <canvas id="graphPression"></canvas><br>
-        <canvas id="graphMaree"></canvas>
+
+    <table class="table mt-3 text-center">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Température</th>
+            <th scope="col">Humidité</th>
+            <th scope="col">Pression</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>Otto</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div id="graphe-container" class="container">
+        <div class='row' id="row1">
+            <div id="containerTemp" class="col">
+                <canvas id="graphTemperature"></canvas>
+            </div>
+            <div id="containerHum" class="col">
+                <canvas id="graphHumidites"></canvas>
+            </div>
+        </div>
+        <div class='row' id="row2">
+            <div id="containerPress" class="col">
+                <canvas id="graphPression"></canvas>
+            </div>
+            <div id="containerMaree" class="col">
+                <canvas id="graphMaree"></canvas>
+            </div>
+        </div>
     </div>
 
 </script>
@@ -156,13 +184,13 @@
                 style="height: 93vh; bottom: 0;"></object>
     </div>
 </script>
+
 <script type="text/html" id="header-site">
     <nav class="navbar">
         <div class="container">
             <div class=" navbar-header navbar-default">
                 <div class="align-middle">
-                    <a class="mybtn2 btn btn-link btn-xs" href="#"><i class="fas fa-arrow-left"
-                                                                      style="color: #424242"></i></i></a>
+                    <a class="mybtn2 btn btn-link btn-xs" href="#"><i class="fas fa-arrow-left" style="color: #424242"></i></i></a>
                     <div class="navbar-brand" style="padding: 0;margin:0;">Retour</div>
                 </div>
             </div>
@@ -193,7 +221,7 @@
 
 <script src="action/vue/Loader.js"></script>
 <script src="action/vue/VueHome.js"></script>
-<script src="action/vue/VueContact.js"></script>
+<script src="action/vue/VueSite.js"></script>
 <script src="action/vue/VueDetail.js"></script>
 <script src="action/vue/VueMap.js"></script>
 
