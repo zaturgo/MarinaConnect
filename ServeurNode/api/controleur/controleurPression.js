@@ -68,3 +68,12 @@ exports.ajouterPression = async function(requete, reponse) {
 	}
 }
 
+exports.livePression = async function(requete, reponse) {
+	try {
+		const { rows : pression } = await pressionDAO.livePression(requete);
+		return reponse.status(200).send({ pression });
+	} catch(error) {
+		console.log(error);
+		return reponse.status(400).send(error);
+	}
+}

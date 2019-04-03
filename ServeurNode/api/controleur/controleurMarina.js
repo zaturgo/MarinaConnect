@@ -15,4 +15,14 @@ exports.listerMarina = async function(requete, reponse) {
         return reponse.status(400).send(error);
     }
 }
+ 
+exports.live = async function(requete, reponse) {
+    try {
+        const { rows : valeurs } = await marinaDAO.live(requete);
+        return reponse.status(200).send({ valeurs });
+    } catch(error) {
+        console.log(error);
+        return reponse.status(400).send(error);
+    }
+}
 

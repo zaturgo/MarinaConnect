@@ -60,6 +60,12 @@ app.get('/pressions/annee/*' , (req, res) => {
        return controleurPression.listerPressionAnnee(req, res);
 });
 
+app.get('/pressions/live/*' , (req, res) => {
+        console.log('Routage pression : get live pression');
+       return controleurPression.livePression(req, res);
+});
+
+
 app.post('/pressions' , (req, res) => {
 	console.log('Routage pression : ajoute pression : '+req.body["valeur"]+"hPa");
 	console.log("");
