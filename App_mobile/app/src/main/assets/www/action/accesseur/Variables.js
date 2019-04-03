@@ -8,3 +8,4 @@ const STRING_ANNEE = "annee";
 const STRING_MOIS = "mois";
 const STRING_SEMAINE = "semaine";
 const STRING_JOURS = "jour";
+const STRING_LIVE = "live";

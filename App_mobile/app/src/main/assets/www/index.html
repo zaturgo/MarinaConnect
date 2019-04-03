@@ -100,6 +100,17 @@
     <div class="container-fluid">
         <h2 class="mb-3" id="nom-marina">Marina de ----- :</h2>
         <div>
+            <p class="ml-5 text-center font-weight-bold" id="date-live"></p>
+            <table class="table table-dark mt-3 text-center w-100">
+                <tr>
+                    <td id="valeur-temperature-live">Température :</td>
+                    <td id="valeur-humidite-live">Humidité :</td>
+                    <td id="valeur-pression-live">Pression :</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h4>Historique</h4>
             <details>
                 <summary>Options</summary>
                 <h5 class="mb-3 mt-3">Période :</h5>
@@ -135,23 +146,6 @@
             </details>
         </div>
     </div>
-
-    <table class="table mt-3 text-center">
-        <thead class="thead-dark">
-        <tr>
-            <th scope="col">Température</th>
-            <th scope="col">Humidité</th>
-            <th scope="col">Pression</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>Otto</td>
-        </tr>
-        </tbody>
-    </table>
 
     <div id="graphe-container" class="container">
         <div class='row' id="row1">
@@ -190,7 +184,8 @@
         <div class="container">
             <div class=" navbar-header navbar-default">
                 <div class="align-middle">
-                    <a class="mybtn2 btn btn-link btn-xs" href="#"><i class="fas fa-arrow-left" style="color: #424242"></i></i></a>
+                    <a class="mybtn2 btn btn-link btn-xs" href="#"><i class="fas fa-arrow-left"
+                                                                      style="color: #424242"></i></i></a>
                     <div class="navbar-brand" style="padding: 0;margin:0;">Retour</div>
                 </div>
             </div>

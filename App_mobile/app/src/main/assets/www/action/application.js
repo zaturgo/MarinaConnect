@@ -4,12 +4,16 @@
      document.getElementById("body").innerHTML = mainNavbar;*/
 
     //Loader();
-    var instance = this;
     var idMarina;
     var marineActive;
     var donneeHumidite;
     var donneeTemp;
     var donneePression;
+
+    var donneeHumiditeLive;
+    var donneeTempLive;
+    var donneePressionLive;
+
     var donneeMaree;
     var latReelle;
     var lngReelle;
@@ -59,10 +63,10 @@
 
     var callbackTemperature = function (result) {
         donneeTemp = JSON.parse(result).temperature;
-        marineActive = chercherMarina(listeMarinas,idMarina);
+        marineActive = chercherMarina(listeMarinas, idMarina);
         var lat = marineActive.latitude;
         var lng = marineActive.longitude;
-        mareeDAO.listerMarees(callBackMaree, lat,lng);
+        mareeDAO.listerMarees(callBackMaree, lat, lng);
     };
 
     var callBackMaree = function (result, lat, lng) {
@@ -74,9 +78,25 @@
 
     var callbackPression = function (result) {
         donneePression = JSON.parse(result).pression;
-        var vueDetail = new VueDetail();
-        vueDetail.afficher(donneeHumidite, donneeTemp, donneePression, donneeMaree,marineActive,latReelle,lngReelle);
+        humiditesDAO.getHumiditesLive(callbackLiveHumidite, idMarina);
     };
+
+    var callbackLiveHumidite = function (result) {
+        donneeHumiditeLive = result;
+        pressionDAO.getPressionLive(callbackLivePression, idMarina);
+    };
+
+    var callbackLivePression = function (result) {
+        donneePressionLive = result;
+        temperatureDAO.getTemperatureLive(callbackLiveTemperature, idMarina);
+    };
+
+    var callbackLiveTemperature = function (result) {
+        donneeTempLive = result;
+        var vueDetail = new VueDetail();
+        vueDetail.afficher(donneeHumidite, donneeTemp, donneePression, donneeMaree, marineActive, latReelle, lngReelle, donneeTempLive, donneeHumiditeLive, donneePressionLive);
+    };
+
 
     var callbackMarina = function (result) {
         listeMarinas = JSON.parse(result).marina;
@@ -84,9 +104,9 @@
         vueMap.afficher(listeMarinas);
     };
 
-    var chercherMarina = function (liste,id) {
+    var chercherMarina = function (liste, id) {
         for (let i = 0; i < liste.length; i++) {
-            if (liste[i].id == id){
+            if (liste[i].id == id) {
                 return liste[i];
             }
         }

@@ -24,9 +24,12 @@ var VueDetail = (function () {
     var pression = [];
     var pressionVal = [];
 
-    var mareeVal = [];
     var latReel;
     var lngReel;
+
+    var donneeHumiditeLive;
+    var donneeTempLive;
+    var donneePressionLive;
 
     var getDonneeCheckBox = function () {
         checkBoxPression = document.getElementById("checkBoxPression").checked;
@@ -170,16 +173,24 @@ var VueDetail = (function () {
 
     return function () {
 
-        this.afficher = function (donneesHumidites, donneesTemp, donneesPression, donneesMaree, marina, latAPI, lngAPI) {
-
+        this.afficher = function (donneesHumidites, donneesTemp, donneesPression, donneesMaree, marina, latAPI, lngAPI, tempLive, humiLive, pressionLive) {
             document.getElementById("container").innerHTML = pageDetail;
             document.getElementById("nom-marina").innerHTML = "Marina de " + marina.nom + " :";
             $("#navbarSupportedContent").collapse('hide');
+
             marinaID = marina.id;
-
             latReel = latAPI;
-
             lngReel = lngAPI;
+            donneePressionLive = pressionLive;
+            donneeHumiditeLive = humiLive;
+            donneeTempLive = tempLive;
+
+            document.getElementById("valeur-temperature-live").innerHTML = "Température : <b>" + donneeTempLive.valeur + " °C</b>";
+            document.getElementById("valeur-humidite-live").innerHTML = "Humidité : <b>" + donneeHumiditeLive.valeur + " %</b>";
+            document.getElementById("valeur-pression-live").innerHTML = "Préssion : <b>" + donneePressionLive.valeur + " hPa</b>";
+            var dateLive = new Date(donneeTempLive.date);
+            document.getElementById("date-live").innerHTML = "Donnée Live captés le " + dateLive.toLocaleString();
+
             document.getElementById("custom-select").addEventListener("change", actualiserGraph);
             document.getElementById("checkBoxHumidite").addEventListener("change", actualiserGraph);
             document.getElementById("checkBoxTemp").addEventListener("change", actualiserGraph);

@@ -198,4 +198,26 @@ var PressionDAO = function () {
 
         xhr.send(data);
     };
+
+    this.getPressionLive = function (callback, id) {
+        console.log("Envoi requete recuperation de la pression live en HTTP en get a : " + API_MOBILE_URL);
+
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_LIVE + "/" + id;
+
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                var donneeLive = JSON.parse(this.responseText).pression[0];
+                console.log(donneeLive);
+                callback(donneeLive);
+            }
+        });
+
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
 };
