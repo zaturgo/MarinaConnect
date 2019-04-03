@@ -3,9 +3,6 @@ var VueMap = (function () {
 
     return function () {
         this.afficher = function (marinas) {
-            console.log(marinas[0]);
-            console.log(marinas[1]);
-            console.log("AllO")
 
             document.getElementById("container").innerHTML = pageMap;
 
@@ -14,8 +11,6 @@ var VueMap = (function () {
             var infowindowCustom;
 
             for (i = 0; i < marinas.length; i++) {
-                console.log("Add marker : " + marinas[i].id);
-
                 var marker = new google.maps.Marker({
                     position: new google.maps.LatLng(marinas[i].latitude, marinas[i].longitude),
                     map: map,

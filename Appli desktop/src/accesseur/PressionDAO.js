@@ -4,7 +4,7 @@ var PressionDAO = function () {
         console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_ANNEE+ "/"+ id;
-
+        console.log(url)
         var data = null;
 
         var xhr = new XMLHttpRequest();
@@ -22,7 +22,6 @@ var PressionDAO = function () {
         xhr.send(data);
     };
     this.listerPressionMois = function lister(callback) {
-        console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_MOIS;
 
@@ -32,7 +31,6 @@ var PressionDAO = function () {
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                //console.log(this.responseText);
                 callback(this.responseText);
             }
         });
@@ -44,7 +42,6 @@ var PressionDAO = function () {
     };
 
     this.listerPressionSemaine = function lister(callback) {
-        console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_SEMAINE;
 
@@ -54,7 +51,6 @@ var PressionDAO = function () {
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                //console.log(this.responseText);
                 callback(this.responseText);
             }
         });
@@ -65,10 +61,9 @@ var PressionDAO = function () {
         xhr.send(data);
     };
 
-    this.listerPressionJours = function lister(callback) {
-        console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
+    this.listerPressionJours = function lister(callback, id) {
 
-        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_JOURS;
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_JOURS+"/"+id;
 
         var data = null;
 
@@ -88,10 +83,8 @@ var PressionDAO = function () {
 
 
     this.listerPressionAnneeUtil = function (callback, id) {
-        console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_ANNEE + "/" + id;
-
         var data = null;
         var xhr = new XMLHttpRequest();
 
@@ -116,7 +109,6 @@ var PressionDAO = function () {
     };
 
     this.listerPressionMoisUtil = function (callback, id) {
-        console.log("Envoi requete recuperation Pression en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_MOIS + "/" + id;
 
@@ -143,7 +135,6 @@ var PressionDAO = function () {
     };
 
     this.listerPressionSemaineUtil = function (callback, id) {
-        console.log("Envoi requete recuperation Pression en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_SEMAINE + "/" + id;
 
@@ -160,7 +151,6 @@ var PressionDAO = function () {
                         donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
-
                 callback(donneesTab);
             }
         });
@@ -172,7 +162,6 @@ var PressionDAO = function () {
     };
 
     this.listerPressionJoursUtil = function (callback, id) {
-        console.log("Envoi requete recuperation Pression en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_JOURS + "/" + id;
 
@@ -192,6 +181,26 @@ var PressionDAO = function () {
                 callback(donneesTab);
             }
         });
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
+
+    this.getPressionLive = function (callback, id) {
+
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_LIVE + "/" + id;
+
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                var donneeLive = JSON.parse(this.responseText).pression[0];
+                callback(donneeLive);
+            }
+        });
+
         xhr.open("GET", url, true);
         xhr.setRequestHeader("Content-Type", "application/json");
 

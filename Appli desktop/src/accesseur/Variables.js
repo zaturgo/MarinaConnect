@@ -1,6 +1,6 @@
 const API_MOBILE_URL = "http://54.39.145.59:8085/";
 const API_MAREE = "http://www.worldtides.info/api?";
-const API_METEO = "api.openweathermap.org/data/2.5/weather?";
+const API_METEO = "https://api.openweathermap.org/data/2.5/weather?";
 const STRING_MARINA = "marina";
 const STRING_TEMPERATURE = "temperatures";
 const STRING_PRESSION = "pressions";
@@ -9,3 +9,4 @@ const STRING_ANNEE = "annee";
 const STRING_MOIS = "mois";
 const STRING_SEMAINE = "semaine";
 const STRING_JOURS = "jour";
+const STRING_LIVE = "live";
