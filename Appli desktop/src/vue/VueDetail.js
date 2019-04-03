@@ -214,11 +214,13 @@ var VueDetail = (function () {
 
 
     function afficheGrapheTemperature(data) {
+        console.log(data)
         var x = [];
         var y = [];
         for (let i = 0; i < data.length; i++) {
-            var date = new Date(data[i].date)
-            x[i] = ""+date.getHours()+"h"+date.getMinutes()+" "+date.getDay()+"/"+date.getMonth()+"/"+date.getFullYear();
+            var date = new Date(data[i].date);
+            console.log(date)
+            x[i] = ""+date.getHours()+"h"+date.getMinutes()+" "+date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
             y[i] = data[i].valeur;
         }
 
@@ -244,12 +246,11 @@ var VueDetail = (function () {
     }
 
     function afficheGrapheHumidite(data) {
-
         var x = [];
         var y = [];
         for (let i = 0; i < data.length; i++) {
-            var date = new Date(data[i].date)
-            x[i] = ""+date.getHours()+"h"+date.getMinutes()+" "+date.getDay()+"/"+date.getMonth()+"/"+date.getFullYear();
+            var date = new Date(data[i].date);
+            x[i] = ""+date.getHours()+"h"+date.getMinutes()+" "+date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
             y[i] = data[i].valeur;
         }
 
@@ -278,8 +279,8 @@ var VueDetail = (function () {
         var x = [];
         var y = [];
         for (let i = 0; i < data.length; i++) {
-            var date = new Date(data[i].date)
-            x[i] = ""+date.getHours()+"h"+date.getMinutes()+" "+date.getDay()+"/"+date.getMonth()+"/"+date.getFullYear();
+            var date = new Date(data[i].date);
+            x[i] = ""+date.getHours()+"h"+date.getMinutes()+" "+date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
             y[i] = data[i].valeur;
         }
 
@@ -304,11 +305,10 @@ var VueDetail = (function () {
         }
     }
     function afficheGrapheMaree(data) {
-
         var x = [];
         var y = [];
         for (let i = 0; i < data.length; i++) {
-            x[i] = ""+data[i].x.getHours()+"h"+data[i].x.getMinutes()+" "+data[i].x.getDay()+"/"+data[i].x.getMonth()+"/"+data[i].x.getFullYear();
+            x[i] = ""+data[i].x.getHours()+"h"+data[i].x.getMinutes()+" "+data[i].x.getDate()+"/"+(data[i].x.getMonth()+1)+"/"+data[i].x.getFullYear();
             y[i] = data[i].y;
         }
 
@@ -319,8 +319,8 @@ var VueDetail = (function () {
                     labels: x,
                     datasets: [{
                         data: y,
-                        label: "Marée en mètres",
-                        borderColor: "#0032FF",
+                        label: "Prévision marée en mètres",
+                        borderColor: "#7b5cff",
                         fill: false
                     }
                     ]
