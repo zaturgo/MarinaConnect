@@ -198,7 +198,6 @@ var HumiditesDAO = function () {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
                 var donneeLive = JSON.parse(this.responseText).humidites[0];
-                console.log(donneeLive);
                 callback(donneeLive);
             }
         });
