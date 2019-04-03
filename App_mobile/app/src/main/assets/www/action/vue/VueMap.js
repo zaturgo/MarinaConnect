@@ -3,10 +3,6 @@ var VueMap = (function () {
 
     return function () {
         this.afficher = function (marinas) {
-            console.log(marinas[0]);
-            console.log(marinas[1]);
-            console.log("AllO")
-
             document.getElementById("container").innerHTML = pageMap;
 
             var map = initMap();
