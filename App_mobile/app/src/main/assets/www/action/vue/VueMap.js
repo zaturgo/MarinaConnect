@@ -4,6 +4,7 @@ var VueMap = (function () {
     return function () {
         this.afficher = function (marinas) {
             document.getElementById("container").innerHTML = pageMap;
+            $("#navbarSupportedContent").collapse('hide');
 
             var map = initMap();
             var i;
