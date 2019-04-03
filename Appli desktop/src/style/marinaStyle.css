@@ -85,3 +85,6 @@ html, body {
     50% {transform: translate(100px, -100px)}
     75% {transform: translate(0, -100px)}
 }
+::-webkit-scrollbar {
+    display: none;
+}

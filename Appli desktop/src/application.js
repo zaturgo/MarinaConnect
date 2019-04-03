@@ -50,6 +50,9 @@
             marinaDAO.listerMarina(callbackMarina);
         } else if (hash.match(/^#settings/)) {
 
+            var vueSettings = new VueSettings();
+            vueSettings.afficher();
+
         } else if (hash.match(/^#contact/)) {
             var vueContact = new VueContact();
             vueContact.afficher();

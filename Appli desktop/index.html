@@ -36,11 +36,27 @@
 
 <script type="text/javascript">
     function initMap() {
-        var latlng = new google.maps.LatLng(46.718021, 1.808943);
+        var string = localStorage.getItem("zoom");
+        var zoom;
+        if (string == "france") {
+            zoom = 6;
+        } else if (string == "europe") {
+            zoom = 5;
+        } else if (string == "monde") {
+            zoom = 3;
+        } else {
+            zoom = 3;
+        }
+        var position = new google.maps.LatLng(46.718021, 1.808943);
         var myOptions = {
-            zoom: 5,
-            center: latlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            zoom: zoom,
+            center: position,
+            disableDefaultUI: true,
+            mapTypeId: 'hybrid',
+            zoomControl: false,
+            scrollwheel: false,
+            disableDoubleClickZoom: true,
+            draggable: false
         };
         var map = new google.maps.Map(document.getElementById("map"), myOptions);
         return map;
@@ -177,7 +193,17 @@
 </script>
 
 <script type="text/html" id="page-settings">
-    <p> paramêtres </p>
+    <div class="container-fluid">
+        <h3 class="mb-5">Paramètres</h3>
+        <label>Zoom :</label>
+
+        <select id="zoom-select" class="custom-select">
+            <option value="france" selected>France</option>
+            <option value="europe">Europe</option>
+            <option value="monde">Monde</option>
+        </select>
+
+    </div>
 </script>
 
 <script type="text/html" id="page-contact">
@@ -228,6 +254,7 @@
 <script src="src/vue/VueContact.js"></script>
 <script src="src/vue/VueDetail.js"></script>
 <script src="src/vue/VueMap.js"></script>
+<script src="src/vue/VueSettings.js"></script>
 
 <script src="src/application.js"></script>
 
