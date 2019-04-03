@@ -1,4 +1,4 @@
-var VueContact = (function () {
+var VueSite = (function () {
     var pageContact = document.getElementById("page-contact").innerHTML;
     var header = document.getElementById("header-site").innerHTML;
 

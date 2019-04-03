@@ -31,5 +31,29 @@ var MareeDAO = function () {
 
         xhr.send(data);
     };
+
+    this.niveauActuel = function lister(callback, lat, lng) {
+        console.log("Envoi requete recuperation niveau en HTTP en get a : " + API_MAREE);
+
+        var url = API_MAREE + "key=c04e3386-a5d8-4f9e-82b9-0fb5a9ed9243\n" +
+            "&lat="+lat+"&lon="+lng+"&heights&start="+new Date().getTime() / 1000+"&length=1";
+
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                var donnees = JSON.parse(this.responseText).heights;
+                var height = donnees[0].height;
+                }
+                callback(height, lat, lng);
+
+        });
+
+        xhr.open("GET", url,true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
     
 };
