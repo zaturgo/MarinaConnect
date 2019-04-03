@@ -2,10 +2,9 @@ var TemperatureDAO = function () {
 
     //TEMPERATURE
 
-    this.listerTemperatureAnnee = function lister(callback, id) {
-        console.log("Envoi requete recuperation temperature en HTTP en get a : " + API_MOBILE_URL);
+    this.listerTemperatureAnnee = function lister(callback) {
 
-        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_ANNEE+"/"+id;
+        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_ANNEE;
 
         var data = null;
 
@@ -13,7 +12,6 @@ var TemperatureDAO = function () {
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                //console.log(this.responseText);
                 callback(this.responseText)
             }
         });
@@ -25,7 +23,6 @@ var TemperatureDAO = function () {
     };
 
     this.listerTemperatureMois = function lister(callback) {
-        console.log("Envoi requete recuperation temperature en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_MOIS;
 
@@ -35,7 +32,6 @@ var TemperatureDAO = function () {
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                //console.log(this.responseText);
                 callback(this.responseText);
             }
         });
@@ -47,7 +43,6 @@ var TemperatureDAO = function () {
     };
 
     this.listerTemperatureSemaine = function lister(callback) {
-        console.log("Envoi requete recuperation temperature en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_SEMAINE;
 
@@ -57,7 +52,6 @@ var TemperatureDAO = function () {
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                //console.log(this.responseText);
                 callback(this.responseText);
             }
         });
@@ -68,10 +62,9 @@ var TemperatureDAO = function () {
         xhr.send(data);
     };
 
-    this.listerTemperatureJours = function lister(callback) {
-        console.log("Envoi requete recuperation temperature en HTTP en get a : " + API_MOBILE_URL);
+    this.listerTemperatureJours = function lister(callback, id) {
 
-        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_JOURS;
+        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_JOURS+"/"+id;
 
         var data = null;
 
@@ -79,7 +72,6 @@ var TemperatureDAO = function () {
 
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === 4) {
-                //console.log(this.responseText);
                 callback(this.responseText);
             }
         });
@@ -92,7 +84,6 @@ var TemperatureDAO = function () {
 
 
     this.listerTemperatureAnneeUtil = function (callback, id) {
-        console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_ANNEE + "/" + id;
 
@@ -120,7 +111,6 @@ var TemperatureDAO = function () {
     };
 
     this.listerTemperatureMoisUtil = function (callback, id) {
-        console.log("Envoi requete recuperation Temperature en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_MOIS + "/" + id;
 
@@ -148,7 +138,6 @@ var TemperatureDAO = function () {
     };
 
     this.listerTemperatureSemaineUtil = function (callback, id) {
-        console.log("Envoi requete recuperation Temperature en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_SEMAINE + "/" + id;
 
@@ -176,7 +165,6 @@ var TemperatureDAO = function () {
     };
 
     this.listerTemperatureJoursUtil = function (callback, id) {
-        console.log("Envoi requete recuperation Temperature en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_JOURS + "/" + id;
         var data = null;
@@ -194,6 +182,26 @@ var TemperatureDAO = function () {
                 callback(donneesTab);
             }
         });
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
+
+    this.getTemperatureLive = function (callback, id) {
+
+        var url = API_MOBILE_URL + STRING_TEMPERATURE + "/" + STRING_LIVE + "/" + id;
+
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                var donneeLive = JSON.parse(this.responseText).temperature[0];
+                callback(donneeLive);
+            }
+        });
+
         xhr.open("GET", url, true);
         xhr.setRequestHeader("Content-Type", "application/json");
 

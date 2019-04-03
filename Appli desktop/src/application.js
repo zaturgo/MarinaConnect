@@ -1,23 +1,34 @@
 (function () {
-    Loader();
-    var instance = this;
-    var idMarina;
 
+    /* var mainNavbar = document.getElementById("main-navbar").innerHTML;
+     document.getElementById("body").innerHTML = mainNavbar;*/
+
+    //Loader();
+    var idMarina;
+    var marineActive;
     var donneeHumidite;
     var donneeTemp;
     var donneePression;
+
+    var donneeHumiditeLive;
+    var donneeTempLive;
+    var donneePressionLive;
+    var donneeMareeLive;
+    var donneeMeteo;
+    var image;
+
     var donneeMaree;
     var latReelle;
     var lngReelle;
-
+    var listeMarinas = [];
 
     this.initialiser = function () {
         this.marinaDAO = new MarinaDAO();
         this.humiditesDAO = new HumiditesDAO();
         this.pressionDAO = new PressionDAO();
         this.temperatureDAO = new TemperatureDAO();
+        this.meteoDAO = new MeteoDAO();
         this.mareeDAO = new MareeDAO();
-        this.marinas = [];
 
         idMarina = 0;
         window.addEventListener("hashchange", naviguer);
@@ -36,82 +47,92 @@
 
         } else if (hash.match(/^#marinas/)) {
             Loader();
-
             marinaDAO.listerMarina(callbackMarina);
-
         } else if (hash.match(/^#settings/)) {
 
         } else if (hash.match(/^#contact/)) {
-            var vueContact = new VueSite();
+            var vueContact = new VueContact();
             vueContact.afficher();
         } else if (hash.match(/^#marina\/([0-9]+)/)) {
             var navigation = hash.match(/^#marina\/([0-9]+)/);
             idMarina = navigation[1];
 
-            //humiditesDAO.listerHumiditesAnnee(callbackHumidite);
-            humiditesDAO.listerHumiditesAnnee(callbackHumidite, idMarina);
+            humiditesDAO.listerHumiditesJours(callbackHumidite, idMarina);
         }
     };
 
     var callbackHumidite = function callbackHumidite(result) {
         donneeHumidite = JSON.parse(result).humidites;
-
-        temperatureDAO.listerTemperatureAnnee(callbackTemperature, idMarina);
-
+        temperatureDAO.listerTemperatureJours(callbackTemperature, idMarina);
     };
 
     var callbackTemperature = function (result) {
         donneeTemp = JSON.parse(result).temperature;
-        var l1 = chercherLatParId(idMarina);
-        var l2 = chercherLngParId(idMarina);
-        mareeDAO.listerMarees(callBackMaree, l1,l2 );
+        marineActive = chercherMarina(listeMarinas, idMarina);
+        var lat = marineActive.latitude;
+        var lng = marineActive.longitude;
+        mareeDAO.listerMarees(callBackMaree, lat, lng);
     };
 
     var callBackMaree = function (result, lat, lng) {
         donneeMaree = result;
         latReelle = lat;
         lngReelle = lng;
-        pressionDAO.listerPressionAnnee(callbackPression, idMarina);
+        pressionDAO.listerPressionJours(callbackPression, idMarina);
     };
-
 
     var callbackPression = function (result) {
+
         donneePression = JSON.parse(result).pression;
-        var vueDetail = new VueDetail();
-        vueDetail.afficher(donneeHumidite, donneeTemp, donneePression, donneeMaree, latReelle, lngReelle,  idMarina);
+        humiditesDAO.getHumiditesLive(callbackLiveHumidite, idMarina);
     };
+
+    var callbackLiveHumidite = function (result) {
+        donneeHumiditeLive = result;
+
+        pressionDAO.getPressionLive(callbackLivePression, idMarina);
+    };
+
+    var callbackLivePression = function (result) {
+        donneePressionLive = result;
+
+        mareeDAO.niveauActuel(callbackLiveMaree, marineActive.latitude, marineActive.longitude);
+    };
+
+    var callbackLiveMaree = function (result) {
+        donneeMareeLive = result;
+        meteoDAO.listerMeteos(callbackMeteo, marineActive.latitude, marineActive.longitude);
+    };
+    var callbackMeteo = function (result, img) {
+        donneeMeteo = result;
+        image = img;
+        temperatureDAO.getTemperatureLive(callbackLiveTemperature, idMarina);
+    };
+
+    var callbackLiveTemperature = function (result) {
+        donneeTempLive = result;
+        var vueDetail = new VueDetail();
+        vueDetail.afficher(donneeHumidite, donneeTemp, donneePression, donneeMaree, marineActive, latReelle, lngReelle, donneeTempLive, donneeHumiditeLive, donneePressionLive, donneeMareeLive, donneeMeteo,image);
+    };
+
 
     var callbackMarina = function (result) {
-        this.marinas = JSON.parse(result).marina;
-        console.log("Marina : " + marinas);
-
+        listeMarinas = JSON.parse(result).marina;
         var vueMap = new VueMap();
-        vueMap.afficher(marinas);
+        vueMap.afficher(listeMarinas);
     };
 
+    var chercherMarina = function (liste, id) {
+        for (let i = 0; i < liste.length; i++) {
+            if (liste[i].id == id) {
+                return liste[i];
+            }
+        }
+        return null;
+    };
 
     var naviguerAccueil = function () {
         window.location.hash = "";
     };
-    var chercherLatParId = function(id){
-        for (let i = 0; i < marinas.length; i++) {
-            if (marinas[i].id == id){
-                return marinas[i].latitude;
-            }
-        }
-        return null;
-
-    }
-
-    var chercherLngParId = function(id){
-        for (let i = 0; i < marinas.length; i++) {
-            if (marinas[i].id == id){
-                return marinas[i].longitude;
-            }
-        }
-        return null;
-    }
-
-    //initialiser();
 
 })();

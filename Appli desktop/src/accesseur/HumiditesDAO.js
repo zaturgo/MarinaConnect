@@ -20,7 +20,6 @@ var HumiditesDAO = function () {
         xhr.send(data);
     };
     this.listerHumiditesMois = function lister(callback, id) {
-        console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + "humidites/mois/" + id;
 
@@ -39,7 +38,6 @@ var HumiditesDAO = function () {
         xhr.send(data);
     };
     this.listerHumiditesSemaine = function lister(callback, id) {
-        console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + "humidites/semaine/" + id;
 
@@ -58,7 +56,6 @@ var HumiditesDAO = function () {
         xhr.send(data);
     };
     this.listerHumiditesJours = function lister(callback, id) {
-        console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + "humidites/jour/" + id;
 
@@ -79,7 +76,6 @@ var HumiditesDAO = function () {
 
 
     this.listerHumiditesAnneeUtil = function (callback, id) {
-        console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_HUMIDITES + "/" + STRING_ANNEE + "/" + id;
         var data = null;
@@ -106,8 +102,6 @@ var HumiditesDAO = function () {
 
 
     this.listerHumiditesMoisUtil = function (callback, id) {
-        console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
-
         var url = API_MOBILE_URL + STRING_HUMIDITES + "/" + STRING_MOIS + "/" + id;
 
         var data = null;
@@ -133,7 +127,6 @@ var HumiditesDAO = function () {
     };
 
     this.listerHumiditesSemaineUtil = function (callback, id) {
-        console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_HUMIDITES + "/" + STRING_SEMAINE + "/" + id;
 
@@ -161,7 +154,6 @@ var HumiditesDAO = function () {
     };
 
     this.listerHumiditesJoursUtil = function (callback, id) {
-        console.log("Envoi requete recuperation humiditées en HTTP en get a : " + API_MOBILE_URL);
 
         var url = API_MOBILE_URL + STRING_HUMIDITES + "/" + STRING_JOURS + "/" + id;
 
@@ -178,6 +170,26 @@ var HumiditesDAO = function () {
                     }
                 }
                 callback(donneesTab);
+            }
+        });
+
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
+
+    this.getHumiditesLive = function (callback, id) {
+
+        var url = API_MOBILE_URL + STRING_HUMIDITES + "/" + STRING_LIVE + "/" + id;
+
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                var donneeLive = JSON.parse(this.responseText).humidites[0];
+                callback(donneeLive);
             }
         });
 
