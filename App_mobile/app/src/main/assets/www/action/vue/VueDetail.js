@@ -125,6 +125,7 @@ var VueDetail = (function () {
         }
 
         if (periode === "annee") {
+            document.getElementById("historique-titre").innerText = "Historique annuel";
             if (checkBoxHumidite) {
                 humiditesDAO.listerHumiditesAnneeUtil(afficheGrapheHumidite, marinaID)
             }
@@ -135,6 +136,7 @@ var VueDetail = (function () {
                 temperatureDAO.listerTemperatureAnneeUtil(afficheGrapheTemperature, marinaID)
             }
         } else if (periode === "mois") {
+            document.getElementById("historique-titre").innerText = "Historique mensuel";
             if (checkBoxHumidite) {
                 humiditesDAO.listerHumiditesMoisUtil(afficheGrapheHumidite, marinaID)
             }
@@ -145,6 +147,7 @@ var VueDetail = (function () {
                 temperatureDAO.listerTemperatureMoisUtil(afficheGrapheTemperature, marinaID)
             }
         } else if (periode === "semaine") {
+            document.getElementById("historique-titre").innerText = "Historique hebdomadaire";
             if (checkBoxHumidite) {
                 humiditesDAO.listerHumiditesSemaineUtil(afficheGrapheHumidite, marinaID)
             }
@@ -155,6 +158,7 @@ var VueDetail = (function () {
                 temperatureDAO.listerTemperatureSemaineUtil(afficheGrapheTemperature, marinaID)
             }
         } else if (periode === "jours") {
+            document.getElementById("historique-titre").innerText = "Historique journalier";
             if (checkBoxHumidite) {
                 humiditesDAO.listerHumiditesJoursUtil(afficheGrapheHumidite, marinaID)
             }
@@ -261,7 +265,7 @@ var VueDetail = (function () {
         var x = [];
         var y = [];
         for (let i = 0; i < data.length; i++) {
-            var date = new Date(data[i].date)
+            var date = new Date(data[i].date);
             x[i] = "" + date.getHours() + "h" + date.getMinutes() + " " + date.getDay() + "/" + date.getMonth() + "/" + date.getFullYear();
             y[i] = data[i].valeur;
         }

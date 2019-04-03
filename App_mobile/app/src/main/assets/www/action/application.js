@@ -52,13 +52,13 @@
             var navigation = hash.match(/^#marina\/([0-9]+)/);
             idMarina = navigation[1];
 
-            humiditesDAO.listerHumiditesAnnee(callbackHumidite, idMarina);
+            humiditesDAO.listerHumiditesJours(callbackHumidite, idMarina);
         }
     };
 
     var callbackHumidite = function callbackHumidite(result) {
         donneeHumidite = JSON.parse(result).humidites;
-        temperatureDAO.listerTemperatureAnnee(callbackTemperature, idMarina);
+        temperatureDAO.listerTemperatureJours(callbackTemperature, idMarina);
     };
 
     var callbackTemperature = function (result) {
@@ -73,7 +73,7 @@
         donneeMaree = result;
         latReelle = lat;
         lngReelle = lng;
-        pressionDAO.listerPressionAnnee(callbackPression, idMarina);
+        pressionDAO.listerPressionJours(callbackPression, idMarina);
     };
 
     var callbackPression = function (result) {
