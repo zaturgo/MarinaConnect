@@ -225,12 +225,10 @@ var VueDetail = (function () {
 
 
     function afficheGrapheTemperature(data) {
-        console.log(data)
         var x = [];
         var y = [];
         for (let i = 0; i < data.length; i++) {
             var date = new Date(data[i].date);
-            console.log(date)
             x[i] = ""+date.getHours()+"h"+date.getMinutes()+" "+date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
             y[i] = data[i].valeur;
         }
