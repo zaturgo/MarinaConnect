@@ -59,7 +59,7 @@ module.exports = function(app) {
 	});
 	
 	app.get('/humidites/live/*' , (req, res) => {
-		console.log('Routage temperature : get live humidite');
+		console.log('Routage temperature : get live humidite avec id');
 	return controleurHumidite.liveHumidite(req, res);
 	});
 	
