@@ -45,8 +45,8 @@ var MareeDAO = function () {
             if (this.readyState === 4) {
                 var donnees = JSON.parse(this.responseText).heights;
                 var height = donnees[0].height;
+                callback(height, lat, lng);
             }
-            callback(height, lat, lng);
         });
 
         xhr.open("GET", url,true);

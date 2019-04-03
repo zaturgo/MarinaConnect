@@ -68,6 +68,9 @@
                     <a class="nav-link ico-menu" href="#marinas"><i class="fas fa-map-marked-alt"></i> Marinas</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link ico-menu" href="#site"><i class="far fa-credit-card"></i> Réserver</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link ico-menu" href="#contact"><i class="far fa-envelope"></i> Contact</a>
                 </li>
                 <li class="nav-item">
@@ -88,12 +91,10 @@
 </script>
 
 <script type="text/html" id="page-map">
-
     <div class="container-fluid">
         <h4>Carte des marinas équipées :</h4>
     </div>
     <div id="map" style="height: 40em"></div>
-
 </script>
 
 <script type="text/html" id="page-detail">
@@ -170,13 +171,30 @@
 </script>
 
 <script type="text/html" id="page-settings">
-    <p> paramêtres </p>
+    <div class="container-fluid">
+        <h3 class="mb-5">Paramètres</h3>
+        <label>Zoom :</label>
+
+        <select id="zoom-select" class="custom-select">
+            <option value="region">Ma région</option>
+            <option value="france" selected>France</option>
+            <option value="europe">Europe</option>
+            <option value="monde">Monde</option>
+        </select>
+
+    </div>
+</script>
+
+<script type="text/html" id="page-site">
+    <div class="">
+        <object type="text/html" data="http://54.39.145.59/marinaConnect/Site%20public/vue/vueAjouterReservationClient.php" class="w-100"
+                style="height: 93vh; bottom: 0;"></object>
+    </div>
 </script>
 
 <script type="text/html" id="page-contact">
     <div class="">
-        <object type="text/html" data="http://54.39.145.59/marinaConnect/Site%20public/vue/" class="w-100"
-                style="height: 93vh; bottom: 0;"></object>
+        <object type="text/html" data="http://54.39.145.59/marinaConnect/Site%20public/vue/vueContact.php" class="w-100" style="height: 93vh; bottom: 0;"></object>
     </div>
 </script>
 
@@ -185,8 +203,7 @@
         <div class="container">
             <div class=" navbar-header navbar-default">
                 <div class="align-middle">
-                    <a class="mybtn2 btn btn-link btn-xs" href="#"><i class="fas fa-arrow-left"
-                                                                      style="color: #424242"></i></i></a>
+                    <a class="mybtn2 btn btn-link btn-xs" href="#"><i class="fas fa-arrow-left" style="color: #424242"></i></i></a>
                     <div class="navbar-brand" style="padding: 0;margin:0;">Retour</div>
                 </div>
             </div>
@@ -218,7 +235,9 @@
 <script src="action/vue/Loader.js"></script>
 <script src="action/vue/VueHome.js"></script>
 <script src="action/vue/VueSite.js"></script>
+<script src="action/vue/VueContact.js"></script>
 <script src="action/vue/VueDetail.js"></script>
+<script src="action/vue/VueSettings.js"></script>
 <script src="action/vue/VueMap.js"></script>
 
 <script src="action/application.js"></script>

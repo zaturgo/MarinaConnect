@@ -65,10 +65,10 @@ var PressionDAO = function () {
         xhr.send(data);
     };
 
-    this.listerPressionJours = function lister(callback) {
+    this.listerPressionJours = function lister(callback,id) {
         console.log("Envoi requete recuperation pression en HTTP en get a : " + API_MOBILE_URL);
 
-        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_JOURS;
+        var url = API_MOBILE_URL + STRING_PRESSION + "/" + STRING_JOURS+"/"+id;
 
         var data = null;
 

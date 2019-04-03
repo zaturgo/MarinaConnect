@@ -222,7 +222,7 @@ var VueDetail = (function () {
         var x = [];
         var y = [];
         for (let i = 0; i < data.length; i++) {
-            var date = new Date(data[i].date)
+            var date = new Date(data[i].date);
             x[i] = "" + date.getHours() + "h" + date.getMinutes() + " " + date.getDay() + "/" + date.getMonth() + "/" + date.getFullYear();
             y[i] = data[i].valeur;
         }
