@@ -186,4 +186,25 @@ var HumiditesDAO = function () {
 
         xhr.send(data);
     };
+
+    this.getHumiditesLive = function (callback, id) {
+        console.log("Envoi requete recuperation de l'humiditées live en HTTP en get a : " + API_MOBILE_URL);
+
+        var url = API_MOBILE_URL + STRING_HUMIDITES + "/" + STRING_LIVE + "/" + id;
+
+        var data = null;
+        var xhr = new XMLHttpRequest();
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                var donneeLive = JSON.parse(this.responseText).humidites[0];
+                callback(donneeLive);
+            }
+        });
+
+        xhr.open("GET", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.send(data);
+    };
 };
