@@ -37,6 +37,8 @@
     };
 
     this.naviguer = function () {
+        var idTimer = parseInt(localStorage.getItem("timerid"));
+        window.clearInterval(idTimer);
         Loader();
 
         var hash = window.location.hash;
@@ -49,13 +51,14 @@
             Loader();
             marinaDAO.listerMarina(callbackMarina);
         } else if (hash.match(/^#settings/)) {
-
             var vueSettings = new VueSettings();
             vueSettings.afficher();
-
         } else if (hash.match(/^#contact/)) {
             var vueContact = new VueContact();
             vueContact.afficher();
+        } else if (hash.match(/^#site/)) {
+            var vueSite = new VueSite();
+            vueSite.afficher();
         } else if (hash.match(/^#marina\/([0-9]+)/)) {
             var navigation = hash.match(/^#marina\/([0-9]+)/);
             idMarina = navigation[1];
@@ -98,7 +101,6 @@
 
     var callbackLivePression = function (result) {
         donneePressionLive = result;
-
         mareeDAO.niveauActuel(callbackLiveMaree, marineActive.latitude, marineActive.longitude);
     };
 

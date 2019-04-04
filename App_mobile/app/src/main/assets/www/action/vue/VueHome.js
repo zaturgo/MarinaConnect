@@ -11,5 +11,5 @@ var VueHome = (function () {
                 localStorage.setItem("zoom","france")
             }
         }
-    }
+    };
 })();

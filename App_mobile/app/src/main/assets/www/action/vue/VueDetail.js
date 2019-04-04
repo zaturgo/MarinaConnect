@@ -1,13 +1,14 @@
 var VueDetail = (function () {
     var pageDetail = document.getElementById("page-detail").innerHTML;
 
-    this.humiditesDAO = new HumiditesDAO();
-    this.pressionDAO = new PressionDAO();
-    this.temperatureDAO = new TemperatureDAO();
-    this.mareeDAO = new MareeDAO();
+    var humiditesDAO = new HumiditesDAO();
+    var pressionDAO = new PressionDAO();
+    var temperatureDAO = new TemperatureDAO();
+    var mareeDAO = new MareeDAO();
 
     var marinaID;
     var marinaActuelle;
+    var image;
 
     var checkBoxTemp = true;
     var checkBoxPression = true;
@@ -22,6 +23,12 @@ var VueDetail = (function () {
     var donneeTempLive;
     var donneePressionLive;
     var donneeMareeLive;
+    var donneeMeteo;
+
+    var timerLive = function () {
+        console.log("älo! " + marinaID);
+        humiditesDAO.getHumiditesLive(callbackLiveHumidite,marinaID)
+    };
 
     var getDonneeCheckBox = function () {
         checkBoxPression = document.getElementById("checkBoxPression").checked;
@@ -43,6 +50,39 @@ var VueDetail = (function () {
                 "        }");
             return donneeFictive;
         } else return donnee;
+    };
+
+    var callbackLiveHumidite = function (result) {
+        donneeHumiditeLive = result;
+        pressionDAO.getPressionLive(callbackLivePression, marinaID);
+    };
+
+    var callbackLivePression = function (result) {
+        donneePressionLive = result;
+        mareeDAO.niveauActuel(callbackLiveMaree, marinaActuelle.latitude, marinaActuelle.longitude);
+    };
+
+    var callbackLiveMaree = function (result) {
+        donneeMareeLive = result;
+        meteoDAO.listerMeteos(callbackMeteo, marinaActuelle.latitude, marinaActuelle.longitude);
+    };
+    var callbackMeteo = function (result, img) {
+        donneeMeteo = result;
+        image = img;
+        temperatureDAO.getTemperatureLive(callbackLiveTemperature, marinaID);
+    };
+
+    var callbackLiveTemperature = function (result) {
+        donneeTempLive = result;
+
+        document.getElementById("valeur-temperature-live").innerHTML = "<span style='font-size: 0.82em'>Température: </span><b>" + donneeTempLive.valeur + "°C</b>";
+        document.getElementById("valeur-humidite-live").innerHTML = "<span style='font-size: 0.82em'>Humidité: </span> <b>" + donneeHumiditeLive.valeur + "%</b>";
+        document.getElementById("valeur-pression-live").innerHTML = "<span style='font-size: 0.82em'>Préssion: </span><b>" + donneePressionLive.valeur + "hPa</b>";
+        document.getElementById("valeur-maree-live").innerHTML = "<span style='font-size: 0.82em'>Marée: </span> <b>" + donneeMareeLive + "m</b>";
+        document.getElementById("meteo").innerHTML = "<img src='http://openweathermap.org/img/w/"+image+".png'><p class='font-weight-bold'>"+donneeMeteo+"</p>";
+
+        var dateLive = new Date(donneeTempLive.date);
+        document.getElementById("date-live").innerHTML = "Donnée Live captés le " + dateLive.toLocaleString();
     };
 
     var clearGraph = function () {
@@ -217,6 +257,9 @@ var VueDetail = (function () {
             afficheGrapheHumidite(donneesHumidites);
             afficheGraphePression(donneesPression);
             afficheGrapheMaree(donneesMaree);
+
+            var idleIntervalTimer = setInterval(timerLive, 10000);
+            localStorage.setItem("timerid",idleIntervalTimer);
         }
     };
 
@@ -346,7 +389,6 @@ var VueDetail = (function () {
         lngReel = lng;
         afficheGrapheMaree(data);
     }
-
 
     function calculDistanceEntreCoord(lat1, lon1, lat2, lon2) {
         var R = 6371; // km
