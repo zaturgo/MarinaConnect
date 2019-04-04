@@ -114,24 +114,30 @@
 
 <script type="text/html" id="page-detail">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <h2 class="mb-3" id="nom-marina">Marina de ----- :</h2>
+        <div class="row vcenter">
+            <div class="col-8">
+                <h4 class="mb-3" id="nom-marina">Marina de ----- :</h4>
             </div>
-            <div class="col text-center">
-                <div style="text-align: end" id="meteo"></div>
+            <div class="col-4">
+                <div class="text-center" id="meteo"></div>
             </div>
-        </div>        <div>
-            <p class="w-100 text-center font-weight-bold" id="date-live"></p>
-            <table class="table table-dark mt-3 text-center w-100">
-                <tr>
-                    <td id="valeur-temperature-live">Température:</td>
-                    <td id="valeur-humidite-live">Humidité:</td>
-                    <td id="valeur-pression-live">Pression:</td>
-                    <td id="valeur-maree-live">Marée:</td>
-                </tr>
-            </table>
         </div>
+    </div>
+
+
+    <div>
+        <p class="w-100 text-center font-weight-bold" id="date-live"></p>
+        <table class="table table-dark mt-3 text-center w-100">
+            <tr>
+                <td id="valeur-temperature-live">Température:</td>
+                <td id="valeur-humidite-live">Humidité:</td>
+                <td id="valeur-pression-live">Pression:</td>
+                <td id="valeur-maree-live">Marée:</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container-fluid">
         <div>
             <h3 id="historique-titre">Historique journalier</h3>
             <details>
