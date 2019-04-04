@@ -114,8 +114,14 @@
 
 <script type="text/html" id="page-detail">
     <div class="container-fluid">
-        <h2 class="mb-3" id="nom-marina">Marina de ----- :</h2>
-        <div>
+        <div class="row">
+            <div class="col">
+                <h2 class="mb-3" id="nom-marina">Marina de ----- :</h2>
+            </div>
+            <div class="col text-center">
+                <div style="text-align: end" id="meteo"></div>
+            </div>
+        </div>        <div>
             <p class="w-100 text-center font-weight-bold" id="date-live"></p>
             <table class="table table-dark mt-3 text-center w-100">
                 <tr>
@@ -246,6 +252,7 @@
 <script src="action/accesseur/TemperatureDAO.js"></script>
 <script src="action/accesseur/MarinaDAO.js"></script>
 <script src="action/accesseur/MareeDAO.js"></script>
+<script src="action/accesseur/MeteoDAO.js"></script>
 <script src="action/accesseur/PressionDAO.js"></script>
 <script src="action/accesseur/Variables.js"></script>
 

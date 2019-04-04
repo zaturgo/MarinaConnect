@@ -161,7 +161,6 @@ var PressionDAO = function () {
                         donneesTab.push({date: new Date(donnees[i].date), valeur: donnees[i].valeur})
                     }
                 }
-                console.log(donneesTab);
                 callback(donneesTab);
             }
         });

@@ -7,6 +7,7 @@ var VueDetail = (function () {
     this.mareeDAO = new MareeDAO();
 
     var marinaID;
+    var marinaActuelle;
 
     var checkBoxTemp = true;
     var checkBoxPression = true;
@@ -161,19 +162,20 @@ var VueDetail = (function () {
             }
         }
         if (checkBoxMaree) {
-            mareeDAO.listerMarees(callbackMareeUtil, marina.latitude, marina.longitude)
+            mareeDAO.listerMarees(callbackMareeUtil, marinaActuelle.latitude, marinaActuelle.longitude)
         }
     };
 
 
     return function () {
 
-        this.afficher = function (donneesHumidites, donneesTemp, donneesPression, donneesMaree, marina, latAPI, lngAPI, tempLive, humiLive, pressionLive, mareeLive) {
+        this.afficher = function (donneesHumidites, donneesTemp, donneesPression, donneesMaree, marina, latAPI, lngAPI, tempLive, humiLive, pressionLive, mareeLive, donneeMeteo, img) {
             document.getElementById("container").innerHTML = pageDetail;
             document.getElementById("nom-marina").innerHTML = "Marina de " + marina.nom + " :";
             $("#navbarSupportedContent").collapse('hide');
 
             marinaID = marina.id;
+            marinaActuelle = marina;
             latReel = latAPI;
             lngReel = lngAPI;
 
@@ -189,6 +191,8 @@ var VueDetail = (function () {
             document.getElementById("valeur-humidite-live").innerHTML = "<span style='font-size: 0.82em'>Humidité: </span> <b>" + donneeHumiditeLive.valeur + "%</b>";
             document.getElementById("valeur-pression-live").innerHTML = "<span style='font-size: 0.82em'>Préssion: </span><b>" + donneePressionLive.valeur + "hPa</b>";
             document.getElementById("valeur-maree-live").innerHTML = "<span style='font-size: 0.82em'>Marée: </span> <b>" + donneeMareeLive + "m</b>";
+            document.getElementById("meteo").innerHTML = "<img src='http://openweathermap.org/img/w/"+img+".png'><p class='font-weight-bold'>"+donneeMeteo+"</p>";
+
             var dateLive = new Date(donneeTempLive.date);
             document.getElementById("date-live").innerHTML = "Donnée Live captés le " + dateLive.toLocaleString();
 

@@ -14,6 +14,8 @@
     var donneeTempLive;
     var donneePressionLive;
     var donneeMareeLive;
+    var donneeMeteo;
+    var image;
 
     var donneeMaree;
     var latReelle;
@@ -22,10 +24,11 @@
 
     this.initialiser = function () {
         this.marinaDAO = new MarinaDAO();
-        this.mareeDAO = new MareeDAO();
         this.humiditesDAO = new HumiditesDAO();
         this.pressionDAO = new PressionDAO();
         this.temperatureDAO = new TemperatureDAO();
+        this.meteoDAO = new MeteoDAO();
+        this.mareeDAO = new MareeDAO();
 
         idMarina = 0;
         window.addEventListener("hashchange", naviguer);
@@ -35,26 +38,28 @@
 
     this.naviguer = function () {
         Loader();
+
         var hash = window.location.hash;
 
         if (!hash) {
             var vueHome = new VueHome();
             vueHome.afficher();
+
         } else if (hash.match(/^#marinas/)) {
             Loader();
             marinaDAO.listerMarina(callbackMarina);
         } else if (hash.match(/^#settings/)) {
+
             var vueSettings = new VueSettings();
             vueSettings.afficher();
-        } else if (hash.match(/^#site/)) {
-            var vueSite = new VueSite();
-            vueSite.afficher();
+
         } else if (hash.match(/^#contact/)) {
             var vueContact = new VueContact();
             vueContact.afficher();
         } else if (hash.match(/^#marina\/([0-9]+)/)) {
             var navigation = hash.match(/^#marina\/([0-9]+)/);
             idMarina = navigation[1];
+
             humiditesDAO.listerHumiditesJours(callbackHumidite, idMarina);
         }
     };
@@ -80,32 +85,37 @@
     };
 
     var callbackPression = function (result) {
+
         donneePression = JSON.parse(result).pression;
         humiditesDAO.getHumiditesLive(callbackLiveHumidite, idMarina);
     };
 
     var callbackLiveHumidite = function (result) {
         donneeHumiditeLive = result;
+
         pressionDAO.getPressionLive(callbackLivePression, idMarina);
     };
 
     var callbackLivePression = function (result) {
         donneePressionLive = result;
+
         mareeDAO.niveauActuel(callbackLiveMaree, marineActive.latitude, marineActive.longitude);
     };
 
     var callbackLiveMaree = function (result) {
-        console.log("8")
         donneeMareeLive = result;
+        meteoDAO.listerMeteos(callbackMeteo, marineActive.latitude, marineActive.longitude);
+    };
+    var callbackMeteo = function (result, img) {
+        donneeMeteo = result;
+        image = img;
         temperatureDAO.getTemperatureLive(callbackLiveTemperature, idMarina);
     };
 
     var callbackLiveTemperature = function (result) {
-        console.log("9")
         donneeTempLive = result;
-
         var vueDetail = new VueDetail();
-        vueDetail.afficher(donneeHumidite, donneeTemp, donneePression, donneeMaree, marineActive, latReelle, lngReelle, donneeTempLive, donneeHumiditeLive, donneePressionLive, donneeMareeLive);
+        vueDetail.afficher(donneeHumidite, donneeTemp, donneePression, donneeMaree, marineActive, latReelle, lngReelle, donneeTempLive, donneeHumiditeLive, donneePressionLive, donneeMareeLive, donneeMeteo,image);
     };
 
 
