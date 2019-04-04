@@ -1,0 +1,12 @@
+[Unit]
+Description=deamon python recuperation donnee capteur
+After=network.target
+
+[Service]
+Type=simple
+user=pi
+ExecStart=/usr/bin/python /home/pi/dht11.py 11 4
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
