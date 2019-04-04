@@ -211,7 +211,7 @@ var VueDetail = (function () {
             afficheGrapheTemperature(donneesTemp);
             afficheGrapheHumidite(donneesHumidites);
             afficheGraphePression(donneesPression);
-            afficheGrapheMaree(donneesMaree);
+            afficheGrapheMaree(donneesMaree, latReel, lngReel);
 
         }
     };
@@ -233,7 +233,7 @@ var VueDetail = (function () {
                     datasets: [{
                         data: y,
                         label: "Température en °C",
-                        borderColor: "#FF5733",
+                        borderColor: "#FA5667",
                         fill: false
                     }
                     ]
@@ -263,7 +263,7 @@ var VueDetail = (function () {
                     datasets: [{
                         data: y,
                         label: "Humidité en %",
-                        borderColor: "#00B9FF",
+                        borderColor: "#1B91F7",
                         fill: false
                     }
                     ]
@@ -293,7 +293,7 @@ var VueDetail = (function () {
                     datasets: [{
                         data: y,
                         label: "Pression en hPa",
-                        borderColor: "#008940",
+                        borderColor: "#FAC24C",
                         fill: false
                     }
                     ]
@@ -306,9 +306,10 @@ var VueDetail = (function () {
         }
     }
 
-    function afficheGrapheMaree(data) {
+    function afficheGrapheMaree(data, lat, lon) {
         var x = [];
         var y = [];
+        var distance = calculDistanceEntreCoord(marinaActuelle.latitude, marinaActuelle.longitude, lat, lon)
         for (let i = 0; i < data.length; i++) {
             x[i] = "" + data[i].x.getHours() + "h" + data[i].x.getMinutes() + " " + data[i].x.getDate() + "/" + (data[i].x.getMonth()+1) + "/" + data[i].x.getFullYear();
             y[i] = data[i].y;
@@ -321,8 +322,8 @@ var VueDetail = (function () {
                     labels: x,
                     datasets: [{
                         data: y,
-                        label: "Marée en mètres",
-                        borderColor: "#0032FF",
+                        label: "Marée en mètres captée à "+distance+" km",
+                        borderColor: "#7A45E5",
                         fill: false
                     }
                     ]
@@ -338,7 +339,7 @@ var VueDetail = (function () {
     function callbackMareeUtil(data, lat, lng) {
         latReel = lat;
         lngReel = lng;
-        afficheGrapheMaree(data);
+        afficheGrapheMaree(data, lat, lng);
     }
 
 
