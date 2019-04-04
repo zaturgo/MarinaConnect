@@ -37,6 +37,8 @@
     };
 
     this.naviguer = function () {
+        var idTimer = parseInt(localStorage.getItem("timerid"));
+        window.clearInterval(idTimer);
         Loader();
 
         var hash = window.location.hash;
