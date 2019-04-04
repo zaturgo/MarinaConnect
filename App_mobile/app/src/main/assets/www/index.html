@@ -202,14 +202,29 @@
 <script type="text/html" id="page-settings">
     <div class="container-fluid">
         <h3 class="mb-5">Paramètres</h3>
-        <label>Zoom :</label>
+        <div class="form-group">
+            <label>Zoom :</label>
 
-        <select id="zoom-select" class="custom-select">
-            <option value="france" selected>France</option>
-            <option value="europe">Europe</option>
-            <option value="monde">Monde</option>
-        </select>
+            <select id="zoom-select" class="custom-select">
+                <option value="france" selected>France</option>
+                <option value="europe">Europe</option>
+                <option value="monde">Monde</option>
+            </select>
 
+            <label class="col-sm-2 col-form-label">Valeur d'alerte température maximum</label>
+            <input type="number" class="form-control" id="alert-temperature-max">
+
+            <label class="col-sm-2 col-form-label">Valeur d'alerte température minimum</label>
+            <input type="number" class="form-control" id="alert-temperature-min">
+
+            <label class="col-sm-2 col-form-label">Valeur d'alerte humidité maximum</label>
+            <input type="number" class="form-control" id="alert-humidite-max">
+            <label class="col-sm-2 col-form-label">Valeur d'alerte humidité minimum</label>
+            <input type="number" class="form-control" id="alert-humidite-min">
+
+            <label class="col-sm-2 col-form-label">Valeur d'alerte pression</label>
+            <input type="number" class="form-control" id="alert-pression">
+        </div>
     </div>
 </script>
 

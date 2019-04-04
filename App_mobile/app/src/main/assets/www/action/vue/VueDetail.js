@@ -265,23 +265,30 @@ var VueDetail = (function () {
     };
 
     function checkAlert() {
+        var valueAlertTempMax = parseInt(localStorage.getItem("alert-temperature-max"));
+        var valueAlertTempMin = parseInt(localStorage.getItem("alert-temperature-min"));
+        var valueAlertpression = parseInt(localStorage.getItem("alert-pression"));
+        var valueAlertHumiditeMax = parseInt(localStorage.getItem("alert-humidite-max"));
+        var valueAlertHumiditeMin = parseInt(localStorage.getItem("alert-humidite-min"));
+
         var isAlert = false;
         var html = "<div class=\"alert alert-danger\" role=\"alert\"><ul>";
-        if (donneeTempLive.valeur < 0) {
+
+        if (donneeTempLive.valeur <= valueAlertTempMin) {
             isAlert = true;
-            html += "<li>Température négative</li>";
-        } else if (donneeTempLive.valeur > 30) {
+            html += "<li>Température faible</li>";
+        } else if (donneeTempLive.valeur >= valueAlertTempMax) {
             isAlert = true;
             html += "<li>Forte chaleur</li>";
         }
-        if (donneeHumiditeLive.valeur > 90) {
+        if (donneeHumiditeLive.valeur >= valueAlertHumiditeMax) {
             isAlert = true;
             html += "<li>Forte humidité</li>";
-        } else if (donneeHumiditeLive.valeur < 10) {
+        } else if (donneeHumiditeLive.valeur <= valueAlertHumiditeMin) {
             isAlert = true;
             html += "<li>Faible humidité</li>";
         }
-        if (donneePressionLive.valeur < 990) {
+        if (donneePressionLive.valeur < valueAlertpression) {
             isAlert = true;
             html += "<li>Pression faible</li>";
         }
