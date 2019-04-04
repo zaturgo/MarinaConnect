@@ -26,6 +26,7 @@ var VueDetail = (function () {
     var timerLive = function () {
         console.log("älo! " + marinaID);
         humiditesDAO.getHumiditesLive(callbackLiveHumidite,marinaID)
+        checkAlert()
     };
 
     var getDonneeCheckBox = function () {
@@ -253,6 +254,7 @@ var VueDetail = (function () {
 
             var idleIntervalTimer = setInterval(timerLive, 10000);
             localStorage.setItem("timerid",idleIntervalTimer);
+            checkAlert();
         }
     };
 
@@ -285,7 +287,34 @@ var VueDetail = (function () {
             });
         }
     }
+    function checkAlert() {
+        var isAlert = false;
+        var html = "<div class=\"alert alert-danger\" role=\"alert\"><ul>";
+        if (donneeTempLive.valeur < 0) {
+            isAlert = true;
+            html += "<li>Température négative</li>";
+        } else if (donneeTempLive.valeur > 30) {
+            isAlert = true;
+            html += "<li>Forte chaleur</li>";
+        }
+        if (donneeHumiditeLive.valeur > 90) {
+            isAlert = true;
+            html += "<li>Forte humidité</li>";
+        } else if (donneeHumiditeLive.valeur < 10) {
+            isAlert = true;
+            html += "<li>Faible humidité</li>";
+        }
+        if (donneePressionLive.valeur < 990) {
+            isAlert = true;
+            html += "<li>Pression faible</li>";
+        }
 
+        if (isAlert) {
+            document.getElementById("alert").innerHTML = html + "</ul></div>";
+        } else {
+            $("#alert").empty();
+        }
+    }
     function afficheGrapheHumidite(data) {
         var x = [];
         var y = [];
