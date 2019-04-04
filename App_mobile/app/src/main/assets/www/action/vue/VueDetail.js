@@ -217,8 +217,6 @@ var VueDetail = (function () {
             afficheGrapheHumidite(donneesHumidites);
             afficheGraphePression(donneesPression);
             afficheGrapheMaree(donneesMaree);
-            console.log("FIN afficher")
-
         }
     };
 
@@ -239,7 +237,7 @@ var VueDetail = (function () {
                     datasets: [{
                         data: y,
                         label: "Température en °C",
-                        borderColor: "#FF5733",
+                        borderColor: "#FA5667",
                         fill: false
                     }
                     ]
@@ -270,7 +268,7 @@ var VueDetail = (function () {
                     datasets: [{
                         data: y,
                         label: "Humidité en %",
-                        borderColor: "#00B9FF",
+                        borderColor: "#7A45E5",
                         fill: false
                     }
                     ]
@@ -300,7 +298,7 @@ var VueDetail = (function () {
                     datasets: [{
                         data: y,
                         label: "Pression en hPa",
-                        borderColor: "#008940",
+                        borderColor: "#FAC24C",
                         fill: false
                     }
                     ]
@@ -330,7 +328,7 @@ var VueDetail = (function () {
                     datasets: [{
                         data: y,
                         label: "Marée en mètres",
-                        borderColor: "#0032FF",
+                        borderColor: "#1B91F7",
                         fill: false
                     }
                     ]
