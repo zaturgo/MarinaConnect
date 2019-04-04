@@ -26,8 +26,8 @@ var VueDetail = (function () {
     var donneeMeteo;
 
     var timerLive = function () {
-        console.log("älo! " + marinaID);
-        humiditesDAO.getHumiditesLive(callbackLiveHumidite,marinaID)
+        humiditesDAO.getHumiditesLive(callbackLiveHumidite, marinaID);
+        checkAlert();
     };
 
     var getDonneeCheckBox = function () {
@@ -79,7 +79,7 @@ var VueDetail = (function () {
         document.getElementById("valeur-humidite-live").innerHTML = "<span style='font-size: 0.82em'>Humidité: </span> <b>" + donneeHumiditeLive.valeur + "%</b>";
         document.getElementById("valeur-pression-live").innerHTML = "<span style='font-size: 0.82em'>Préssion: </span><b>" + donneePressionLive.valeur + "hPa</b>";
         document.getElementById("valeur-maree-live").innerHTML = "<span style='font-size: 0.82em'>Marée: </span> <b>" + donneeMareeLive + "m</b>";
-        document.getElementById("meteo").innerHTML = "<img src='http://openweathermap.org/img/w/"+image+".png'><p class='font-weight-bold'>"+donneeMeteo+"</p>";
+        document.getElementById("meteo").innerHTML = "<img src='http://openweathermap.org/img/w/" + image + ".png'><p class='font-weight-bold'>" + donneeMeteo + "</p>";
 
         var dateLive = new Date(donneeTempLive.date);
         document.getElementById("date-live").innerHTML = "Donnée Live captés le " + dateLive.toLocaleString();
@@ -229,9 +229,9 @@ var VueDetail = (function () {
 
             document.getElementById("valeur-temperature-live").innerHTML = "<span style='font-size: 0.82em'>Température: </span><b>" + donneeTempLive.valeur + "°C</b>";
             document.getElementById("valeur-humidite-live").innerHTML = "<span style='font-size: 0.82em'>Humidité: </span> <b>" + donneeHumiditeLive.valeur + "%</b>";
-            document.getElementById("valeur-pression-live").innerHTML = "<span style='font-size: 0.82em'>Préssion: </span><b>" + donneePressionLive.valeur + "hPa</b>";
+            document.getElementById("valeur-pression-live").innerHTML = "<span style='font-size: 0.82em'>Pression: </span><b>" + donneePressionLive.valeur + "hPa</b>";
             document.getElementById("valeur-maree-live").innerHTML = "<span style='font-size: 0.82em'>Marée: </span> <b>" + donneeMareeLive + "m</b>";
-            document.getElementById("meteo").innerHTML = "<img src='http://openweathermap.org/img/w/"+img+".png'><p class='font-weight-bold'>"+donneeMeteo+"</p>";
+            document.getElementById("meteo").innerHTML = "<img src='http://openweathermap.org/img/w/" + img + ".png'><p class='font-weight-bold'>" + donneeMeteo + "</p>";
 
             var dateLive = new Date(donneeTempLive.date);
             document.getElementById("date-live").innerHTML = "Donnée Live captés le " + dateLive.toLocaleString();
@@ -258,10 +258,40 @@ var VueDetail = (function () {
             afficheGraphePression(donneesPression);
             afficheGrapheMaree(donneesMaree);
 
-            var idleIntervalTimer = setInterval(timerLive, 10000);
-            localStorage.setItem("timerid",idleIntervalTimer);
+            var idleIntervalTimer = setInterval(timerLive, 5000);
+            localStorage.setItem("timerid", idleIntervalTimer);
+            checkAlert()
         }
     };
+
+    function checkAlert() {
+        var isAlert = false;
+        var html = "<div class=\"alert alert-danger\" role=\"alert\"><ul>";
+        if (donneeTempLive.valeur < 0) {
+            isAlert = true;
+            html += "<li>Température négative</li>";
+        } else if (donneeTempLive.valeur > 30) {
+            isAlert = true;
+            html += "<li>Forte chaleur</li>";
+        }
+        if (donneeHumiditeLive.valeur > 90) {
+            isAlert = true;
+            html += "<li>Forte humidité</li>";
+        } else if (donneeHumiditeLive.valeur < 10) {
+            isAlert = true;
+            html += "<li>Faible humidité</li>";
+        }
+        if (donneePressionLive.valeur < 990) {
+            isAlert = true;
+            html += "<li>Pression faible</li>";
+        }
+
+        if (isAlert) {
+            document.getElementById("alert").innerHTML = html + "</ul></div>";
+        } else {
+            $("#alert").empty();
+        }
+    }
 
     function afficheGrapheTemperature(data) {
         var x = [];
